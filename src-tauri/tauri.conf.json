@@ -33,7 +33,8 @@
       "icons/icon.ico"
     ],
     "resources": {
-      "../content/curriculum/": "content/curriculum/"
+      "../content/curriculum/": "content/curriculum/",
+      "../content/audio/": "content/audio/"
     },
     "iOS": {
       "developmentTeam": null

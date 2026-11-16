@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import type { LearningItemDetail } from "../../services/api/tauri";
+import { PhraseAudioControls } from "../../components/audio/PhraseAudioControls";
 import { tauriApi } from "../../services/api/tauri";
 
 export function PhraseDetailScreen() {
@@ -35,6 +36,7 @@ export function PhraseDetailScreen() {
         {detail.contextNote ? (
           <p className="mt-3 text-sm text-stone-600">{detail.contextNote}</p>
         ) : null}
+        <PhraseAudioControls learningItemId={detail.id} className="mt-4" />
       </div>
 
       <section className="mt-6 grid gap-3 md:grid-cols-3">

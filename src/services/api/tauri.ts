@@ -77,6 +77,15 @@ export interface ReviewQueueItem {
   acceptedAnswers: string[];
 }
 
+export interface AudioAssetDto {
+  id: string;
+  learningItemId: string;
+  source: string;
+  speakingSpeed: string;
+  relativePath?: string;
+  durationMs?: number;
+}
+
 export interface LearningItemDetail {
   id: string;
   kannadaText: string;
@@ -117,6 +126,8 @@ export const tauriApi = {
     invoke<ItemScheduleState>("get_item_schedule_state", { learningItemId }),
   getLearningItemDetail: (learningItemId: string) =>
     invoke<LearningItemDetail>("get_learning_item_detail", { learningItemId }),
+  listAudioAssets: (learningItemId: string) =>
+    invoke<AudioAssetDto[]>("list_audio_assets", { learningItemId }),
   recordExerciseAttempt: (input: Record<string, unknown>) =>
     invoke("record_exercise_attempt", { input }),
   completeLesson: (lessonId: string, xpEarned: number) =>

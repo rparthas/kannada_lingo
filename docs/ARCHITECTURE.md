@@ -19,6 +19,6 @@
 
 ## Extension points
 
-- **Audio**: implement `AudioService` with iOS native commands (Phase 0 spike).
+- **Audio**: `WebAudioService` + Tauri commands (`list_audio_assets`, `resolve_resource_path`, `write_learner_recording`); native iOS adapters can replace the web recording/playback layer later.
 - **AI**: implement `AIContentProvider` behind a secure backend; never ship API keys in the app bundle.
 - **Content**: add JSON under `content/curriculum/`, bump `content_version`, re-import via tooling (future CLI).

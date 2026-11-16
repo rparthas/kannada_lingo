@@ -12,6 +12,7 @@
     "ios:dev": "tauri ios dev",
     "ios:build": "tauri ios build",
     "ios:setup": "bash scripts/ensure-ios-toolchain.sh",
+    "content:validate": "node scripts/validate-content.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },

@@ -22,15 +22,13 @@ export interface AudioService {
 }
 
 export class StubAudioService implements AudioService {
-  async play(): Promise<void> {
-    /* Phase 0: no bundled audio files yet */
-  }
+  async play(): Promise<void> {}
   async pause(): Promise<void> {}
   async startRecording(): Promise<void> {
-    throw new Error("Recording requires device validation (Phase 0).");
+    throw new Error("Recording is only available inside the Tauri app.");
   }
   async stopRecording(): Promise<RecordingResult> {
-    throw new Error("Recording requires device validation (Phase 0).");
+    throw new Error("Recording is only available inside the Tauri app.");
   }
   async playLearnerRecording(): Promise<void> {}
 }

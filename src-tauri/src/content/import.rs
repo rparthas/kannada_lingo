@@ -18,8 +18,21 @@ struct CurriculumBundle {
     units: Vec<UnitJson>,
     lessons: Vec<LessonJson>,
     learning_items: Vec<LearningItemJson>,
+    audio_assets: Option<Vec<AudioAssetJson>>,
     lesson_items: Vec<LessonItemJson>,
     exercises: Vec<ExerciseJson>,
+}
+
+#[derive(Debug, Deserialize)]
+struct AudioAssetJson {
+    id: String,
+    learning_item_id: String,
+    source: String,
+    speaking_speed: Option<String>,
+    review_status: Option<String>,
+    duration_ms: Option<i32>,
+    file_format: Option<String>,
+    relative_path: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -182,6 +195,27 @@ pub fn import_bundled(conn: &Connection) -> Result<usize, String> {
         item_count += 1;
     }
 
+    if let Some(assets) = &bundle.audio_assets {
+        for asset in assets {
+            tx.execute(
+                "INSERT OR REPLACE INTO audio_assets (id, learning_item_id, locale, source, speaking_speed, review_status, duration_ms, file_format, relative_path, content_version)
+                 VALUES (?1, ?2, 'kn-IN', ?3, ?4, ?5, ?6, ?7, ?8, ?9)",
+                (
+                    &asset.id,
+                    &asset.learning_item_id,
+                    &asset.source,
+                    asset.speaking_speed.as_deref().unwrap_or("normal"),
+                    asset.review_status.as_deref().unwrap_or("approved"),
+                    asset.duration_ms,
+                    &asset.file_format,
+                    &asset.relative_path,
+                    bundle.content_version,
+                ),
+            )
+            .map_err(|e| e.to_string())?;
+        }
+    }
+
     for li in &bundle.lesson_items {
         tx.execute(
             "INSERT OR REPLACE INTO lesson_items (lesson_id, learning_item_id, sort_order) VALUES (?1, ?2, ?3)",
@@ -215,4 +249,33 @@ pub fn import_bundled(conn: &Connection) -> Result<usize, String> {
 
     tx.commit().map_err(|e| e.to_string())?;
     Ok(item_count)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::db::migrations;
+    use rusqlite::Connection;
+
+    #[test]
+    fn bundled_import_includes_audio_assets() {
+        let conn = Connection::open_in_memory().unwrap();
+        conn.execute_batch("PRAGMA foreign_keys = ON;")
+            .unwrap();
+        migrations::run(&conn).unwrap();
+        import_bundled(&conn).expect("import");
+        let audio_count: i64 = conn
+            .query_row("SELECT COUNT(*) FROM audio_assets", [], |r| r.get(0))
+            .unwrap();
+        assert_eq!(audio_count, 21);
+        let human_normal: i64 = conn
+            .query_row(
+                "SELECT COUNT(DISTINCT learning_item_id) FROM audio_assets
+                 WHERE source = 'human' AND speaking_speed = 'normal'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(human_normal, 10);
+    }
 }

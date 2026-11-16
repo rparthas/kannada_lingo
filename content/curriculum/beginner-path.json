@@ -1,5 +1,5 @@
 {
-  "content_version": 2,
+  "content_version": 3,
   "course": {
     "id": "course-kannada-quest",
     "title": "Kannada Quest",
@@ -161,6 +161,29 @@
       "difficulty": 2,
       "validation_status": "approved"
     }
+  ],
+  "audio_assets": [
+    {"id": "audio-item-namaskara-normal", "learning_item_id": "item-namaskara", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-namaskara-normal.wav"},
+    {"id": "audio-item-namaskara-slow", "learning_item_id": "item-namaskara", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-namaskara-slow.wav"},
+    {"id": "audio-item-hengidira-normal", "learning_item_id": "item-hengidira", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-hengidira-normal.wav"},
+    {"id": "audio-item-hengidira-slow", "learning_item_id": "item-hengidira", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-hengidira-slow.wav"},
+    {"id": "audio-item-chennagi-idini-normal", "learning_item_id": "item-chennagi-idini", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-chennagi-idini-normal.wav"},
+    {"id": "audio-item-chennagi-idini-slow", "learning_item_id": "item-chennagi-idini", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-chennagi-idini-slow.wav"},
+    {"id": "audio-item-dhanyavada-normal", "learning_item_id": "item-dhanyavada", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-dhanyavada-normal.wav"},
+    {"id": "audio-item-dhanyavada-slow", "learning_item_id": "item-dhanyavada", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-dhanyavada-slow.wav"},
+    {"id": "audio-item-sari-normal", "learning_item_id": "item-sari", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-sari-normal.wav"},
+    {"id": "audio-item-sari-slow", "learning_item_id": "item-sari", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-sari-slow.wav"},
+    {"id": "audio-item-sari-ai-variation", "learning_item_id": "item-sari", "source": "ai", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-sari-normal.wav"},
+    {"id": "audio-item-illa-normal", "learning_item_id": "item-illa", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-illa-normal.wav"},
+    {"id": "audio-item-illa-slow", "learning_item_id": "item-illa", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-illa-slow.wav"},
+    {"id": "audio-item-auto-bidu-normal", "learning_item_id": "item-auto-bidu", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-auto-bidu-normal.wav"},
+    {"id": "audio-item-auto-bidu-slow", "learning_item_id": "item-auto-bidu", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-auto-bidu-slow.wav"},
+    {"id": "audio-item-elli-hogbeku-normal", "learning_item_id": "item-elli-hogbeku", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-elli-hogbeku-normal.wav"},
+    {"id": "audio-item-elli-hogbeku-slow", "learning_item_id": "item-elli-hogbeku", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-elli-hogbeku-slow.wav"},
+    {"id": "audio-item-meter-prati-normal", "learning_item_id": "item-meter-prati", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-meter-prati-normal.wav"},
+    {"id": "audio-item-meter-prati-slow", "learning_item_id": "item-meter-prati", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-meter-prati-slow.wav"},
+    {"id": "audio-item-aidu-nimisha-normal", "learning_item_id": "item-aidu-nimisha", "source": "human", "speaking_speed": "normal", "review_status": "approved", "duration_ms": 450, "file_format": "wav", "relative_path": "content/audio/item-aidu-nimisha-normal.wav"},
+    {"id": "audio-item-aidu-nimisha-slow", "learning_item_id": "item-aidu-nimisha", "source": "human", "speaking_speed": "slow", "review_status": "approved", "duration_ms": 650, "file_format": "wav", "relative_path": "content/audio/item-aidu-nimisha-slow.wav"}
   ],
   "lesson_items": [
     { "lesson_id": "lesson-greetings-1", "learning_item_id": "item-namaskara", "sort_order": 1 },

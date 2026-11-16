@@ -7,6 +7,8 @@ import {
   normalizeFreeText,
 } from "../../domain/exercises/evaluate";
 import { ExerciseContinueBar } from "./ExerciseContinueBar";
+import { LearnerRecordingPanel } from "../audio/LearnerRecordingPanel";
+import { PhraseAudioControls } from "../audio/PhraseAudioControls";
 
 export interface ExerciseResult {
   isCorrect: boolean;
@@ -36,12 +38,33 @@ interface ConversationStep {
   explanation?: string;
 }
 
-function PhraseCard({ item }: { item: LearningItemDto }) {
+function PhraseCard({
+  item,
+  showText = true,
+  showAudio = false,
+}: {
+  item: LearningItemDto;
+  showText?: boolean;
+  showAudio?: boolean;
+}) {
   return (
-    <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-stone-200">
-      <p className="text-3xl font-semibold text-stone-900 kannada">{item.kannadaText}</p>
-      <p className="mt-2 text-lg text-amber-800">{item.transliteration}</p>
-      {item.contextNote ? (
+    <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-stone-200 space-y-3">
+      {showText ? (
+        <>
+          <p className="text-3xl font-semibold text-stone-900 kannada">{item.kannadaText}</p>
+          <p className="mt-2 text-lg text-amber-800">{item.transliteration}</p>
+        </>
+      ) : (
+        <p className="text-sm font-medium text-stone-500">Listen carefully before you answer.</p>
+      )}
+      {showAudio ? (
+        <PhraseAudioControls
+          learningItemId={item.id}
+          compact={!showText}
+          autoPlay={!showText}
+        />
+      ) : null}
+      {item.contextNote && showText ? (
         <p className="mt-3 text-sm text-stone-600">{item.contextNote}</p>
       ) : null}
     </div>
@@ -107,7 +130,7 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
       return (
         <div className="space-y-4">
           <p className="text-stone-700">{instruction}</p>
-          <PhraseCard item={item} />
+          <PhraseCard item={item} showAudio />
           {!revealed ? (
             <button
               type="button"
@@ -134,12 +157,46 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
       );
 
     case "listen_identify":
+      if (!item) return null;
+      return (
+        <div className="space-y-4">
+          <p className="text-stone-700">{instruction}</p>
+          <PhraseCard item={item} showText={false} showAudio />
+          <div className="grid gap-2">
+            {choices.map((choice, index) => (
+              <button
+                key={choice}
+                type="button"
+                disabled={!!pending}
+                className={`rounded-xl border px-4 py-3 text-left ${
+                  selected === index ? "border-amber-500 bg-amber-50" : "border-stone-200"
+                }`}
+                onClick={() => setSelected(index)}
+              >
+                {choice}
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
+            disabled={selected === null || !!pending}
+            onClick={() =>
+              submitMcq(Number(exercise.prompt.correct_index ?? exercise.prompt.correctIndex))
+            }
+          >
+            Check
+          </button>
+          {continueBar}
+        </div>
+      );
+
     case "kannada_to_english":
       if (!item) return null;
       return (
         <div className="space-y-4">
           <p className="text-stone-700">{instruction}</p>
-          <PhraseCard item={item} />
+          <PhraseCard item={item} showAudio />
           <div className="grid gap-2">
             {choices.map((choice, index) => (
               <button
@@ -300,10 +357,8 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
       return (
         <div className="space-y-4">
           <p className="text-stone-700">{instruction}</p>
-          <PhraseCard item={item} />
-          <p className="text-sm text-stone-500">
-            Audio playback will use human recordings on device once assets are bundled.
-          </p>
+          <PhraseCard item={item} showAudio />
+          <LearnerRecordingPanel />
           <div className="grid grid-cols-2 gap-2">
             {[
               { label: "Needs practice", ok: false, confident: false },
