@@ -1,0 +1,279 @@
+{
+  "content_version": 1,
+  "course": {
+    "id": "course-kannada-quest",
+    "title": "Kannada Quest",
+    "description": "Practical spoken Bengaluru Kannada for everyday situations."
+  },
+  "levels": [
+    {
+      "id": "level-1-survival",
+      "course_id": "course-kannada-quest",
+      "ordinal": 1,
+      "title": "Survival Kannada",
+      "description": "Greetings, yes/no, numbers, and essential questions."
+    }
+  ],
+  "units": [
+    {
+      "id": "unit-1-greetings",
+      "level_id": "level-1-survival",
+      "ordinal": 1,
+      "title": "Greetings & basics",
+      "description": "Start every conversation politely."
+    },
+    {
+      "id": "unit-2-travel",
+      "level_id": "level-1-survival",
+      "ordinal": 2,
+      "title": "Auto & directions",
+      "description": "Phrases for cabs and finding your way."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-greetings-1",
+      "unit_id": "unit-1-greetings",
+      "ordinal": 1,
+      "title": "Hello and thank you",
+      "description": "Core polite phrases you'll use many times a day.",
+      "estimated_minutes": 12
+    },
+    {
+      "id": "lesson-auto-1",
+      "unit_id": "unit-2-travel",
+      "ordinal": 1,
+      "title": "Talking to your auto driver",
+      "description": "Fare, destination, and simple requests.",
+      "estimated_minutes": 15
+    }
+  ],
+  "learning_items": [
+    {
+      "id": "item-namaskara",
+      "kannada_text": "ನಮಸ್ಕಾರ",
+      "transliteration": "namaskāra",
+      "english_meaning": "Hello (formal greeting)",
+      "literal_translation": "Greetings / salutation",
+      "context_note": "Safe default when meeting shop staff, neighbours, or service workers.",
+      "register": "neutral",
+      "tags": ["greeting", "home"],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-hengidira",
+      "kannada_text": "ಹೇಗಿದ್ದೀರಾ?",
+      "transliteration": "hēgiddīrā?",
+      "english_meaning": "How are you? (respectful)",
+      "context_note": "Use with elders or people you want to be polite with.",
+      "register": "formal",
+      "tags": ["greeting"],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-chennagi-idini",
+      "kannada_text": "ಚೆನ್ನಾಗಿ ಇದ್ದೀನಿ",
+      "transliteration": "cennāgi iddīni",
+      "english_meaning": "I am fine",
+      "context_note": "Common reply to 'How are you?'",
+      "register": "informal",
+      "tags": ["greeting", "response"],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-dhanyavada",
+      "kannada_text": "ಧನ್ಯವಾದ",
+      "transliteration": "dhanyavāda",
+      "english_meaning": "Thank you",
+      "context_note": "Works in shops, restaurants, and with auto drivers.",
+      "register": "neutral",
+      "tags": ["politeness"],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-sari",
+      "kannada_text": "ಸರಿ",
+      "transliteration": "sari",
+      "english_meaning": "Okay / all right",
+      "accepted_answers": ["okay", "ok", "alright"],
+      "register": "informal",
+      "tags": ["response"],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-illa",
+      "kannada_text": "ಇಲ್ಲ",
+      "transliteration": "illa",
+      "english_meaning": "No",
+      "context_note": "General negation — 'no / not / don't have'.",
+      "register": "informal",
+      "tags": ["response"],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-auto-bidu",
+      "kannada_text": "ಆಟೋ ಬಿಡಿ",
+      "transliteration": "āṭō biḍi",
+      "english_meaning": "Stop the auto here",
+      "literal_translation": "Auto, leave (stop)",
+      "context_note": "Say clearly when you want the driver to stop.",
+      "register": "informal",
+      "tags": ["auto", "transport"],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-elli-hogbeku",
+      "kannada_text": "ಎಲ್ಲಿಗೆ ಹೋಗಬೇಕು?",
+      "transliteration": "ellige hōgabēku?",
+      "english_meaning": "Where do you need to go?",
+      "context_note": "Driver may ask you this — know how to answer with a place name.",
+      "register": "informal",
+      "tags": ["auto", "question"],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-meter-prati",
+      "kannada_text": "ಮೀಟರ್ ಪ್ರಕಾರ",
+      "transliteration": "mīṭar prakāra",
+      "english_meaning": "By the meter (fare)",
+      "context_note": "Ask to use the meter instead of a flat quote.",
+      "register": "informal",
+      "tags": ["auto", "fare"],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-aidu-nimisha",
+      "kannada_text": "ಐದು ನಿಮಿಷ ಬೇಕು",
+      "transliteration": "aidu nimisha bēku",
+      "english_meaning": "Five minutes, please",
+      "context_note": "Useful when asking someone to wait briefly.",
+      "register": "informal",
+      "tags": ["time"],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lesson_items": [
+    { "lesson_id": "lesson-greetings-1", "learning_item_id": "item-namaskara", "sort_order": 1 },
+    { "lesson_id": "lesson-greetings-1", "learning_item_id": "item-hengidira", "sort_order": 2 },
+    { "lesson_id": "lesson-greetings-1", "learning_item_id": "item-chennagi-idini", "sort_order": 3 },
+    { "lesson_id": "lesson-greetings-1", "learning_item_id": "item-dhanyavada", "sort_order": 4 },
+    { "lesson_id": "lesson-greetings-1", "learning_item_id": "item-sari", "sort_order": 5 },
+    { "lesson_id": "lesson-greetings-1", "learning_item_id": "item-illa", "sort_order": 6 },
+    { "lesson_id": "lesson-auto-1", "learning_item_id": "item-auto-bidu", "sort_order": 1 },
+    { "lesson_id": "lesson-auto-1", "learning_item_id": "item-elli-hogbeku", "sort_order": 2 },
+    { "lesson_id": "lesson-auto-1", "learning_item_id": "item-meter-prati", "sort_order": 3 },
+    { "lesson_id": "lesson-auto-1", "learning_item_id": "item-aidu-nimisha", "sort_order": 4 }
+  ],
+  "exercises": [
+    {
+      "id": "ex-greet-flash-1",
+      "lesson_id": "lesson-greetings-1",
+      "learning_item_id": "item-namaskara",
+      "exercise_type": "vocabulary_flashcard",
+      "sort_order": 1,
+      "prompt": { "instruction": "Learn this greeting." }
+    },
+    {
+      "id": "ex-greet-mcq-1",
+      "lesson_id": "lesson-greetings-1",
+      "learning_item_id": "item-namaskara",
+      "exercise_type": "listen_identify",
+      "sort_order": 2,
+      "prompt": {
+        "instruction": "What does this phrase mean?",
+        "choices": ["Thank you", "Hello (formal greeting)", "Good night", "Where are you going?"],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-greet-en-kn-1",
+      "lesson_id": "lesson-greetings-1",
+      "learning_item_id": "item-dhanyavada",
+      "exercise_type": "english_to_kannada",
+      "sort_order": 3,
+      "prompt": { "instruction": "How do you say 'Thank you' in Kannada?" }
+    },
+    {
+      "id": "ex-greet-kn-en-1",
+      "lesson_id": "lesson-greetings-1",
+      "learning_item_id": "item-sari",
+      "exercise_type": "kannada_to_english",
+      "sort_order": 4,
+      "prompt": {
+        "instruction": "Choose the best English meaning.",
+        "choices": ["No", "Please wait", "Okay / all right", "How are you?"],
+        "correct_index": 2
+      }
+    },
+    {
+      "id": "ex-greet-fill-1",
+      "lesson_id": "lesson-greetings-1",
+      "learning_item_id": "item-chennagi-idini",
+      "exercise_type": "fill_blank",
+      "sort_order": 5,
+      "prompt": {
+        "instruction": "Complete the reply: 'I am fine'",
+        "blanked_transliteration": "cennāgi _____",
+        "accepted": ["iddīni", "iddini"]
+      }
+    },
+    {
+      "id": "ex-auto-flash-1",
+      "lesson_id": "lesson-auto-1",
+      "learning_item_id": "item-auto-bidu",
+      "exercise_type": "vocabulary_flashcard",
+      "sort_order": 1,
+      "prompt": { "instruction": "Phrase for stopping your auto." }
+    },
+    {
+      "id": "ex-auto-mcq-1",
+      "lesson_id": "lesson-auto-1",
+      "learning_item_id": "item-meter-prati",
+      "exercise_type": "listen_identify",
+      "sort_order": 2,
+      "prompt": {
+        "instruction": "What does this mean for your ride?",
+        "choices": ["Stop here", "By the meter (fare)", "Turn left", "I don't know"],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-auto-en-kn-1",
+      "lesson_id": "lesson-auto-1",
+      "learning_item_id": "item-auto-bidu",
+      "exercise_type": "english_to_kannada",
+      "sort_order": 3,
+      "prompt": { "instruction": "Say: 'Stop the auto here'." }
+    },
+    {
+      "id": "ex-auto-order-1",
+      "lesson_id": "lesson-auto-1",
+      "learning_item_id": "item-auto-bidu",
+      "exercise_type": "sentence_construction",
+      "sort_order": 4,
+      "prompt": {
+        "instruction": "Arrange the words (transliteration tiles).",
+        "tiles": ["biḍi", "āṭō"],
+        "solution": ["āṭō", "biḍi"]
+      }
+    },
+    {
+      "id": "ex-auto-repeat-1",
+      "lesson_id": "lesson-auto-1",
+      "learning_item_id": "item-meter-prati",
+      "exercise_type": "listen_repeat",
+      "sort_order": 5,
+      "prompt": { "instruction": "Listen and repeat aloud. Mark how you did." }
+    }
+  ]
+}
