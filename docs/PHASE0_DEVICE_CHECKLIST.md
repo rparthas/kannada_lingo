@@ -15,6 +15,10 @@ Record results on a **physical** iPhone and iPad. Simulator is useful but not su
 | Import backup from Files | ☐ | ☐ | Invalid ZIP rejected |
 | Portrait / landscape layout | ☐ | ☐ | iPad two-column where applicable |
 
-## Known environment gap
+## Agent verification (2026-11-16)
 
-This workspace had **Command Line Tools only** (no `xcodebuild`). Install Xcode and select it with `xcode-select` before `tauri ios dev`.
+Simulator only: iOS sim **build + launch** passed on iPhone 17 (iOS 27.2). Toolchain details in `docs/PHASE0_VERIFICATION.md`.
+
+## Device signing note
+
+If `tauri ios build` (device SDK) fails with missing team/profile, open `src-tauri/gen/apple/kannada-quest.xcodeproj` in Xcode, sign in under **Accounts**, enable **Automatically manage signing** for `kannada-quest_iOS`.

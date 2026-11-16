@@ -4,8 +4,8 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Phase 0 — Technical feasibility | Partial | rustup + iOS targets + `tauri ios init` done; **Xcode.app install + dev cert** still manual (Apple ID) |
-| Phase 1 — Application foundation | In progress | Project scaffold, navigation, SQLite, migrations, content import |
+| Phase 0 — Technical feasibility | **Verified (Simulator)** | Xcode 27.2, rustup iOS targets, sim build + launch; see `docs/PHASE0_VERIFICATION.md`. Physical device + audio/mic/iCloud checks remain on checklist |
+| Phase 1 — Application foundation | Complete | Project scaffold, navigation, SQLite, migrations, content import (verified: 7/7 JS tests, tsc clean, 2/2 Rust tests) |
 | Phase 2 — Learning engine | In progress | Exercise framework, evaluation, lesson player skeleton |
 | Phase 3 — Audio and content | Stub | Platform adapter interface; recording deferred to device spike |
 | Phase 4 — Revision and retention | In progress | SM-2 scheduler (unit-tested) |

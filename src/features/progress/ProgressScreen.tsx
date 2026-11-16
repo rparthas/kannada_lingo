@@ -34,8 +34,7 @@ export function ProgressScreen() {
       <section className="rounded-2xl bg-white p-5 ring-1 ring-stone-200">
         <h2 className="font-semibold text-stone-900">Backup</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Export a portable ZIP to Files or iCloud Drive. Restore is available from Settings in a
-          future build.
+          Export a portable ZIP to Files or iCloud Drive. Restore is available from Settings.
         </p>
         <button
           type="button"
