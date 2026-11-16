@@ -14,12 +14,26 @@ pub struct AppInitResult {
 
 #[tauri::command]
 pub fn init_app(state: State<DbState>) -> Result<AppInitResult, String> {
-    let imported = if state.content_is_empty()? {
-        let count = crate::db::with_conn(&state, |conn| import_bundled(conn))?;
-        Some(count)
-    } else {
-        None
-    };
+    let imported = crate::db::with_conn(&state, |conn| {
+        let bundled_version = crate::content::import::bundled_content_version();
+        let stored_version: i32 = conn
+            .query_row(
+                "SELECT COALESCE(MAX(content_version), 0) FROM courses",
+                [],
+                |row| row.get(0),
+            )
+            .unwrap_or(0);
+        let empty = conn
+            .query_row("SELECT COUNT(*) FROM learning_items", [], |row| row.get::<_, i64>(0))
+            .unwrap_or(0)
+            == 0;
+        if empty || stored_version < bundled_version {
+            let count = import_bundled(conn)?;
+            Ok(Some(count))
+        } else {
+            Ok(None)
+        }
+    })?;
 
     let integrity = state.integrity_check()?;
     Ok(AppInitResult {

@@ -16,7 +16,57 @@ pub struct RecordAttemptInput {
     pub lesson_id: Option<String>,
     pub ease_factor: f64,
     pub interval_days: i32,
+    pub repetitions: i32,
     pub mastery_status: String,
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct LessonAttemptSnapshot {
+    pub exercise_id: String,
+    pub exercise_type: String,
+    pub is_correct: bool,
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct LessonResumeState {
+    pub resume_index: i32,
+    pub lesson_completed: bool,
+    pub attempts: Vec<LessonAttemptSnapshot>,
+}
+
+#[derive(Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ItemScheduleState {
+    pub ease_factor: f64,
+    pub interval_days: i32,
+    pub repetitions: i32,
+    pub mastery_status: String,
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct AttemptHistoryRow {
+    pub exercise_type: String,
+    pub is_correct: bool,
+    pub attempted_at: String,
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct LearningItemDetail {
+    pub id: String,
+    pub kannada_text: String,
+    pub transliteration: String,
+    pub english_meaning: String,
+    pub literal_translation: Option<String>,
+    pub context_note: Option<String>,
+    pub accepted_answers: Vec<String>,
+    pub progress: Option<ItemScheduleState>,
+    pub attempt_count: i32,
+    pub correct_count: i32,
+    pub recent_attempts: Vec<AttemptHistoryRow>,
 }
 
 #[derive(Serialize)]
@@ -27,6 +77,9 @@ pub struct ReviewQueueItem {
     pub transliteration: String,
     pub english_meaning: String,
     pub next_review_at: String,
+    pub exercise_id: Option<String>,
+    pub exercise_type: Option<String>,
+    pub accepted_answers: Vec<String>,
 }
 
 #[tauri::command]
@@ -75,8 +128,8 @@ pub fn record_exercise_attempt(
 
         if let Some(item_id) = &input.learning_item_id {
             conn.execute(
-                "INSERT INTO learner_item_progress (learning_item_id, attempts, correct_attempts, incorrect_attempts, last_attempt_at, last_correct_at, ease_factor, interval_days, mastery_status, updated_at)
-                 VALUES (?1, 1, ?2, ?3, datetime('now'), CASE WHEN ?2 = 1 THEN datetime('now') ELSE NULL END, ?4, ?5, ?6, datetime('now'))
+                "INSERT INTO learner_item_progress (learning_item_id, attempts, correct_attempts, incorrect_attempts, last_attempt_at, last_correct_at, ease_factor, interval_days, repetitions, mastery_status, updated_at)
+                 VALUES (?1, 1, ?2, ?3, datetime('now'), CASE WHEN ?2 = 1 THEN datetime('now') ELSE NULL END, ?4, ?5, ?6, ?7, datetime('now'))
                  ON CONFLICT(learning_item_id) DO UPDATE SET
                    attempts = learner_item_progress.attempts + 1,
                    correct_attempts = learner_item_progress.correct_attempts + excluded.correct_attempts,
@@ -85,6 +138,7 @@ pub fn record_exercise_attempt(
                    last_correct_at = CASE WHEN excluded.correct_attempts = 1 THEN datetime('now') ELSE last_correct_at END,
                    ease_factor = excluded.ease_factor,
                    interval_days = excluded.interval_days,
+                   repetitions = excluded.repetitions,
                    mastery_status = excluded.mastery_status,
                    updated_at = datetime('now')",
                 (
@@ -93,6 +147,7 @@ pub fn record_exercise_attempt(
                     if input.is_correct { 0 } else { 1 },
                     input.ease_factor,
                     input.interval_days,
+                    input.repetitions,
                     &input.mastery_status,
                 ),
             )
@@ -131,14 +186,232 @@ pub fn complete_lesson(
         if exists > 0 {
             return Ok(());
         }
-        let la_id = Uuid::new_v4().to_string();
-        conn.execute(
-            "INSERT INTO lesson_attempts (id, lesson_id, started_at, completed_at, xp_earned)
-             VALUES (?1, ?2, datetime('now'), datetime('now'), ?3)",
-            (&la_id, &lesson_id, xp_earned),
-        )
-        .map_err(|e| e.to_string())?;
+        let updated = conn
+            .execute(
+                "UPDATE lesson_attempts SET completed_at = datetime('now'), xp_earned = ?2
+                 WHERE lesson_id = ?1 AND completed_at IS NULL",
+                (&lesson_id, xp_earned),
+            )
+            .map_err(|e| e.to_string())?;
+        if updated == 0 {
+            let la_id = Uuid::new_v4().to_string();
+            conn.execute(
+                "INSERT INTO lesson_attempts (id, lesson_id, started_at, completed_at, xp_earned)
+                 VALUES (?1, ?2, datetime('now'), datetime('now'), ?3)",
+                (&la_id, &lesson_id, xp_earned),
+            )
+            .map_err(|e| e.to_string())?;
+        }
         Ok(())
+    })
+}
+
+#[tauri::command]
+pub fn prepare_lesson(state: State<DbState>, lesson_id: String) -> Result<LessonResumeState, String> {
+    crate::db::with_conn(&state, |conn| {
+        let lesson_completed: i32 = conn
+            .query_row(
+                "SELECT COUNT(*) FROM lesson_attempts WHERE lesson_id = ?1 AND completed_at IS NOT NULL",
+                [&lesson_id],
+                |row| row.get(0),
+            )
+            .unwrap_or(0);
+
+        if lesson_completed == 0 {
+            let open: i32 = conn
+                .query_row(
+                    "SELECT COUNT(*) FROM lesson_attempts WHERE lesson_id = ?1 AND completed_at IS NULL",
+                    [&lesson_id],
+                    |row| row.get(0),
+                )
+                .unwrap_or(0);
+            if open == 0 {
+                let la_id = Uuid::new_v4().to_string();
+                conn.execute(
+                    "INSERT INTO lesson_attempts (id, lesson_id, started_at, xp_earned)
+                     VALUES (?1, ?2, datetime('now'), 0)",
+                    (&la_id, &lesson_id),
+                )
+                .map_err(|e| e.to_string())?;
+            }
+        }
+
+        let mut exercise_stmt = conn
+            .prepare(
+                "SELECT e.id, e.exercise_type, e.sort_order
+                 FROM exercise_definitions e
+                 WHERE e.lesson_id = ?1
+                 ORDER BY e.sort_order",
+            )
+            .map_err(|e| e.to_string())?;
+
+        let exercises: Vec<(String, String, i32)> = exercise_stmt
+            .query_map([&lesson_id], |row| {
+                Ok((row.get(0)?, row.get(1)?, row.get(2)?))
+            })
+            .map_err(|e| e.to_string())?
+            .collect::<Result<Vec<_>, _>>()
+            .map_err(|e| e.to_string())?;
+
+        let mut resume_index = exercises.len() as i32;
+        for (idx, (ex_id, _, _)) in exercises.iter().enumerate() {
+            let attempted: i32 = conn
+                .query_row(
+                    "SELECT COUNT(*) FROM exercise_attempts WHERE exercise_id = ?1",
+                    [ex_id],
+                    |row| row.get(0),
+                )
+                .unwrap_or(0);
+            if attempted == 0 {
+                resume_index = idx as i32;
+                break;
+            }
+        }
+
+        let mut attempt_stmt = conn
+            .prepare(
+                "SELECT ea.exercise_id, ed.exercise_type, ea.is_correct
+                 FROM exercise_attempts ea
+                 JOIN exercise_definitions ed ON ed.id = ea.exercise_id
+                 WHERE ed.lesson_id = ?1
+                 ORDER BY ea.attempted_at",
+            )
+            .map_err(|e| e.to_string())?;
+
+        let attempts = attempt_stmt
+            .query_map([&lesson_id], |row| {
+                Ok(LessonAttemptSnapshot {
+                    exercise_id: row.get(0)?,
+                    exercise_type: row.get(1)?,
+                    is_correct: row.get::<_, i32>(2)? == 1,
+                })
+            })
+            .map_err(|e| e.to_string())?
+            .collect::<Result<Vec<_>, _>>()
+            .map_err(|e| e.to_string())?;
+
+        Ok(LessonResumeState {
+            resume_index,
+            lesson_completed: lesson_completed > 0,
+            attempts,
+        })
+    })
+}
+
+#[tauri::command]
+pub fn get_item_schedule_state(
+    state: State<DbState>,
+    learning_item_id: String,
+) -> Result<ItemScheduleState, String> {
+    crate::db::with_conn(&state, |conn| {
+        Ok(
+            conn.query_row(
+                "SELECT ease_factor, interval_days, repetitions, mastery_status
+                 FROM learner_item_progress WHERE learning_item_id = ?1",
+                [&learning_item_id],
+                |row| {
+                    Ok(ItemScheduleState {
+                        ease_factor: row.get(0)?,
+                        interval_days: row.get(1)?,
+                        repetitions: row.get(2)?,
+                        mastery_status: row.get(3)?,
+                    })
+                },
+            )
+            .unwrap_or(ItemScheduleState {
+                ease_factor: 2.5,
+                interval_days: 0,
+                repetitions: 0,
+                mastery_status: "new".to_string(),
+            }),
+        )
+    })
+}
+
+fn parse_accepted_answers(raw: Option<String>) -> Vec<String> {
+    raw.and_then(|s| serde_json::from_str(&s).ok())
+        .unwrap_or_default()
+}
+
+#[tauri::command]
+pub fn get_learning_item_detail(
+    state: State<DbState>,
+    learning_item_id: String,
+) -> Result<LearningItemDetail, String> {
+    crate::db::with_conn(&state, |conn| {
+        let item = conn.query_row(
+            "SELECT id, kannada_text, transliteration, english_meaning, literal_translation, context_note, accepted_answers
+             FROM learning_items WHERE id = ?1",
+            [&learning_item_id],
+            |row| {
+                Ok((
+                    row.get::<_, String>(0)?,
+                    row.get::<_, String>(1)?,
+                    row.get::<_, String>(2)?,
+                    row.get::<_, String>(3)?,
+                    row.get::<_, Option<String>>(4)?,
+                    row.get::<_, Option<String>>(5)?,
+                    parse_accepted_answers(row.get(6)?),
+                ))
+            },
+        ).map_err(|e| e.to_string())?;
+
+        let progress = conn
+            .query_row(
+                "SELECT ease_factor, interval_days, repetitions, mastery_status, attempts, correct_attempts
+                 FROM learner_item_progress WHERE learning_item_id = ?1",
+                [&learning_item_id],
+                |row| {
+                    Ok((
+                        ItemScheduleState {
+                            ease_factor: row.get(0)?,
+                            interval_days: row.get(1)?,
+                            repetitions: row.get(2)?,
+                            mastery_status: row.get(3)?,
+                        },
+                        row.get::<_, i32>(4)?,
+                        row.get::<_, i32>(5)?,
+                    ))
+                },
+            )
+            .ok();
+
+        let mut hist_stmt = conn
+            .prepare(
+                "SELECT ed.exercise_type, ea.is_correct, ea.attempted_at
+                 FROM exercise_attempts ea
+                 JOIN exercise_definitions ed ON ed.id = ea.exercise_id
+                 WHERE ea.learning_item_id = ?1
+                 ORDER BY ea.attempted_at DESC
+                 LIMIT 12",
+            )
+            .map_err(|e| e.to_string())?;
+
+        let recent_attempts = hist_stmt
+            .query_map([&learning_item_id], |row| {
+                Ok(AttemptHistoryRow {
+                    exercise_type: row.get(0)?,
+                    is_correct: row.get::<_, i32>(1)? == 1,
+                    attempted_at: row.get(2)?,
+                })
+            })
+            .map_err(|e| e.to_string())?
+            .collect::<Result<Vec<_>, _>>()
+            .map_err(|e| e.to_string())?;
+
+        Ok(LearningItemDetail {
+            id: item.0,
+            kannada_text: item.1,
+            transliteration: item.2,
+            english_meaning: item.3,
+            literal_translation: item.4,
+            context_note: item.5,
+            accepted_answers: item.6,
+            progress: progress.as_ref().map(|p| p.0.clone()),
+            attempt_count: progress.as_ref().map(|p| p.1).unwrap_or(0),
+            correct_count: progress.as_ref().map(|p| p.2).unwrap_or(0),
+            recent_attempts,
+        })
     })
 }
 
@@ -147,7 +420,14 @@ pub fn get_review_queue(state: State<DbState>) -> Result<Vec<ReviewQueueItem>, S
     crate::db::with_conn(&state, |conn| {
         let mut stmt = conn
             .prepare(
-                "SELECT rs.learning_item_id, li.kannada_text, li.transliteration, li.english_meaning, rs.next_review_at
+                "SELECT rs.learning_item_id, li.kannada_text, li.transliteration, li.english_meaning, rs.next_review_at,
+                        (SELECT e.id FROM exercise_definitions e
+                           WHERE e.learning_item_id = rs.learning_item_id
+                           ORDER BY e.sort_order LIMIT 1),
+                        (SELECT e.exercise_type FROM exercise_definitions e
+                           WHERE e.learning_item_id = rs.learning_item_id
+                           ORDER BY e.sort_order LIMIT 1),
+                        li.accepted_answers
                  FROM review_schedule rs
                  JOIN learning_items li ON li.id = rs.learning_item_id
                  WHERE rs.next_review_at <= datetime('now')
@@ -164,6 +444,9 @@ pub fn get_review_queue(state: State<DbState>) -> Result<Vec<ReviewQueueItem>, S
                     transliteration: row.get(2)?,
                     english_meaning: row.get(3)?,
                     next_review_at: row.get(4)?,
+                    exercise_id: row.get(5)?,
+                    exercise_type: row.get(6)?,
+                    accepted_answers: parse_accepted_answers(row.get(7)?),
                 })
             })
             .map_err(|e| e.to_string())?;

@@ -53,6 +53,48 @@ export interface LessonDetail {
   exercises: ExerciseDto[];
 }
 
+export interface LessonResumeState {
+  resumeIndex: number;
+  lessonCompleted: boolean;
+  attempts: { exerciseId: string; exerciseType: string; isCorrect: boolean }[];
+}
+
+export interface ItemScheduleState {
+  easeFactor: number;
+  intervalDays: number;
+  repetitions: number;
+  masteryStatus: string;
+}
+
+export interface ReviewQueueItem {
+  learningItemId: string;
+  kannadaText: string;
+  transliteration: string;
+  englishMeaning: string;
+  nextReviewAt: string;
+  exerciseId?: string;
+  exerciseType?: string;
+  acceptedAnswers: string[];
+}
+
+export interface LearningItemDetail {
+  id: string;
+  kannadaText: string;
+  transliteration: string;
+  englishMeaning: string;
+  literalTranslation?: string;
+  contextNote?: string;
+  acceptedAnswers: string[];
+  progress?: ItemScheduleState;
+  attemptCount: number;
+  correctCount: number;
+  recentAttempts: {
+    exerciseType: string;
+    isCorrect: boolean;
+    attemptedAt: string;
+  }[];
+}
+
 export const tauriApi = {
   initApp: () => invoke<{ contentImported: boolean }>("init_app"),
   getLearnerProfile: () =>
@@ -69,11 +111,17 @@ export const tauriApi = {
     invoke<LessonSummary[]>("list_lessons_for_level", { levelId }),
   getLessonDetail: (lessonId: string) =>
     invoke<LessonDetail>("get_lesson_detail", { lessonId }),
+  prepareLesson: (lessonId: string) =>
+    invoke<LessonResumeState>("prepare_lesson", { lessonId }),
+  getItemScheduleState: (learningItemId: string) =>
+    invoke<ItemScheduleState>("get_item_schedule_state", { learningItemId }),
+  getLearningItemDetail: (learningItemId: string) =>
+    invoke<LearningItemDetail>("get_learning_item_detail", { learningItemId }),
   recordExerciseAttempt: (input: Record<string, unknown>) =>
     invoke("record_exercise_attempt", { input }),
   completeLesson: (lessonId: string, xpEarned: number) =>
     invoke("complete_lesson", { lessonId, xpEarned }),
-  getReviewQueue: () => invoke<unknown[]>("get_review_queue"),
+  getReviewQueue: () => invoke<ReviewQueueItem[]>("get_review_queue"),
   getProgressStats: () => invoke<Record<string, number>>("get_progress_stats"),
   exportLearningBackup: (destPath: string) =>
     invoke("export_learning_backup", { destPath }),

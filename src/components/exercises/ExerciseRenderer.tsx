@@ -6,6 +6,7 @@ import {
   evaluateWordOrder,
   normalizeFreeText,
 } from "../../domain/exercises/evaluate";
+import { ExerciseContinueBar } from "./ExerciseContinueBar";
 
 export interface ExerciseResult {
   isCorrect: boolean;
@@ -16,6 +17,23 @@ export interface ExerciseResult {
 interface Props {
   exercise: ExerciseDto;
   onComplete: (result: ExerciseResult) => void;
+}
+
+interface ConversationChoice {
+  label: string;
+  hint?: string;
+  correct: boolean;
+}
+
+interface ConversationStep {
+  narration?: string;
+  partner?: {
+    kannada: string;
+    transliteration: string;
+    english: string;
+  };
+  choices?: ConversationChoice[];
+  explanation?: string;
 }
 
 function PhraseCard({ item }: { item: LearningItemDto }) {
@@ -39,25 +57,49 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
     () => (exercise.prompt.tiles as string[] | undefined)?.slice() ?? [],
   );
   const [built, setBuilt] = useState<string[]>([]);
-  const [feedback, setFeedback] = useState<string | null>(null);
+  const [pending, setPending] = useState<{
+    result: ExerciseResult;
+    message: string;
+    explanation?: string;
+  } | null>(null);
 
   const choices = useMemo(
     () => (exercise.prompt.choices as string[] | undefined) ?? [],
     [exercise.prompt.choices],
   );
 
+  function queueResult(
+    result: ExerciseResult,
+    message: string,
+    explanation?: string,
+  ) {
+    setPending({ result, message, explanation });
+  }
+
   function submitMcq(correctIndex: number) {
     if (selected === null) return;
     const isCorrect = evaluateMultipleChoice(selected, correctIndex);
-    setFeedback(isCorrect ? "Correct" : "Try reviewing the phrase.");
-    onComplete({ isCorrect, response: { selected } });
+    queueResult(
+      { isCorrect, response: { selected } },
+      isCorrect ? "Correct" : "Not quite — check the meaning again.",
+      isCorrect ? undefined : "Review the phrase card before you continue.",
+    );
   }
 
-  if (!item && exercise.exerciseType !== "vocabulary_flashcard") {
+  if (!item && exercise.exerciseType !== "vocabulary_flashcard" && exercise.exerciseType !== "scripted_conversation") {
     return <p className="text-stone-600">Exercise is missing phrase data.</p>;
   }
 
   const instruction = String(exercise.prompt.instruction ?? "Complete the exercise.");
+
+  const continueBar = pending ? (
+    <ExerciseContinueBar
+      feedback={pending.message}
+      isCorrect={pending.result.isCorrect}
+      explanation={pending.explanation}
+      onContinue={() => onComplete(pending.result)}
+    />
+  ) : null;
 
   switch (exercise.exerciseType) {
     case "vocabulary_flashcard":
@@ -103,6 +145,7 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
               <button
                 key={choice}
                 type="button"
+                disabled={!!pending}
                 className={`rounded-xl border px-4 py-3 text-left ${
                   selected === index ? "border-amber-500 bg-amber-50" : "border-stone-200"
                 }`}
@@ -115,14 +158,14 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
           <button
             type="button"
             className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
-            disabled={selected === null}
+            disabled={selected === null || !!pending}
             onClick={() =>
               submitMcq(Number(exercise.prompt.correct_index ?? exercise.prompt.correctIndex))
             }
           >
             Check
           </button>
-          {feedback ? <p className="text-sm text-stone-600">{feedback}</p> : null}
+          {continueBar}
         </div>
       );
 
@@ -139,10 +182,12 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
             placeholder="Type Kannada or transliteration"
             autoCapitalize="off"
             autoCorrect="off"
+            disabled={!!pending}
           />
           <button
             type="button"
-            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white"
+            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
+            disabled={!!pending}
             onClick={() => {
               const isCorrect = evaluateKannadaRecall(textAnswer, {
                 kannadaText: item.kannadaText,
@@ -150,13 +195,18 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
                 englishMeaning: item.englishMeaning,
                 acceptedAnswers: item.acceptedAnswers,
               });
-              setFeedback(isCorrect ? "Correct" : `Expected something like “${item.transliteration}”.`);
-              onComplete({ isCorrect, response: { textAnswer } });
+              queueResult(
+                { isCorrect, response: { textAnswer } },
+                isCorrect ? "Correct" : "Keep practising this one.",
+                isCorrect
+                  ? undefined
+                  : `Expected something like “${item.transliteration}”.`,
+              );
             }}
           >
             Check
           </button>
-          {feedback ? <p className="text-sm text-stone-600">{feedback}</p> : null}
+          {continueBar}
         </div>
       );
 
@@ -173,19 +223,25 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
             className="w-full rounded-xl border border-stone-300 px-4 py-3"
             value={textAnswer}
             onChange={(e) => setTextAnswer(e.target.value)}
+            disabled={!!pending}
           />
           <button
             type="button"
-            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white"
+            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
+            disabled={!!pending}
             onClick={() => {
               const isCorrect = [item.transliteration, ...accepted].some(
                 (v) => normalizeFreeText(textAnswer) === normalizeFreeText(v),
               );
-              onComplete({ isCorrect, response: { textAnswer } });
+              queueResult(
+                { isCorrect, response: { textAnswer } },
+                isCorrect ? "Correct" : "That blank needs another try.",
+              );
             }}
           >
             Check
           </button>
+          {continueBar}
         </div>
       );
     }
@@ -208,6 +264,7 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
               <button
                 key={tile}
                 type="button"
+                disabled={!!pending}
                 className="rounded-full bg-stone-100 px-4 py-2 text-sm"
                 onClick={() => {
                   setBuilt((prev) => [...prev, tile]);
@@ -220,14 +277,20 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
           </div>
           <button
             type="button"
-            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white"
+            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
+            disabled={!!pending || built.length === 0}
             onClick={() => {
               const isCorrect = evaluateWordOrder(built, solution);
-              onComplete({ isCorrect, response: { built } });
+              queueResult(
+                { isCorrect, response: { built } },
+                isCorrect ? "Correct order" : "Word order is not quite right.",
+                isCorrect ? undefined : `Solution: ${solution.join(" ")}`,
+              );
             }}
           >
             Check order
           </button>
+          {continueBar}
         </div>
       );
     }
@@ -266,9 +329,114 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
         </div>
       );
 
+    case "scripted_conversation":
+      return (
+        <ScriptedConversation
+          instruction={instruction}
+          steps={(exercise.prompt.steps as ConversationStep[] | undefined) ?? []}
+          onComplete={onComplete}
+        />
+      );
+
     default:
       return (
         <p className="text-stone-600">Unsupported exercise type: {exercise.exerciseType}</p>
       );
   }
+}
+
+function ScriptedConversation({
+  instruction,
+  steps,
+  onComplete,
+}: {
+  instruction: string;
+  steps: ConversationStep[];
+  onComplete: (result: ExerciseResult) => void;
+}) {
+  const [stepIndex, setStepIndex] = useState(0);
+  const [wrongChoice, setWrongChoice] = useState<string | null>(null);
+  const [hadWrong, setHadWrong] = useState(false);
+
+  const step = steps[stepIndex];
+  if (!step) {
+    return <p className="text-stone-600">Conversation has no steps.</p>;
+  }
+
+  function advance() {
+    setWrongChoice(null);
+    if (stepIndex + 1 >= steps.length) {
+      onComplete({
+        isCorrect: !hadWrong,
+        response: { stepsCompleted: steps.length, hadWrong },
+      });
+      return;
+    }
+    setStepIndex((i) => i + 1);
+  }
+
+  if (step.partner) {
+    return (
+      <div className="space-y-4">
+        <p className="text-stone-700">{instruction}</p>
+        {step.narration ? (
+          <p className="text-sm font-medium text-stone-500">{step.narration}</p>
+        ) : null}
+        <div className="rounded-2xl bg-white p-5 ring-1 ring-stone-200">
+          <p className="text-sm text-stone-500">Partner</p>
+          <p className="text-3xl font-semibold kannada">{step.partner.kannada}</p>
+          <p className="mt-2 text-lg text-amber-800">{step.partner.transliteration}</p>
+          <p className="mt-2 text-stone-700">{step.partner.english}</p>
+        </div>
+        <button
+          type="button"
+          className="w-full rounded-xl bg-stone-900 py-3 font-semibold text-white"
+          onClick={advance}
+        >
+          Continue
+        </button>
+      </div>
+    );
+  }
+
+  const choiceStep = step;
+  return (
+    <div className="space-y-4">
+      <p className="text-stone-700">{instruction}</p>
+      {choiceStep.narration ? (
+        <p className="text-sm font-medium text-stone-500">{choiceStep.narration}</p>
+      ) : null}
+      <div className="grid gap-2">
+        {(choiceStep.choices ?? []).map((choice) => (
+          <button
+            key={choice.label}
+            type="button"
+            className={`rounded-xl border px-4 py-3 text-left ${
+              wrongChoice === choice.label
+                ? "border-red-300 bg-red-50"
+                : "border-stone-200"
+            }`}
+            onClick={() => {
+              if (choice.correct) {
+                advance();
+              } else {
+                setHadWrong(true);
+                setWrongChoice(choice.label);
+              }
+            }}
+          >
+            <span className="font-medium">{choice.label}</span>
+            {choice.hint ? (
+              <span className="mt-1 block text-sm text-stone-500">{choice.hint}</span>
+            ) : null}
+          </button>
+        ))}
+      </div>
+      {wrongChoice && choiceStep.explanation ? (
+        <p className="rounded-xl bg-amber-50 p-3 text-sm text-stone-700">
+          {choiceStep.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
 }

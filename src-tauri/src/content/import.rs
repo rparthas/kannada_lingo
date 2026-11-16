@@ -3,6 +3,13 @@ use serde::Deserialize;
 
 const BUNDLED_CURRICULUM: &str = include_str!("../../../content/curriculum/beginner-path.json");
 
+pub fn bundled_content_version() -> i32 {
+    serde_json::from_str::<serde_json::Value>(BUNDLED_CURRICULUM)
+        .ok()
+        .and_then(|v| v.get("content_version").and_then(|c| c.as_i64()))
+        .unwrap_or(1) as i32
+}
+
 #[derive(Debug, Deserialize)]
 struct CurriculumBundle {
     content_version: i32,

@@ -1,8 +1,9 @@
 use rusqlite::Connection;
 
-pub const LATEST_VERSION: i32 = 1;
+pub const LATEST_VERSION: i32 = 2;
 
 const MIGRATION_001: &str = include_str!("../../migrations/001_initial.sql");
+const MIGRATION_002: &str = include_str!("../../migrations/002_item_repetitions.sql");
 
 pub fn run(conn: &Connection) -> Result<(), String> {
     let current: i32 = conn
@@ -27,6 +28,16 @@ pub fn run(conn: &Connection) -> Result<(), String> {
             .map_err(|e| format!("migration 001 failed: {e}"))?;
         conn.execute(
             "INSERT OR IGNORE INTO schema_migrations (version) VALUES (1)",
+            [],
+        )
+        .map_err(|e| e.to_string())?;
+    }
+
+    if current < 2 {
+        conn.execute_batch(MIGRATION_002)
+            .map_err(|e| format!("migration 002 failed: {e}"))?;
+        conn.execute(
+            "INSERT OR IGNORE INTO schema_migrations (version) VALUES (2)",
             [],
         )
         .map_err(|e| e.to_string())?;

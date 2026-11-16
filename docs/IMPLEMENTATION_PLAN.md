@@ -6,7 +6,7 @@
 |-------|--------|-------|
 | Phase 0 — Technical feasibility | **Verified (Simulator)** | Xcode 27.2, rustup iOS targets, sim build + launch; see `docs/PHASE0_VERIFICATION.md`. Physical device + audio/mic/iCloud checks remain on checklist |
 | Phase 1 — Application foundation | Complete | Project scaffold, navigation, SQLite, migrations, content import (verified: 7/7 JS tests, tsc clean, 2/2 Rust tests) |
-| Phase 2 — Learning engine | In progress | Exercise framework, evaluation, lesson player skeleton |
+| Phase 2 — Learning engine | **Complete** | Lesson player with resume + review mode, all exercise types incl. scripted conversations, XP domain, phrase history, practice drills, SM-2 state from DB (`repetitions` migration 002) |
 | Phase 3 — Audio and content | Stub | Platform adapter interface; recording deferred to device spike |
 | Phase 4 — Revision and retention | In progress | SM-2 scheduler (unit-tested) |
 | Phase 5 — AI personalization | Stub | Provider interface only |

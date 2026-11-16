@@ -9,7 +9,9 @@ Foundation and learning loop work on desktop Tauri. **iOS Phase 0**: run `npm ru
 ### Included now
 
 - Bottom navigation (Home, Learn, Practice, Progress)
-- Beginner curriculum sample (10 phrases, 2 lessons, multiple exercise types)
+- Beginner curriculum sample (10 phrases, 2 lessons, exercise types including scripted conversations)
+- Lesson player with resume after interrupt, review mode, and immediate feedback
+- Phrase detail screen with attempt history; practice tab recall drills
 - SQLite schema + migrations + bundled content import
 - SM-2-inspired review scheduling (unit tested)
 - Answer evaluation with accepted alternatives

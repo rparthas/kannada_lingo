@@ -118,8 +118,19 @@ pub fn get_home_summary(state: State<DbState>) -> Result<HomeSummary, String> {
             )
             .unwrap_or(0);
 
-        let next_lesson = conn
+        let in_progress = conn
             .query_row(
+                "SELECT l.id, l.title FROM lesson_attempts la
+                 JOIN lessons l ON l.id = la.lesson_id
+                 WHERE la.completed_at IS NULL
+                 ORDER BY la.started_at DESC LIMIT 1",
+                [],
+                |row| Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?)),
+            )
+            .ok();
+
+        let next_lesson = in_progress.or_else(|| {
+            conn.query_row(
                 "SELECT l.id, l.title FROM lessons l
                  LEFT JOIN lesson_attempts la ON la.lesson_id = l.id AND la.completed_at IS NOT NULL
                  WHERE la.id IS NULL
@@ -127,7 +138,8 @@ pub fn get_home_summary(state: State<DbState>) -> Result<HomeSummary, String> {
                 [],
                 |row| Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?)),
             )
-            .ok();
+            .ok()
+        });
 
         Ok(HomeSummary {
             streak_days,

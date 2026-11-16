@@ -1,0 +1,1 @@
+ALTER TABLE learner_item_progress ADD COLUMN repetitions INTEGER NOT NULL DEFAULT 0;

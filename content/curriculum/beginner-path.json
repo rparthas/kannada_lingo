@@ -1,5 +1,5 @@
 {
-  "content_version": 1,
+  "content_version": 2,
   "course": {
     "id": "course-kannada-quest",
     "title": "Kannada Quest",
@@ -228,6 +228,51 @@
       }
     },
     {
+      "id": "ex-greet-convo-1",
+      "lesson_id": "lesson-greetings-1",
+      "exercise_type": "scripted_conversation",
+      "sort_order": 6,
+      "prompt": {
+        "instruction": "Short exchange at a neighbourhood shop.",
+        "steps": [
+          {
+            "narration": "The shopkeeper greets you.",
+            "partner": {
+              "kannada": "ನಮಸ್ಕಾರ",
+              "transliteration": "namaskāra",
+              "english": "Hello"
+            }
+          },
+          {
+            "narration": "Reply with the same polite greeting.",
+            "choices": [
+              { "label": "namaskāra", "hint": "Hello (formal)", "correct": true },
+              { "label": "illa", "hint": "No", "correct": false },
+              { "label": "dhanyavāda", "hint": "Thank you", "correct": false }
+            ],
+            "explanation": "Mirror a greeting with namaskāra before you ask for anything."
+          },
+          {
+            "narration": "They ask how you are.",
+            "partner": {
+              "kannada": "ಹೇಗಿದ್ದೀರಾ?",
+              "transliteration": "hēgiddīrā?",
+              "english": "How are you?"
+            }
+          },
+          {
+            "narration": "Choose a natural reply.",
+            "choices": [
+              { "label": "cennāgi iddīni", "hint": "I am fine", "correct": true },
+              { "label": "sari", "hint": "Okay", "correct": false },
+              { "label": "āṭō biḍi", "hint": "Stop the auto", "correct": false }
+            ],
+            "explanation": "cennāgi iddīni is the usual polite answer."
+          }
+        ]
+      }
+    },
+    {
       "id": "ex-auto-flash-1",
       "lesson_id": "lesson-auto-1",
       "learning_item_id": "item-auto-bidu",
@@ -274,6 +319,51 @@
       "exercise_type": "listen_repeat",
       "sort_order": 5,
       "prompt": { "instruction": "Listen and repeat aloud. Mark how you did." }
+    },
+    {
+      "id": "ex-auto-convo-1",
+      "lesson_id": "lesson-auto-1",
+      "exercise_type": "scripted_conversation",
+      "sort_order": 6,
+      "prompt": {
+        "instruction": "You're in an auto — pick what to say next.",
+        "steps": [
+          {
+            "narration": "The driver quotes a flat fare.",
+            "partner": {
+              "kannada": "ಐವತ್ತು ರೂಪಾಯಿ",
+              "transliteration": "aivattu rūpāyi",
+              "english": "Fifty rupees"
+            }
+          },
+          {
+            "narration": "Ask to use the meter instead.",
+            "choices": [
+              { "label": "mīṭar prakāra", "hint": "By the meter", "correct": true },
+              { "label": "illa", "hint": "No", "correct": false },
+              { "label": "namaskāra", "hint": "Hello", "correct": false }
+            ],
+            "explanation": "mīṭar prakāra politely asks for meter fare."
+          },
+          {
+            "narration": "You're near your stop.",
+            "partner": {
+              "kannada": "ಎಲ್ಲಿ ಇಳಿಯಬೇಕು?",
+              "transliteration": "elli iḷiyabēku?",
+              "english": "Where should you get down?"
+            }
+          },
+          {
+            "narration": "Tell the driver to stop here.",
+            "choices": [
+              { "label": "āṭō biḍi", "hint": "Stop the auto here", "correct": true },
+              { "label": "ellige hōgabēku?", "hint": "Where to go?", "correct": false },
+              { "label": "aidu nimisha bēku", "hint": "Five minutes please", "correct": false }
+            ],
+            "explanation": "āṭō biḍi is what locals say to stop the ride."
+          }
+        ]
+      }
     }
   ]
 }

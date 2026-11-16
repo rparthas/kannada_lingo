@@ -7,6 +7,7 @@ import { HomeScreen } from "../features/home/HomeScreen";
 import { LessonPlayerScreen } from "../features/lessons/LessonPlayerScreen";
 import { OnboardingScreen } from "../features/onboarding/OnboardingScreen";
 import { PracticeScreen } from "../features/practice/PracticeScreen";
+import { PhraseDetailScreen } from "../features/phrases/PhraseDetailScreen";
 import { ProgressScreen } from "../features/progress/ProgressScreen";
 import { tauriApi } from "../services/api/tauri";
 
@@ -19,6 +20,7 @@ function MainRoutes() {
       <Route path="/practice" element={<PracticeScreen />} />
       <Route path="/progress" element={<ProgressScreen />} />
       <Route path="/lesson/:lessonId" element={<LessonPlayerScreen />} />
+      <Route path="/phrase/:itemId" element={<PhraseDetailScreen />} />
       <Route path="/settings" element={<SettingsScreen />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
