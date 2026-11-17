@@ -8,9 +8,9 @@
 | Phase 1 — Application foundation | Complete | Project scaffold, navigation, SQLite, migrations, content import (verified: 7/7 JS tests, tsc clean, 2/2 Rust tests) |
 | Phase 2 — Learning engine | **Complete** | Lesson player with resume + review mode, all exercise types incl. scripted conversations, XP domain, phrase history, practice drills, SM-2 state from DB (`repetitions` migration 002) |
 | Phase 3 — Audio and content | **Complete** | Bundled WAV assets + `audio_assets` import (v3), `WebAudioService` (play/pause/replay, normal/slow, recording), phrase + exercise UI, `npm run content:validate` |
-| Phase 4 — Revision and retention | In progress | SM-2 scheduler (unit-tested) |
-| Phase 5 — AI personalization | Stub | Provider interface only |
-| Phase 6 — Backup / release | In progress | Export/import commands + manifest validation |
+| Phase 4 — Revision and retention | **Complete** | Local-time scheduling, consecutive streak, multi-type practice w/ self-grades, phrase review schedule UI, daily goal settings |
+| Phase 5 — AI personalization | **Complete (mock)** | `MockAIContentProvider` + phrase grammar insight UI; swap via `VITE_AI_PROVIDER=unconfigured` for production boundary |
+| Phase 6 — Backup / release | **Complete (app)** | Schema-safe restore, confirm UX, export feedback, restore roundtrip tests; device signing / store submission remain manual |
 
 ## Toolchain (recorded)
 

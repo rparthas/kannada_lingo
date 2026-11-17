@@ -18,7 +18,7 @@ Foundation and learning loop work on desktop Tauri. **iOS Phase 0**: run `npm ru
 - Backup export/import (ZIP, manifest, SHA-256, integrity check)
 - Bundled phrase audio (placeholder tones — swap for human recordings), slow/normal playback, learner recording playback
 - Curriculum content validation (`npm run content:validate`)
-- AI audio **interface** for Phase 5 (supplementary AI asset on `item-sari`)
+- Phase 5 mock AI grammar insight on phrase detail (`VITE_AI_PROVIDER=unconfigured` for production stub)
 
 ## Quick start
 
