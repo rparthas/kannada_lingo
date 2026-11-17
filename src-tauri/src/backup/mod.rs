@@ -11,6 +11,25 @@ use zip::ZipWriter;
 
 pub const BACKUP_FORMAT_VERSION: &str = "1.0.0";
 
+pub fn assert_restore_compatible(
+    manifest: &BackupManifest,
+    current_schema_version: i32,
+) -> Result<(), String> {
+    if manifest.database_schema_version > current_schema_version {
+        return Err(format!(
+            "backup schema {} is newer than this app ({}). Update the app before restoring.",
+            manifest.database_schema_version, current_schema_version
+        ));
+    }
+    if manifest.database_schema_version < current_schema_version {
+        eprintln!(
+            "restoring older schema {} — migrations will upgrade on next launch",
+            manifest.database_schema_version
+        );
+    }
+    Ok(())
+}
+
 #[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct BackupManifest {
@@ -166,8 +185,10 @@ pub fn restore_backup_package(
     zip_path: &Path,
     live_db_path: &Path,
     safety_backup: &Path,
+    current_schema_version: i32,
 ) -> Result<BackupManifest, String> {
     let manifest = validate_backup_package(zip_path)?;
+    assert_restore_compatible(&manifest, current_schema_version)?;
 
     if live_db_path.exists() {
         snapshot_database(live_db_path, safety_backup)?;
@@ -212,6 +233,64 @@ pub fn safety_backup_path(db_path: &Path) -> PathBuf {
 mod tests {
     use super::*;
     use rusqlite::Connection;
+
+    #[test]
+    fn restore_replaces_database() {
+        let dir = std::env::temp_dir().join(format!("kq-restore-{}", Uuid::new_v4()));
+        fs::create_dir_all(&dir).unwrap();
+        let live_db = dir.join("learner.sqlite");
+        let zip_path = dir.join("backup.zip");
+        let safety = safety_backup_path(&live_db);
+
+        {
+            let conn = Connection::open(&live_db).unwrap();
+            crate::db::migrations::run(&conn).unwrap();
+            conn.execute(
+                "UPDATE learner_profile SET display_name = 'before'",
+                [],
+            )
+            .unwrap();
+        }
+
+        export_backup_package(&live_db, &zip_path, 2, "0.1.0", 1).unwrap();
+
+        {
+            let conn = Connection::open(&live_db).unwrap();
+            conn.execute(
+                "UPDATE learner_profile SET display_name = 'after'",
+                [],
+            )
+            .unwrap();
+        }
+
+        restore_backup_package(&zip_path, &live_db, &safety, 2).unwrap();
+
+        let name: String = Connection::open(&live_db)
+            .unwrap()
+            .query_row(
+                "SELECT display_name FROM learner_profile WHERE id = 'default'",
+                [],
+                |row| row.get(0),
+            )
+            .unwrap();
+        assert_eq!(name, "before");
+        let _ = fs::remove_dir_all(dir);
+    }
+
+    #[test]
+    fn rejects_newer_schema_backup() {
+        let dir = std::env::temp_dir().join(format!("kq-schema-{}", Uuid::new_v4()));
+        fs::create_dir_all(&dir).unwrap();
+        let db_path = dir.join("learner.sqlite");
+        let zip_path = dir.join("backup.zip");
+        {
+            let conn = Connection::open(&db_path).unwrap();
+            crate::db::migrations::run(&conn).unwrap();
+        }
+        let manifest = export_backup_package(&db_path, &zip_path, 99, "0.1.0", 1).unwrap();
+        assert!(assert_restore_compatible(&manifest, 2).is_err());
+        let _ = fs::remove_dir_all(dir);
+    }
 
     #[test]
     fn export_and_validate_roundtrip() {

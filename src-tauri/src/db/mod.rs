@@ -1,11 +1,12 @@
 pub mod migrations;
 
 use rusqlite::{Connection, OptionalExtension};
-use std::path::Path;
+use std::path::{Path, PathBuf};
 use std::sync::Mutex;
 
 pub struct DbState {
     pub conn: Mutex<Connection>,
+    pub path: PathBuf,
 }
 
 impl DbState {
@@ -13,13 +14,27 @@ impl DbState {
         if let Some(parent) = path.parent() {
             std::fs::create_dir_all(parent).map_err(|e| e.to_string())?;
         }
+        let conn = Self::connect_and_migrate(path)?;
+        Ok(Self {
+            conn: Mutex::new(conn),
+            path: path.to_path_buf(),
+        })
+    }
+
+    fn connect_and_migrate(path: &Path) -> Result<Connection, String> {
         let conn = Connection::open(path).map_err(|e| e.to_string())?;
         conn.execute_batch("PRAGMA foreign_keys = ON;")
             .map_err(|e| e.to_string())?;
         migrations::run(&conn)?;
-        Ok(Self {
-            conn: Mutex::new(conn),
-        })
+        Ok(conn)
+    }
+
+    /// Re-open the database file from disk (required after external restore over live path).
+    pub fn reopen(&self) -> Result<(), String> {
+        let conn = Self::connect_and_migrate(&self.path)?;
+        let mut guard = self.conn.lock().map_err(|e| e.to_string())?;
+        *guard = conn;
+        Ok(())
     }
 
     pub fn schema_version(&self) -> Result<i32, String> {

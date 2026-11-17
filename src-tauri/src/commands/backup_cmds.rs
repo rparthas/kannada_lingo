@@ -65,16 +65,25 @@ pub fn export_learning_backup(
 
 #[tauri::command]
 pub fn validate_learning_backup(path: String) -> Result<BackupManifest, String> {
-    validate_backup_package(&PathBuf::from(path))
+    let manifest = validate_backup_package(&PathBuf::from(path))?;
+    crate::backup::assert_restore_compatible(
+        &manifest,
+        crate::db::migrations::LATEST_VERSION,
+    )?;
+    Ok(manifest)
 }
 
 #[tauri::command]
 pub fn restore_learning_backup(
     app: tauri::AppHandle,
+    state: State<DbState>,
     path: String,
 ) -> Result<BackupManifest, String> {
     let live = db_path(&app)?;
     let safety = safety_backup_path(&live);
-    let manifest = restore_backup_package(&PathBuf::from(path), &live, &safety)?;
+    let schema_version = crate::db::migrations::LATEST_VERSION;
+    let manifest =
+        restore_backup_package(&PathBuf::from(path), &live, &safety, schema_version)?;
+    state.reopen()?;
     Ok(manifest)
 }
