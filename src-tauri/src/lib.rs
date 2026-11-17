@@ -26,6 +26,7 @@ pub fn run() {
             commands::init_app,
             commands::complete_onboarding,
             commands::get_learner_profile,
+            commands::update_learner_profile,
             commands::get_home_summary,
             commands::list_levels,
             commands::list_lessons_for_level,

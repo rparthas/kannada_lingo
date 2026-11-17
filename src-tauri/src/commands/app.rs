@@ -57,6 +57,27 @@ pub fn complete_onboarding(state: State<DbState>, display_name: Option<String>) 
 }
 
 #[tauri::command]
+pub fn update_learner_profile(
+    state: State<DbState>,
+    daily_goal_xp: Option<i32>,
+) -> Result<(), String> {
+    if let Some(goal) = daily_goal_xp {
+        if !(10..=500).contains(&goal) {
+            return Err("daily goal must be between 10 and 500 XP".to_string());
+        }
+        crate::db::with_conn(&state, |conn| {
+            conn.execute(
+                "UPDATE learner_profile SET daily_goal_xp = ?1, updated_at = datetime('now') WHERE id = 'default'",
+                [goal],
+            )
+            .map_err(|e| e.to_string())?;
+            Ok(())
+        })?;
+    }
+    Ok(())
+}
+
+#[tauri::command]
 pub fn get_learner_profile(state: State<DbState>) -> Result<serde_json::Value, String> {
     crate::db::with_conn(&state, |conn| {
         conn.query_row(

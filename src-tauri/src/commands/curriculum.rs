@@ -67,6 +67,38 @@ pub struct LessonDetail {
     pub exercises: Vec<ExerciseDto>,
 }
 
+/// Consecutive calendar days with daily XP goal met, ending today if met or yesterday otherwise.
+fn consecutive_goal_streak(conn: &rusqlite::Connection) -> Result<i32, String> {
+    let today_met: i32 = conn
+        .query_row(
+            "SELECT COALESCE(goal_met, 0) FROM daily_activity WHERE activity_date = date('now', 'localtime')",
+            [],
+            |row| row.get(0),
+        )
+        .unwrap_or(0);
+    let mut offset = if today_met == 1 { 0 } else { 1 };
+    let mut streak = 0i32;
+    loop {
+        let met: i32 = conn
+            .query_row(
+                "SELECT COALESCE(goal_met, 0) FROM daily_activity
+                 WHERE activity_date = date('now', '-' || ?1 || ' days', 'localtime')",
+                [offset],
+                |row| row.get(0),
+            )
+            .unwrap_or(0);
+        if met == 0 {
+            break;
+        }
+        streak += 1;
+        offset += 1;
+        if offset > 400 {
+            break;
+        }
+    }
+    Ok(streak)
+}
+
 fn parse_accepted_answers(raw: Option<String>) -> Vec<String> {
     raw.and_then(|s| serde_json::from_str(&s).ok()).unwrap_or_default()
 }
@@ -104,19 +136,13 @@ pub fn get_home_summary(state: State<DbState>) -> Result<HomeSummary, String> {
 
         let due_reviews: i32 = conn
             .query_row(
-                "SELECT COUNT(*) FROM review_schedule WHERE next_review_at <= datetime('now')",
+                "SELECT COUNT(*) FROM review_schedule WHERE next_review_at <= datetime('now', 'localtime')",
                 [],
                 |row| row.get(0),
             )
             .unwrap_or(0);
 
-        let streak_days: i32 = conn
-            .query_row(
-                "SELECT COUNT(*) FROM daily_activity WHERE goal_met = 1 AND activity_date >= date('now', '-30 days')",
-                [],
-                |row| row.get(0),
-            )
-            .unwrap_or(0);
+        let streak_days = consecutive_goal_streak(conn)?;
 
         let in_progress = conn
             .query_row(

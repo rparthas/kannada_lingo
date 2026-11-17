@@ -1,5 +1,4 @@
 use crate::db::DbState;
-use chrono::{Duration, Utc};
 use serde::{Deserialize, Serialize};
 use tauri::State;
 use uuid::Uuid;
@@ -64,6 +63,7 @@ pub struct LearningItemDetail {
     pub context_note: Option<String>,
     pub accepted_answers: Vec<String>,
     pub progress: Option<ItemScheduleState>,
+    pub next_review_at: Option<String>,
     pub attempt_count: i32,
     pub correct_count: i32,
     pub recent_attempts: Vec<AttemptHistoryRow>,
@@ -79,6 +79,7 @@ pub struct ReviewQueueItem {
     pub next_review_at: String,
     pub exercise_id: Option<String>,
     pub exercise_type: Option<String>,
+    pub exercise_prompt: Option<serde_json::Value>,
     pub accepted_answers: Vec<String>,
 }
 
@@ -128,8 +129,8 @@ pub fn record_exercise_attempt(
 
         if let Some(item_id) = &input.learning_item_id {
             conn.execute(
-                "INSERT INTO learner_item_progress (learning_item_id, attempts, correct_attempts, incorrect_attempts, last_attempt_at, last_correct_at, ease_factor, interval_days, repetitions, mastery_status, updated_at)
-                 VALUES (?1, 1, ?2, ?3, datetime('now'), CASE WHEN ?2 = 1 THEN datetime('now') ELSE NULL END, ?4, ?5, ?6, ?7, datetime('now'))
+                "INSERT INTO learner_item_progress (learning_item_id, attempts, correct_attempts, incorrect_attempts, last_attempt_at, last_correct_at, ease_factor, interval_days, repetitions, mastery_status, next_review_at, updated_at)
+                 VALUES (?1, 1, ?2, ?3, datetime('now'), CASE WHEN ?2 = 1 THEN datetime('now') ELSE NULL END, ?4, ?5, ?6, ?7, datetime('now', 'localtime', '+' || ?5 || ' days'), datetime('now'))
                  ON CONFLICT(learning_item_id) DO UPDATE SET
                    attempts = learner_item_progress.attempts + 1,
                    correct_attempts = learner_item_progress.correct_attempts + excluded.correct_attempts,
@@ -140,6 +141,7 @@ pub fn record_exercise_attempt(
                    interval_days = excluded.interval_days,
                    repetitions = excluded.repetitions,
                    mastery_status = excluded.mastery_status,
+                   next_review_at = datetime('now', 'localtime', '+' || excluded.interval_days || ' days'),
                    updated_at = datetime('now')",
                 (
                     item_id,
@@ -153,9 +155,13 @@ pub fn record_exercise_attempt(
             )
             .map_err(|e| e.to_string())?;
 
-            let next_review = (Utc::now() + Duration::days(input.interval_days as i64))
-                .format("%Y-%m-%d %H:%M:%S")
-                .to_string();
+            let next_review: String = conn
+                .query_row(
+                    "SELECT datetime('now', 'localtime', '+' || ?1 || ' days')",
+                    [input.interval_days],
+                    |row| row.get(0),
+                )
+                .map_err(|e| e.to_string())?;
             conn.execute(
                 "INSERT INTO review_schedule (learning_item_id, next_review_at, priority_score)
                  VALUES (?1, ?2, CASE WHEN ?3 = 0 THEN 2.0 ELSE 1.0 END)
@@ -376,6 +382,14 @@ pub fn get_learning_item_detail(
             )
             .ok();
 
+        let next_review_at: Option<String> = conn
+            .query_row(
+                "SELECT next_review_at FROM review_schedule WHERE learning_item_id = ?1",
+                [&learning_item_id],
+                |row| row.get(0),
+            )
+            .ok();
+
         let mut hist_stmt = conn
             .prepare(
                 "SELECT ed.exercise_type, ea.is_correct, ea.attempted_at
@@ -408,6 +422,7 @@ pub fn get_learning_item_detail(
             context_note: item.5,
             accepted_answers: item.6,
             progress: progress.as_ref().map(|p| p.0.clone()),
+            next_review_at,
             attempt_count: progress.as_ref().map(|p| p.1).unwrap_or(0),
             correct_count: progress.as_ref().map(|p| p.2).unwrap_or(0),
             recent_attempts,
@@ -427,10 +442,13 @@ pub fn get_review_queue(state: State<DbState>) -> Result<Vec<ReviewQueueItem>, S
                         (SELECT e.exercise_type FROM exercise_definitions e
                            WHERE e.learning_item_id = rs.learning_item_id
                            ORDER BY e.sort_order LIMIT 1),
+                        (SELECT e.prompt_json FROM exercise_definitions e
+                           WHERE e.learning_item_id = rs.learning_item_id
+                           ORDER BY e.sort_order LIMIT 1),
                         li.accepted_answers
                  FROM review_schedule rs
                  JOIN learning_items li ON li.id = rs.learning_item_id
-                 WHERE rs.next_review_at <= datetime('now')
+                 WHERE rs.next_review_at <= datetime('now', 'localtime')
                  ORDER BY rs.priority_score DESC, rs.next_review_at ASC
                  LIMIT 50",
             )
@@ -446,7 +464,10 @@ pub fn get_review_queue(state: State<DbState>) -> Result<Vec<ReviewQueueItem>, S
                     next_review_at: row.get(4)?,
                     exercise_id: row.get(5)?,
                     exercise_type: row.get(6)?,
-                    accepted_answers: parse_accepted_answers(row.get(7)?),
+                    exercise_prompt: row
+                        .get::<_, Option<String>>(7)?
+                        .and_then(|s| serde_json::from_str(&s).ok()),
+                    accepted_answers: parse_accepted_answers(row.get(8)?),
                 })
             })
             .map_err(|e| e.to_string())?;
