@@ -5,18 +5,27 @@ import { tauriApi } from "../../services/api/tauri";
 
 export function ProgressScreen() {
   const [stats, setStats] = useState<Record<string, number>>({});
+  const [exportStatus, setExportStatus] = useState<string | null>(null);
 
   useEffect(() => {
     void tauriApi.getProgressStats().then(setStats);
   }, []);
 
   async function exportBackup() {
+    setExportStatus(null);
     const file = await save({
       filters: [{ name: "Kannada Quest Backup", extensions: ["kqbackup.zip"] }],
       defaultPath: `kannada-quest-${new Date().toISOString().slice(0, 10)}.kqbackup.zip`,
     });
     if (!file) return;
-    await tauriApi.exportLearningBackup(file);
+    try {
+      const result = await tauriApi.exportLearningBackup(file);
+      setExportStatus(
+        `Saved backup · schema v${result.manifest.databaseSchemaVersion} · ${result.manifest.databaseChecksumSha256.slice(0, 12)}…`,
+      );
+    } catch (err) {
+      setExportStatus(err instanceof Error ? err.message : "Export failed.");
+    }
   }
 
   return (
@@ -43,6 +52,7 @@ export function ProgressScreen() {
         >
           Export backup
         </button>
+        {exportStatus ? <p className="mt-3 text-sm text-stone-600">{exportStatus}</p> : null}
         <Link to="/settings" className="ml-3 text-sm text-amber-800 underline">
           Settings
         </Link>

@@ -74,7 +74,23 @@ export interface ReviewQueueItem {
   nextReviewAt: string;
   exerciseId?: string;
   exerciseType?: string;
+  exercisePrompt?: Record<string, unknown>;
   acceptedAnswers: string[];
+}
+
+export interface BackupManifest {
+  backupFormatVersion: string;
+  databaseSchemaVersion: number;
+  applicationVersion: string;
+  exportTimestamp: string;
+  backupId: string;
+  contentVersion: number;
+  databaseChecksumSha256: string;
+}
+
+export interface BackupExportResult {
+  path: string;
+  manifest: BackupManifest;
 }
 
 export interface AudioAssetDto {
@@ -95,6 +111,7 @@ export interface LearningItemDetail {
   contextNote?: string;
   acceptedAnswers: string[];
   progress?: ItemScheduleState;
+  nextReviewAt?: string;
   attemptCount: number;
   correctCount: number;
   recentAttempts: {
@@ -114,6 +131,8 @@ export const tauriApi = {
     }>("get_learner_profile"),
   completeOnboarding: (displayName?: string) =>
     invoke("complete_onboarding", { displayName }),
+  updateLearnerProfile: (dailyGoalXp?: number) =>
+    invoke("update_learner_profile", { dailyGoalXp }),
   getHomeSummary: () => invoke<HomeSummary>("get_home_summary"),
   listLevels: () => invoke<LevelSummary[]>("list_levels"),
   listLessonsForLevel: (levelId: string) =>
@@ -135,9 +154,9 @@ export const tauriApi = {
   getReviewQueue: () => invoke<ReviewQueueItem[]>("get_review_queue"),
   getProgressStats: () => invoke<Record<string, number>>("get_progress_stats"),
   exportLearningBackup: (destPath: string) =>
-    invoke("export_learning_backup", { destPath }),
+    invoke<BackupExportResult>("export_learning_backup", { destPath }),
   validateLearningBackup: (path: string) =>
-    invoke("validate_learning_backup", { path }),
+    invoke<BackupManifest>("validate_learning_backup", { path }),
   restoreLearningBackup: (path: string) =>
-    invoke("restore_learning_backup", { path }),
+    invoke<BackupManifest>("restore_learning_backup", { path }),
 };

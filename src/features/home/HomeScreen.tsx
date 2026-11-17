@@ -35,7 +35,8 @@ export function HomeScreen() {
           <div className="h-full bg-amber-500" style={{ width: `${goalPct}%` }} />
         </div>
         <p className="mt-3 text-sm text-stone-600">
-          Streak (goal days, last 30d): {summary?.streakDays ?? 0}
+          Streak: {summary?.streakDays ?? 0} day
+          {(summary?.streakDays ?? 0) === 1 ? "" : "s"} with goal met
         </p>
       </section>
 
@@ -51,9 +52,18 @@ export function HomeScreen() {
       <section className="rounded-2xl bg-stone-900 p-5 text-white">
         <p className="text-sm text-stone-300">Due revision</p>
         <p className="text-3xl font-bold">{summary?.dueReviews ?? 0}</p>
-        <Link to="/practice" className="mt-3 inline-block text-amber-300 underline">
-          Open practice
-        </Link>
+        {summary && summary.dueReviews > 0 ? (
+          <Link
+            to="/practice"
+            className="mt-3 inline-block rounded-xl bg-amber-500 px-4 py-2 font-semibold text-white"
+          >
+            Start daily review
+          </Link>
+        ) : (
+          <Link to="/practice" className="mt-3 inline-block text-amber-300 underline">
+            Open practice
+          </Link>
+        )}
       </section>
     </div>
   );
