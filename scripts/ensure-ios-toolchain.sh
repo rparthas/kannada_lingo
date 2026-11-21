@@ -34,6 +34,12 @@ echo "==> Tauri iOS project"
 cd "${ROOT}"
 npm install
 npm run ios:init
+# XcodeGen expands ${VAR} from the generating shell; npm/Cursor set FORCE_COLOR=0,
+# which was baked into the "Build Rust Code" script as a bogus arch. Regenerate without it.
+if [[ -f "${ROOT}/src-tauri/gen/apple/project.yml" ]]; then
+  echo "==> Regenerate Xcode project (project.yml → .xcodeproj)"
+  (cd "${ROOT}/src-tauri/gen/apple" && env -u FORCE_COLOR xcodegen generate)
+fi
 
 if [[ ! -d "/Applications/Xcode.app" ]]; then
   echo ""

@@ -103,15 +103,18 @@ fn parse_accepted_answers(raw: Option<String>) -> Vec<String> {
     raw.and_then(|s| serde_json::from_str(&s).ok()).unwrap_or_default()
 }
 
-fn row_to_learning_item(row: &rusqlite::Row<'_>) -> Result<LearningItemDto, rusqlite::Error> {
+fn learning_item_from_row(
+    row: &rusqlite::Row<'_>,
+    offset: usize,
+) -> Result<LearningItemDto, rusqlite::Error> {
     Ok(LearningItemDto {
-        id: row.get(0)?,
-        kannada_text: row.get(1)?,
-        transliteration: row.get(2)?,
-        english_meaning: row.get(3)?,
-        literal_translation: row.get(4)?,
-        context_note: row.get(5)?,
-        accepted_answers: parse_accepted_answers(row.get(6)?),
+        id: row.get(offset)?,
+        kannada_text: row.get(offset + 1)?,
+        transliteration: row.get(offset + 2)?,
+        english_meaning: row.get(offset + 3)?,
+        literal_translation: row.get(offset + 4)?,
+        context_note: row.get(offset + 5)?,
+        accepted_answers: parse_accepted_answers(row.get(offset + 6)?),
     })
 }
 
@@ -278,16 +281,7 @@ pub fn get_lesson_detail(state: State<DbState>, lesson_id: String) -> Result<Les
                 let prompt: serde_json::Value =
                     serde_json::from_str(row.get::<_, String>(3)?.as_str()).unwrap_or_default();
                 let learning_item = if row.get::<_, Option<String>>(4)?.is_some() {
-                    let accepted: Option<String> = row.get(10)?;
-                    Some(LearningItemDto {
-                        id: row.get(4)?,
-                        kannada_text: row.get(5)?,
-                        transliteration: row.get(6)?,
-                        english_meaning: row.get(7)?,
-                        literal_translation: row.get(8)?,
-                        context_note: row.get(9)?,
-                        accepted_answers: parse_accepted_answers(accepted),
-                    })
+                    Some(learning_item_from_row(row, 4)?)
                 } else {
                     None
                 };

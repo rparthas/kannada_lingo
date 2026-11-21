@@ -12,7 +12,6 @@ pub struct RecordAttemptInput {
     pub response_json: serde_json::Value,
     pub self_assessed: Option<bool>,
     pub xp_amount: i32,
-    pub lesson_id: Option<String>,
     pub ease_factor: f64,
     pub interval_days: i32,
     pub repetitions: i32,

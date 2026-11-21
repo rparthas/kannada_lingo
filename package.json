@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "tauri": "tauri",
     "ios:init": "tauri ios init",
-    "ios:dev": "tauri ios dev",
+    "ios:dev": "PATH=\"${HOME}/.cargo/bin:${PATH}\" tauri ios dev",
     "ios:build": "tauri ios build",
     "ios:setup": "bash scripts/ensure-ios-toolchain.sh",
     "content:validate": "node scripts/validate-content.mjs",
