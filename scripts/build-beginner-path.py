@@ -325,6 +325,58 @@ def build() -> dict[str, Any]:
         reg("item-work-aitu", "ಕೆಲಸ ಆಯ್ತು", "kelasa āytu", "Work is done", tags=["work", "response"], difficulty=2),
     ]
 
+    money1 = [
+        reg("item-atm-ellige", "ATM ಎಲ್ಲಿದೆ?", "ATM elligide?", "Where is the ATM?", tags=["money"], difficulty=2),
+        reg("item-upi-madthini", "UPI ಮಾಡ್ತೀನಿ", "UPI māḍtīni", "I'll pay by UPI", tags=["money"], difficulty=2),
+        reg("item-account-number", "ಖಾತೆ ಸಂಖ್ಯೆ", "khāte sankhye", "Account number", tags=["money", "bank"], difficulty=3),
+        reg("item-withdraw-beku", "ಹಣ ತೆಗೆದುಕೊಳ್ಳಬೇಕು", "haṇa tegedukoḷḷabēku", "I need to withdraw cash", tags=["money"], difficulty=3),
+    ]
+    money2 = [
+        reg("item-suttu-kodi", "ಸುತ್ತು ಕೊಡಿ", "suttu koḍi", "Give change", tags=["money"], difficulty=2),
+        reg("item-receipt-kodi", "ರಶೀದಿ ಕೊಡಿ", "raśīdi koḍi", "Give the receipt", tags=["money", "shopping"], difficulty=2),
+        reg("item-card-swipe", "ಕಾರ್ಡ್ ಸ್ವೈಪ್ ಮಾಡಿ", "kārḍ svāip māḍi", "Swipe the card", tags=["money"], difficulty=2),
+        reg("item-paisa-kammi", "ಹಣ ಕಡಿಮೆ", "haṇa kadi me", "Short on money", tags=["money"], difficulty=2),
+    ]
+
+    phone1 = [
+        reg("item-phone-elli", "ಫೋನ್ ಎಲ್ಲಿದೆ?", "phōn elligide?", "Where's the phone?", tags=["phone"], difficulty=2),
+        reg("item-call-bantu", "ಕಾಲ್ ಬರುತ್ತಿದೆ", "kāl baruttide", "A call is coming in", tags=["phone"], difficulty=2),
+        reg("item-message-kalsi", "ಮೆಸೇಜ್ ಕಳಿಸಿ", "mesēj kaḷisi", "Send a message", tags=["phone"], difficulty=2),
+        reg("item-network-illa", "ನೆಟ್‌ವರ್ಕ್ ಇಲ್ಲ", "neṭvark illa", "No network signal", tags=["phone"], difficulty=2),
+    ]
+    phone2 = [
+        reg("item-tumba-late", "ತುಂಬಾ ಲೇಟ್ ಆಯ್ತು", "tumba lēṭ āytu", "Got very late", tags=["phone", "time"], difficulty=2),
+        reg("item-callback-madthini", "ಕಾಲ್ ಬ್ಯಾಕ್ ಮಾಡ್ತೀನಿ", "kāl byāk māḍtīni", "I'll call you back", tags=["phone"], difficulty=2),
+        reg("item-voice-clear-illa", "ಧ್ವನಿ ಸ್ಪಷ್ಟವಿಲ್ಲ", "dhvani spaṣṭavilla", "Voice isn't clear", tags=["phone"], difficulty=3),
+        reg("item-badige-hogi", "ಬ್ಯಾಡಗೆ ಹೋಗಿ", "byāḍige hōgi", "Go offline / hang up", context="Colloquial way to say the call dropped.", tags=["phone"], difficulty=3),
+    ]
+
+    school1 = [
+        reg("item-school-ge", "ಸ್ಕೂಲ್‌ಗೆ ಹೋಗೋಣ", "skūl ge hōgōṇa", "Let's go to school", tags=["family", "school"], difficulty=2),
+        reg("item-magu-elli", "ಮಗು ಎಲ್ಲಿದೆ?", "magu elligide?", "Where is the child?", tags=["family"], difficulty=2),
+        reg("item-pickup-beku", "ಪಿಕಪ್ ಬೇಕು", "pikap bēku", "Need a pickup", accepted=["pickup beku"], tags=["family", "school"], difficulty=2),
+        reg("item-banni-ready", "ಬನ್ನಿ ರೆಡಿ", "banni reḍi", "Come on, get ready", tags=["family"], difficulty=2),
+    ]
+    school2 = [
+        reg("item-homework-ide", "ಹೋಮ್ ವರ್ಕ್ ಇದೆ", "hōm vark ide", "There is homework", tags=["family", "school"], difficulty=2),
+        reg("item-exam-ide", "ಪರೀಕ್ಷೆ ಇದೆ", "parīkṣe ide", "There is an exam", tags=["family", "school"], difficulty=2),
+        reg("item-tiffin-beku", "ಟಿಫಿನ್ ಬೇಕು", "ṭifin bēku", "Need a lunch box", tags=["family"], difficulty=2),
+        reg("item-bus-bidalu", "ಬಸ್ ಬಿಡಲು", "bas biḍalu", "To drop at the bus", tags=["family", "school"], difficulty=2),
+    ]
+
+    social1 = [
+        reg("item-malleyagide", "ಮಳೆಯಾಗ್ತಿದೆ", "maḷeyāgtide", "It is raining", tags=["social", "weather"], difficulty=2),
+        reg("item-tumba-bisi", "ತುಂಬಾ ಬಿಸಿ", "tumba bisi", "Very hot (weather)", tags=["social", "weather"], difficulty=2),
+        reg("item-coffee-kudiyona", "ಕಾಫಿ ಕುಡಿಯೋಣ?", "kāfi kuḍiyōṇa?", "Shall we have coffee?", tags=["social"], difficulty=2),
+        reg("item-visheshave-illa", "ವಿಶೇಷವೇ ಇಲ್ಲ", "viśeṣavē illa", "Nothing special", tags=["social", "response"], difficulty=2),
+    ]
+    social2 = [
+        reg("item-happy-aytu", "ಖುಶಿಯಾಯ್ತು", "khusiyāytu", "I'm happy about it", tags=["social"], difficulty=2),
+        reg("item-avaga-bartini", "ಅವಾಗ ಬರ್ತೀನಿ", "avāga bartīni", "I'll come then", tags=["social", "time"], difficulty=2),
+        reg("item-festival-shubha", "ಹಬ್ಬದ ಶುಭಾಶಯಗಳು", "habbada śubhāśayagaḷu", "Festival greetings", tags=["social"], difficulty=3),
+        reg("item-madodu-en", "ಮಾಡೋದು ಏನು?", "māḍōdu ēnu?", "What shall we do?", tags=["social"], difficulty=2),
+    ]
+
     lessons_meta = [
         ("lesson-greetings-1", "unit-1-greetings", 1, "Hello and thank you", "Core polite phrases you'll use many times a day.", 12, greet1),
         ("lesson-greetings-2", "unit-1-greetings", 2, "Yes, please, and goodbye", "Polite words to open and close any chat.", 12, greet2),
@@ -344,6 +396,14 @@ def build() -> dict[str, Any]:
         ("lesson-health-2", "unit-8-health", 2, "Feeling unwell", "Rest, hospital directions, and timing.", 14, health2),
         ("lesson-work-1", "unit-9-work", 1, "Office basics", "Meetings, reports, and being on time.", 14, work1),
         ("lesson-work-2", "unit-9-work", 2, "Quick work phrases", "Email, calls, and wrapping up tasks.", 12, work2),
+        ("lesson-money-1", "unit-10-money", 1, "ATM and UPI", "Cash, accounts, and digital pay.", 12, money1),
+        ("lesson-money-2", "unit-10-money", 2, "Receipts and cards", "Change, receipts, and swiping.", 12, money2),
+        ("lesson-phone-1", "unit-11-phone", 1, "Calls and texts", "Ringing, messages, and signal.", 12, phone1),
+        ("lesson-phone-2", "unit-11-phone", 2, "Call problems", "Late, callback, and bad connection.", 12, phone2),
+        ("lesson-school-1", "unit-12-family", 1, "School run", "Getting kids ready and pickup.", 12, school1),
+        ("lesson-school-2", "unit-12-family", 2, "Homework and bus", "Exams, tiffin, and the bus stop.", 12, school2),
+        ("lesson-social-1", "unit-13-social", 1, "Weather and coffee", "Rain, heat, and casual invites.", 12, social1),
+        ("lesson-social-2", "unit-13-social", 2, "Plans and festivals", "Happy news, timing, and wishes.", 12, social2),
     ]
 
     # Preserve hand-tuned exercises for first two lessons
@@ -785,6 +845,158 @@ def build() -> dict[str, Any]:
                 },
             ],
         },
+        "lesson-money-1": {
+            "instruction": "Paying at a shop with UPI.",
+            "steps": [
+                {
+                    "narration": "Shopkeeper asks cash or UPI.",
+                    "partner": {"kannada": "UPI ಇದೆಯಾ?", "transliteration": "UPI ideyā?", "english": "Do you have UPI?"},
+                },
+                {
+                    "narration": "Say you'll pay by UPI.",
+                    "choices": [
+                        {"label": "UPI māḍtīni", "hint": "I'll pay by UPI", "correct": True},
+                        {"label": "suttu koḍi", "hint": "Give change", "correct": False},
+                        {"label": "skūl ge hōgōṇa", "hint": "Go to school", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-money-2": {
+            "instruction": "At the counter after paying.",
+            "steps": [
+                {
+                    "narration": "You paid cash.",
+                    "partner": {"kannada": "ಸರಿ", "transliteration": "sari", "english": "Okay"},
+                },
+                {
+                    "narration": "Ask for the receipt.",
+                    "choices": [
+                        {"label": "raśīdi koḍi", "hint": "Give the receipt", "correct": True},
+                        {"label": "ATM elligide?", "hint": "Where is ATM?", "correct": False},
+                        {"label": "maḷeyāgtide", "hint": "It is raining", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-phone-1": {
+            "instruction": "Your phone rings in a meeting.",
+            "steps": [
+                {
+                    "narration": "Colleague hears it.",
+                    "partner": {"kannada": "ನಿಮ್ಮ ಫೋನ್", "transliteration": "nimma phōn", "english": "Your phone"},
+                },
+                {
+                    "narration": "Say a call is coming.",
+                    "choices": [
+                        {"label": "kāl baruttide", "hint": "A call is coming in", "correct": True},
+                        {"label": "neṭvark illa", "hint": "No network", "correct": False},
+                        {"label": "ṭifin bēku", "hint": "Need lunch box", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-phone-2": {
+            "instruction": "Bad connection on a call.",
+            "steps": [
+                {
+                    "narration": "You can barely hear them.",
+                    "partner": {"kannada": "ಕೇಳಿಸ್ತಾ?", "transliteration": "kēḷistā?", "english": "Can you hear?"},
+                },
+                {
+                    "narration": "Say the voice isn't clear.",
+                    "choices": [
+                        {"label": "dhvani spaṣṭavilla", "hint": "Voice isn't clear", "correct": True},
+                        {"label": "khusiyāytu", "hint": "I'm happy", "correct": False},
+                        {"label": "parīkṣe ide", "hint": "Exam coming", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-school-1": {
+            "instruction": "School morning rush.",
+            "steps": [
+                {
+                    "narration": "You need to leave soon.",
+                    "partner": {"kannada": "ಏನ್ ಮಾಡೋದು?", "transliteration": "ēn māḍōdu?", "english": "What to do?"},
+                },
+                {
+                    "narration": "Suggest going to school.",
+                    "choices": [
+                        {"label": "skūl ge hōgōṇa", "hint": "Let's go to school", "correct": True},
+                        {"label": "kāfi kuḍiyōṇa?", "hint": "Coffee?", "correct": False},
+                        {"label": "kārḍ svāip māḍi", "hint": "Swipe card", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-school-2": {
+            "instruction": "After school pickup.",
+            "steps": [
+                {
+                    "narration": "Parent asks about school.",
+                    "partner": {"kannada": "ಏನ್ ಆಯ್ತು?", "transliteration": "ēn āytu?", "english": "How did it go?"},
+                },
+                {
+                    "narration": "Mention homework.",
+                    "choices": [
+                        {"label": "hōm vark ide", "hint": "There is homework", "correct": True},
+                        {"label": "habbada śubhāśayagaḷu", "hint": "Festival greetings", "correct": False},
+                        {"label": "haṇa kadi me", "hint": "Short on money", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-social-1": {
+            "instruction": "Small talk about weather.",
+            "steps": [
+                {
+                    "narration": "Friend looks outside.",
+                    "partner": {"kannada": "ಮಳೆಯಾಗ್ತಿದೆ", "transliteration": "maḷeyāgtide", "english": "It is raining"},
+                },
+                {
+                    "narration": "Agree it's raining.",
+                    "choices": [
+                        {"label": "maḷeyāgtide", "hint": "It is raining", "correct": True},
+                        {"label": "tumba bisi", "hint": "Very hot", "correct": False},
+                        {"label": "māḍōdu ēnu?", "hint": "What shall we do?", "correct": False},
+                    ],
+                },
+                {
+                    "narration": "Invite for coffee.",
+                    "choices": [
+                        {"label": "kāfi kuḍiyōṇa?", "hint": "Shall we have coffee?", "correct": True},
+                        {"label": "bas biḍalu", "hint": "Bus drop", "correct": False},
+                        {"label": "khāte sankhye", "hint": "Account number", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-social-2": {
+            "instruction": "Making plans after good news.",
+            "steps": [
+                {
+                    "narration": "Friend shares happy news.",
+                    "partner": {"kannada": "ಖುಷಿ ಆಯ್ತು!", "transliteration": "khusi āytu!", "english": "So happy!"},
+                },
+                {
+                    "narration": "React positively.",
+                    "choices": [
+                        {"label": "khusiyāytu", "hint": "I'm happy about it", "correct": True},
+                        {"label": "viśeṣavē illa", "hint": "Nothing special", "correct": False},
+                        {"label": "pikap bēku", "hint": "Need pickup", "correct": False},
+                    ],
+                },
+                {
+                    "narration": "Say when you'll come.",
+                    "choices": [
+                        {"label": "avāga bartīni", "hint": "I'll come then", "correct": True},
+                        {"label": "kāl byāk māḍtīni", "hint": "Call back", "correct": False},
+                        {"label": "mesēj kaḷisi", "hint": "Send message", "correct": False},
+                    ],
+                },
+            ],
+        },
         "lesson-dir-2": {
             "instruction": "You're almost there.",
             "steps": [
@@ -864,6 +1076,30 @@ def build() -> dict[str, Any]:
             "blank": "mīṭiṅg _____",
             "accepted": ["ide"],
         },
+        "lesson-money-1": {
+            "item_id": "item-atm-ellige",
+            "instruction": "Where is the ATM?",
+            "blank": "ATM ell____?",
+            "accepted": ["igide", "elligide"],
+        },
+        "lesson-phone-1": {
+            "item_id": "item-message-kalsi",
+            "instruction": "Send a message",
+            "blank": "mesēj _____",
+            "accepted": ["kaḷisi", "kalisi"],
+        },
+        "lesson-school-1": {
+            "item_id": "item-magu-elli",
+            "instruction": "Where is the child?",
+            "blank": "magu ell____?",
+            "accepted": ["igide", "elligide"],
+        },
+        "lesson-social-1": {
+            "item_id": "item-malleyagide",
+            "instruction": "It is raining",
+            "blank": "maḷeyāg____",
+            "accepted": ["tide", "gtide"],
+        },
     }
 
     tile_specs: dict[str, dict[str, Any]] = {
@@ -901,6 +1137,26 @@ def build() -> dict[str, Any]:
             "item_id": "item-call-madthini",
             "tiles": ["māḍtīni", "kāl"],
             "solution": ["kāl", "māḍtīni"],
+        },
+        "lesson-money-2": {
+            "item_id": "item-card-swipe",
+            "tiles": ["māḍi", "kārḍ svāip"],
+            "solution": ["kārḍ svāip", "māḍi"],
+        },
+        "lesson-phone-2": {
+            "item_id": "item-callback-madthini",
+            "tiles": ["māḍtīni", "kāl byāk"],
+            "solution": ["kāl byāk", "māḍtīni"],
+        },
+        "lesson-school-2": {
+            "item_id": "item-tiffin-beku",
+            "tiles": ["bēku", "ṭifin"],
+            "solution": ["ṭifin", "bēku"],
+        },
+        "lesson-social-2": {
+            "item_id": "item-festival-shubha",
+            "tiles": ["śubhāśayagaḷu", "habbada"],
+            "solution": ["habbada", "śubhāśayagaḷu"],
         },
     }
 
@@ -956,7 +1212,7 @@ def build() -> dict[str, Any]:
         )
 
     bundle = {
-        "content_version": 5,
+        "content_version": 6,
         "course": {
             "id": "course-kannada-quest",
             "title": "Kannada Quest",
@@ -968,7 +1224,7 @@ def build() -> dict[str, Any]:
                 "course_id": "course-kannada-quest",
                 "ordinal": 1,
                 "title": "Survival Kannada",
-                "description": "Everyday Bengaluru Kannada: travel, food, home, health, and work.",
+                "description": "Travel, home, health, work, money, phone, family, and social chat.",
             }
         ],
         "units": [
@@ -981,6 +1237,10 @@ def build() -> dict[str, Any]:
             {"id": "unit-7-home", "level_id": "level-1-survival", "ordinal": 7, "title": "Home & neighbours", "description": "Security, deliveries, and asking next door."},
             {"id": "unit-8-health", "level_id": "level-1-survival", "ordinal": 8, "title": "Health", "description": "Doctor, pharmacy, and feeling unwell."},
             {"id": "unit-9-work", "level_id": "level-1-survival", "ordinal": 9, "title": "Work", "description": "Meetings, email, and quick office chat."},
+            {"id": "unit-10-money", "level_id": "level-1-survival", "ordinal": 10, "title": "Money & bank", "description": "ATM, UPI, receipts, and change."},
+            {"id": "unit-11-phone", "level_id": "level-1-survival", "ordinal": 11, "title": "Phone", "description": "Calls, texts, and bad signal."},
+            {"id": "unit-12-family", "level_id": "level-1-survival", "ordinal": 12, "title": "Family & school", "description": "School run, homework, and pickup."},
+            {"id": "unit-13-social", "level_id": "level-1-survival", "ordinal": 13, "title": "Social chat", "description": "Weather, coffee, plans, and festivals."},
         ],
         "lessons": lessons_json,
         "learning_items": all_items,
