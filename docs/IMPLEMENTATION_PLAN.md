@@ -24,7 +24,8 @@
 1. Install Xcode from the App Store and run `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
 2. `npm run tauri ios init` then `npm run tauri ios dev` on a physical device
 3. Complete Phase 0 checklist in `docs/PHASE0_DEVICE_CHECKLIST.md`
-4. Record human audio for Level 1 items and wire `audio_assets` paths
+4. Record human audio for Level 1 items (54 phrases) and wire `audio_assets` paths
+5. **Content expansion (optional)**: Level 2+ curriculum, real AI provider, import CLI for content updates without reinstall
 
 ## Architecture
 

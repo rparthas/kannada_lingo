@@ -9,6 +9,38 @@ import type { AudioAssetDto } from "../api/tauri";
 
 let activeAudio: HTMLAudioElement | null = null;
 
+async function playAudioElement(el: HTMLAudioElement): Promise<void> {
+  await new Promise<void>((resolve, reject) => {
+    const fail = (message: string) => {
+      cleanup();
+      reject(new Error(message));
+    };
+    const cleanup = () => {
+      el.removeEventListener("error", onError);
+      el.removeEventListener("canplaythrough", onReady);
+    };
+    const onError = () => {
+      const code = el.error?.code;
+      fail(
+        code
+          ? `Audio failed to load (media error ${code}). Rebuild and reinstall the app.`
+          : "Audio failed to load.",
+      );
+    };
+    const onReady = () => {
+      cleanup();
+      void el.play().then(resolve).catch(reject);
+    };
+    el.addEventListener("error", onError, { once: true });
+    if (el.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
+      void el.play().then(resolve).catch(reject);
+      return;
+    }
+    el.addEventListener("canplaythrough", onReady, { once: true });
+    el.load();
+  });
+}
+
 async function resolvePlayableUrl(relativePath: string): Promise<string> {
   if (isTauri()) {
     const absolute = await invoke<string>("resolve_resource_path", {
@@ -52,7 +84,7 @@ export class WebAudioService implements AudioService {
     const el = new Audio(url);
     el.playbackRate = speed === "slow" && asset.speakingSpeed === "normal" ? 0.82 : 1;
     activeAudio = el;
-    await el.play();
+    await playAudioElement(el);
   }
 
   async pause(): Promise<void> {
@@ -115,7 +147,7 @@ export class WebAudioService implements AudioService {
       : convertFileSrc(filePath);
     const el = new Audio(src);
     activeAudio = el;
-    await el.play();
+    await playAudioElement(el);
   }
 }
 

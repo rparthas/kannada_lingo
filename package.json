@@ -10,8 +10,10 @@
     "tauri": "tauri",
     "ios:init": "tauri ios init",
     "ios:dev": "PATH=\"${HOME}/.cargo/bin:${PATH}\" tauri ios dev",
-    "ios:build": "tauri ios build",
+    "ios:build": "PATH=\"${HOME}/.cargo/bin:${PATH}\" tauri ios build",
     "ios:setup": "bash scripts/ensure-ios-toolchain.sh",
+    "ios:xcodegen": "bash scripts/ios-xcodegen.sh",
+    "content:build": "python3 scripts/build-beginner-path.py && python3 scripts/generate-placeholder-audio.py",
     "content:validate": "node scripts/validate-content.mjs",
     "test": "vitest run",
     "test:watch": "vitest"

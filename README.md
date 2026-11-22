@@ -9,7 +9,7 @@ Foundation and learning loop work on desktop Tauri. **iOS Phase 0**: run `npm ru
 ### Included now
 
 - Bottom navigation (Home, Learn, Practice, Progress)
-- Beginner curriculum sample (10 phrases, 2 lessons, exercise types including scripted conversations)
+- Level 1 Survival path: **54 phrases**, **12 lessons** (6 units), exercise types including scripted conversations (`python3 scripts/build-beginner-path.py` to regenerate JSON)
 - Lesson player with resume after interrupt, review mode, and immediate feedback
 - Phrase detail screen with attempt history; practice tab recall drills
 - SQLite schema + migrations + bundled content import

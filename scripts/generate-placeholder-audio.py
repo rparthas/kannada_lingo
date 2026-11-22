@@ -2,25 +2,22 @@
 """Generate short placeholder WAV clips for curriculum dev (replace with human recordings)."""
 from __future__ import annotations
 
+import json
 import math
 import struct
 import wave
 from pathlib import Path
 
-ITEM_IDS = [
-    "item-namaskara",
-    "item-hengidira",
-    "item-chennagi-idini",
-    "item-dhanyavada",
-    "item-sari",
-    "item-illa",
-    "item-auto-bidu",
-    "item-elli-hogbeku",
-    "item-meter-prati",
-    "item-aidu-nimisha",
-]
+ROOT = Path(__file__).resolve().parent.parent
+CURRICULUM = ROOT / "content" / "curriculum" / "beginner-path.json"
+OUT = ROOT / "content" / "audio"
 
-OUT = Path(__file__).resolve().parent.parent / "content" / "audio"
+
+def learning_item_ids() -> list[str]:
+    if not CURRICULUM.is_file():
+        raise SystemExit(f"Missing curriculum: {CURRICULUM}")
+    bundle = json.loads(CURRICULUM.read_text(encoding="utf-8"))
+    return [item["id"] for item in bundle.get("learning_items", [])]
 
 
 def write_tone(path: Path, *, freq: float, duration_s: float, sample_rate: int = 22050) -> int:
@@ -42,7 +39,7 @@ def write_tone(path: Path, *, freq: float, duration_s: float, sample_rate: int =
 
 def main() -> None:
     durations: list[tuple[str, str, int]] = []
-    for item_id in ITEM_IDS:
+    for item_id in learning_item_ids():
         normal = OUT / f"{item_id}-normal.wav"
         slow = OUT / f"{item_id}-slow.wav"
         d1 = write_tone(normal, freq=520.0, duration_s=0.45)
