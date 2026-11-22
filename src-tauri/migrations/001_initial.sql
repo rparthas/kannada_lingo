@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS audio_assets (
     learning_item_id TEXT NOT NULL REFERENCES learning_items(id),
     locale TEXT NOT NULL DEFAULT 'kn-IN',
     speaker_id TEXT,
-    source TEXT NOT NULL CHECK (source IN ('human', 'ai')),
+    source TEXT NOT NULL CHECK (source IN ('human', 'ai', 'tts')),
     speaking_speed TEXT DEFAULT 'normal',
     review_status TEXT DEFAULT 'approved',
     duration_ms INTEGER,

@@ -9,14 +9,14 @@ Foundation and learning loop work on desktop Tauri. **iOS Phase 0**: run `npm ru
 ### Included now
 
 - Bottom navigation (Home, Learn, Practice, Progress)
-- Level 1 Survival path: **54 phrases**, **12 lessons** (6 units), exercise types including scripted conversations (`python3 scripts/build-beginner-path.py` to regenerate JSON)
+- Level 1 Survival path: **9 units**, **18 lessons**, **78 phrases** — macOS Kannada TTS audio (`npm run content:build`; swap in human recordings later)
 - Lesson player with resume after interrupt, review mode, and immediate feedback
 - Phrase detail screen with attempt history; practice tab recall drills
 - SQLite schema + migrations + bundled content import
 - SM-2-inspired review scheduling (unit tested)
 - Answer evaluation with accepted alternatives
 - Backup export/import (ZIP, manifest, SHA-256, integrity check)
-- Bundled phrase audio (placeholder tones — swap for human recordings), slow/normal playback, learner recording playback
+- Bundled phrase audio (macOS **Soumya** Kannada TTS on `content:build`; tone fallback on Linux CI), slow/normal playback, learner recording
 - Curriculum content validation (`npm run content:validate`)
 - Phase 5 mock AI grammar insight on phrase detail (`VITE_AI_PROVIDER=unconfigured` for production stub)
 

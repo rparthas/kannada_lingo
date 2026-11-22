@@ -267,15 +267,18 @@ mod tests {
         let audio_count: i64 = conn
             .query_row("SELECT COUNT(*) FROM audio_assets", [], |r| r.get(0))
             .unwrap();
-        assert_eq!(audio_count, 21);
-        let human_normal: i64 = conn
+        let item_count: i64 = conn
+            .query_row("SELECT COUNT(*) FROM learning_items", [], |r| r.get(0))
+            .unwrap();
+        assert!(audio_count >= item_count * 2);
+        let voiced_normal: i64 = conn
             .query_row(
                 "SELECT COUNT(DISTINCT learning_item_id) FROM audio_assets
-                 WHERE source = 'human' AND speaking_speed = 'normal'",
+                 WHERE source IN ('human', 'tts') AND speaking_speed = 'normal'",
                 [],
                 |r| r.get(0),
             )
             .unwrap();
-        assert_eq!(human_normal, 10);
+        assert_eq!(voiced_normal, item_count);
     }
 }

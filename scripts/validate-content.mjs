@@ -13,7 +13,11 @@ function validateBundle(bundle) {
   const approved = items.filter((i) => (i.validation_status ?? "approved") === "approved");
   const humanNormal = new Set(
     audio
-      .filter((a) => a.source === "human" && (a.speaking_speed ?? "normal") === "normal")
+      .filter(
+        (a) =>
+          (a.source === "human" || a.source === "tts") &&
+          (a.speaking_speed ?? "normal") === "normal",
+      )
       .map((a) => a.learning_item_id),
   );
   for (const item of approved) {

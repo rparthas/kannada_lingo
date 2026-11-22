@@ -115,7 +115,11 @@ export function PhraseAudioControls({
         <p className="text-xs text-stone-500">
           Source:{" "}
           <span className="font-medium capitalize text-stone-700">
-            {active.source === "ai" ? "AI supplement" : "human recording"}
+            {active.source === "ai"
+              ? "AI supplement"
+              : active.source === "tts"
+                ? "Kannada voice (TTS)"
+                : "human recording"}
           </span>
           {active.speakingSpeed === "slow" ? " · slow take" : ""}
         </p>

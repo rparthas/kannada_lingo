@@ -1,5 +1,5 @@
 {
-  "content_version": 4,
+  "content_version": 5,
   "course": {
     "id": "course-kannada-quest",
     "title": "Kannada Quest",
@@ -11,7 +11,7 @@
       "course_id": "course-kannada-quest",
       "ordinal": 1,
       "title": "Survival Kannada",
-      "description": "Greetings, yes/no, numbers, food, shopping, travel, and directions."
+      "description": "Everyday Bengaluru Kannada: travel, food, home, health, and work."
     }
   ],
   "units": [
@@ -56,6 +56,27 @@
       "ordinal": 6,
       "title": "On foot",
       "description": "Left, right, near, and far."
+    },
+    {
+      "id": "unit-7-home",
+      "level_id": "level-1-survival",
+      "ordinal": 7,
+      "title": "Home & neighbours",
+      "description": "Security, deliveries, and asking next door."
+    },
+    {
+      "id": "unit-8-health",
+      "level_id": "level-1-survival",
+      "ordinal": 8,
+      "title": "Health",
+      "description": "Doctor, pharmacy, and feeling unwell."
+    },
+    {
+      "id": "unit-9-work",
+      "level_id": "level-1-survival",
+      "ordinal": 9,
+      "title": "Work",
+      "description": "Meetings, email, and quick office chat."
     }
   ],
   "lessons": [
@@ -153,6 +174,54 @@
       "ordinal": 2,
       "title": "Near, far, right here",
       "description": "Pin down where something is.",
+      "estimated_minutes": 12
+    },
+    {
+      "id": "lesson-neigh-1",
+      "unit_id": "unit-7-home",
+      "ordinal": 1,
+      "title": "Flat and security",
+      "description": "Deliveries, guards, and telling people you live here.",
+      "estimated_minutes": 12
+    },
+    {
+      "id": "lesson-neigh-2",
+      "unit_id": "unit-7-home",
+      "ordinal": 2,
+      "title": "Asking neighbours",
+      "description": "Power, water, and quick favours.",
+      "estimated_minutes": 12
+    },
+    {
+      "id": "lesson-health-1",
+      "unit_id": "unit-8-health",
+      "ordinal": 1,
+      "title": "Doctor and pharmacy",
+      "description": "Pain, fever, and medicine.",
+      "estimated_minutes": 14
+    },
+    {
+      "id": "lesson-health-2",
+      "unit_id": "unit-8-health",
+      "ordinal": 2,
+      "title": "Feeling unwell",
+      "description": "Rest, hospital directions, and timing.",
+      "estimated_minutes": 14
+    },
+    {
+      "id": "lesson-work-1",
+      "unit_id": "unit-9-work",
+      "ordinal": 1,
+      "title": "Office basics",
+      "description": "Meetings, reports, and being on time.",
+      "estimated_minutes": 14
+    },
+    {
+      "id": "lesson-work-2",
+      "unit_id": "unit-9-work",
+      "ordinal": 2,
+      "title": "Quick work phrases",
+      "description": "Email, calls, and wrapping up tasks.",
       "estimated_minutes": 12
     }
   ],
@@ -837,1088 +906,1865 @@
       ],
       "difficulty": 2,
       "validation_status": "approved"
+    },
+    {
+      "id": "item-nanu-vasisutteni",
+      "kannada_text": "ನಾನು ಇಲ್ಲಿಯೇ ವಾಸಿಸುತ್ತೇನೆ",
+      "transliteration": "nānu illiyē vāsisuttēne",
+      "english_meaning": "I live right here",
+      "register": "informal",
+      "tags": [
+        "home",
+        "neighbours"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-security-helu",
+      "kannada_text": "ಸೆಕ್ಯುರಿಟಿಗೆ ಹೇಳಿ",
+      "transliteration": "sekyuriti ge hēḷi",
+      "english_meaning": "Tell security",
+      "register": "informal",
+      "tags": [
+        "home"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-yavaga-barthira",
+      "kannada_text": "ಯಾವಾಗ ಬರುತ್ತೀರಾ?",
+      "transliteration": "yāvāga baruttīrā?",
+      "english_meaning": "When will you come?",
+      "register": "informal",
+      "tags": [
+        "home",
+        "question"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-parcel-ide",
+      "kannada_text": "ಪಾರ್ಸೆಲ್ ಬಂದಿದೆ",
+      "transliteration": "pārsel bandide",
+      "english_meaning": "A parcel has arrived",
+      "register": "informal",
+      "tags": [
+        "home"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-sahaya-beku",
+      "kannada_text": "ಸಹಾಯ ಬೇಕು",
+      "transliteration": "sahāya bēku",
+      "english_meaning": "I need help",
+      "register": "informal",
+      "tags": [
+        "home",
+        "neighbours"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-neeru-illa",
+      "kannada_text": "ನೀರು ಇಲ್ಲ",
+      "transliteration": "nīru illa",
+      "english_meaning": "No water",
+      "register": "informal",
+      "tags": [
+        "home"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-current-illa",
+      "kannada_text": "ಕರೆಂಟ್ ಇಲ್ಲ",
+      "transliteration": "kareṇṭ illa",
+      "english_meaning": "No power",
+      "register": "informal",
+      "tags": [
+        "home"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-olleyavaru",
+      "kannada_text": "ತುಂಬಾ ಒಳ್ಳೆಯವರು",
+      "transliteration": "tumba oḷḷeyavaru",
+      "english_meaning": "You are very kind",
+      "register": "informal",
+      "tags": [
+        "neighbours",
+        "politeness"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-vaidyara-bheti",
+      "kannada_text": "ವೈದ್ಯರ ಭೇಟಿ",
+      "transliteration": "vaidyara bhēṭi",
+      "english_meaning": "Doctor's appointment",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-tumba-novu",
+      "kannada_text": "ತುಂಬಾ ನೋವು",
+      "transliteration": "tumba nōvu",
+      "english_meaning": "A lot of pain",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-maththu-kodi",
+      "kannada_text": "ಮದ್ದು ಕೊಡಿ",
+      "transliteration": "maddu koḍi",
+      "english_meaning": "Give medicine",
+      "register": "informal",
+      "tags": [
+        "health",
+        "pharmacy"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-fever-ide",
+      "kannada_text": "ಜ್ವರ ಇದೆ",
+      "transliteration": "jvara ide",
+      "english_meaning": "I have a fever",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-hospital-ellige",
+      "kannada_text": "ಆಸ್ಪತ್ರೆ ಎಲ್ಲಿಗೆ?",
+      "transliteration": "āspatre ellige?",
+      "english_meaning": "Where is the hospital?",
+      "register": "informal",
+      "tags": [
+        "health",
+        "directions"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-visranti-beku",
+      "kannada_text": "ವಿಶ್ರಾಂತಿ ಬೇಕು",
+      "transliteration": "viśrānti bēku",
+      "english_meaning": "I need rest",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-weak-iddini",
+      "kannada_text": "ದುರ್ಬಲವಾಗಿದ್ದೀನಿ",
+      "transliteration": "durbalavāgiddīni",
+      "english_meaning": "I feel weak",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-naale-beku",
+      "kannada_text": "ನಾಳೆ ಬೇಕು",
+      "transliteration": "nāḷe bēku",
+      "english_meaning": "I need it tomorrow",
+      "register": "informal",
+      "tags": [
+        "health",
+        "time"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-meeting-ide",
+      "kannada_text": "ಮೀಟಿಂಗ್ ಇದೆ",
+      "transliteration": "mīṭiṅg ide",
+      "english_meaning": "There is a meeting",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-office-ge-hogi",
+      "kannada_text": "ಆಫೀಸ್‌ಗೆ ಹೋಗಿ",
+      "transliteration": "āfīs ge hōgi",
+      "english_meaning": "Go to the office",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-samayakke-banni",
+      "kannada_text": "ಸಮಯಕ್ಕೆ ಬನ್ನಿ",
+      "transliteration": "samayakke banni",
+      "english_meaning": "Come on time",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-report-kalsi",
+      "kannada_text": "ರಿಪೋರ್ಟ್ ಕಳಿಸಿ",
+      "transliteration": "ripōrṭ kaḷisi",
+      "english_meaning": "Send the report",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-manager-ondu",
+      "kannada_text": "ಒಂದು ನಿಮಿಷ",
+      "transliteration": "ondu nimisha",
+      "english_meaning": "One minute",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "context_note": "Hold on — common with colleagues."
+    },
+    {
+      "id": "item-email-beku",
+      "kannada_text": "ಇಮೇಲ್ ಬೇಕು",
+      "transliteration": "imēl bēku",
+      "english_meaning": "I need an email",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-call-madthini",
+      "kannada_text": "ಕಾಲ್ ಮಾಡ್ತೀನಿ",
+      "transliteration": "kāl māḍtīni",
+      "english_meaning": "I'll make a call",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-work-aitu",
+      "kannada_text": "ಕೆಲಸ ಆಯ್ತು",
+      "transliteration": "kelasa āytu",
+      "english_meaning": "Work is done",
+      "register": "informal",
+      "tags": [
+        "work",
+        "response"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
     }
   ],
   "audio_assets": [
     {
       "id": "audio-item-namaskara-normal",
       "learning_item_id": "item-namaskara",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 915,
       "file_format": "wav",
       "relative_path": "content/audio/item-namaskara-normal.wav"
     },
     {
       "id": "audio-item-namaskara-slow",
       "learning_item_id": "item-namaskara",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1121,
       "file_format": "wav",
       "relative_path": "content/audio/item-namaskara-slow.wav"
     },
     {
       "id": "audio-item-hengidira-normal",
       "learning_item_id": "item-hengidira",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 897,
       "file_format": "wav",
       "relative_path": "content/audio/item-hengidira-normal.wav"
     },
     {
       "id": "audio-item-hengidira-slow",
       "learning_item_id": "item-hengidira",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1100,
       "file_format": "wav",
       "relative_path": "content/audio/item-hengidira-slow.wav"
     },
     {
       "id": "audio-item-chennagi-idini-normal",
       "learning_item_id": "item-chennagi-idini",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1253,
       "file_format": "wav",
       "relative_path": "content/audio/item-chennagi-idini-normal.wav"
     },
     {
       "id": "audio-item-chennagi-idini-slow",
       "learning_item_id": "item-chennagi-idini",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1550,
       "file_format": "wav",
       "relative_path": "content/audio/item-chennagi-idini-slow.wav"
     },
     {
       "id": "audio-item-dhanyavada-normal",
       "learning_item_id": "item-dhanyavada",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 880,
       "file_format": "wav",
       "relative_path": "content/audio/item-dhanyavada-normal.wav"
     },
     {
       "id": "audio-item-dhanyavada-slow",
       "learning_item_id": "item-dhanyavada",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1085,
       "file_format": "wav",
       "relative_path": "content/audio/item-dhanyavada-slow.wav"
     },
     {
       "id": "audio-item-sari-normal",
       "learning_item_id": "item-sari",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 597,
       "file_format": "wav",
       "relative_path": "content/audio/item-sari-normal.wav"
     },
     {
       "id": "audio-item-sari-slow",
       "learning_item_id": "item-sari",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 743,
       "file_format": "wav",
       "relative_path": "content/audio/item-sari-slow.wav"
     },
     {
       "id": "audio-item-illa-normal",
       "learning_item_id": "item-illa",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 556,
       "file_format": "wav",
       "relative_path": "content/audio/item-illa-normal.wav"
     },
     {
       "id": "audio-item-illa-slow",
       "learning_item_id": "item-illa",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 692,
       "file_format": "wav",
       "relative_path": "content/audio/item-illa-slow.wav"
     },
     {
       "id": "audio-item-houdu-normal",
       "learning_item_id": "item-houdu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 664,
       "file_format": "wav",
       "relative_path": "content/audio/item-houdu-normal.wav"
     },
     {
       "id": "audio-item-houdu-slow",
       "learning_item_id": "item-houdu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 824,
       "file_format": "wav",
       "relative_path": "content/audio/item-houdu-slow.wav"
     },
     {
       "id": "audio-item-dayavittu-normal",
       "learning_item_id": "item-dayavittu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 915,
       "file_format": "wav",
       "relative_path": "content/audio/item-dayavittu-normal.wav"
     },
     {
       "id": "audio-item-dayavittu-slow",
       "learning_item_id": "item-dayavittu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1131,
       "file_format": "wav",
       "relative_path": "content/audio/item-dayavittu-slow.wav"
     },
     {
       "id": "audio-item-kshamisi-normal",
       "learning_item_id": "item-kshamisi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 822,
       "file_format": "wav",
       "relative_path": "content/audio/item-kshamisi-normal.wav"
     },
     {
       "id": "audio-item-kshamisi-slow",
       "learning_item_id": "item-kshamisi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1011,
       "file_format": "wav",
       "relative_path": "content/audio/item-kshamisi-slow.wav"
     },
     {
       "id": "audio-item-matte-sigona-normal",
       "learning_item_id": "item-matte-sigona",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1043,
       "file_format": "wav",
       "relative_path": "content/audio/item-matte-sigona-normal.wav"
     },
     {
       "id": "audio-item-matte-sigona-slow",
       "learning_item_id": "item-matte-sigona",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1282,
       "file_format": "wav",
       "relative_path": "content/audio/item-matte-sigona-slow.wav"
     },
     {
       "id": "audio-item-shubha-ratri-normal",
       "learning_item_id": "item-shubha-ratri",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1031,
       "file_format": "wav",
       "relative_path": "content/audio/item-shubha-ratri-normal.wav"
     },
     {
       "id": "audio-item-shubha-ratri-slow",
       "learning_item_id": "item-shubha-ratri",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1259,
       "file_format": "wav",
       "relative_path": "content/audio/item-shubha-ratri-slow.wav"
     },
     {
       "id": "audio-item-auto-bidu-normal",
       "learning_item_id": "item-auto-bidu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 846,
       "file_format": "wav",
       "relative_path": "content/audio/item-auto-bidu-normal.wav"
     },
     {
       "id": "audio-item-auto-bidu-slow",
       "learning_item_id": "item-auto-bidu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1052,
       "file_format": "wav",
       "relative_path": "content/audio/item-auto-bidu-slow.wav"
     },
     {
       "id": "audio-item-elli-hogbeku-normal",
       "learning_item_id": "item-elli-hogbeku",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1300,
       "file_format": "wav",
       "relative_path": "content/audio/item-elli-hogbeku-normal.wav"
     },
     {
       "id": "audio-item-elli-hogbeku-slow",
       "learning_item_id": "item-elli-hogbeku",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1610,
       "file_format": "wav",
       "relative_path": "content/audio/item-elli-hogbeku-slow.wav"
     },
     {
       "id": "audio-item-meter-prati-normal",
       "learning_item_id": "item-meter-prati",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1136,
       "file_format": "wav",
       "relative_path": "content/audio/item-meter-prati-normal.wav"
     },
     {
       "id": "audio-item-meter-prati-slow",
       "learning_item_id": "item-meter-prati",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1399,
       "file_format": "wav",
       "relative_path": "content/audio/item-meter-prati-slow.wav"
     },
     {
       "id": "audio-item-aidu-nimisha-normal",
       "learning_item_id": "item-aidu-nimisha",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1392,
       "file_format": "wav",
       "relative_path": "content/audio/item-aidu-nimisha-normal.wav"
     },
     {
       "id": "audio-item-aidu-nimisha-slow",
       "learning_item_id": "item-aidu-nimisha",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1713,
       "file_format": "wav",
       "relative_path": "content/audio/item-aidu-nimisha-slow.wav"
     },
     {
       "id": "audio-item-illi-nilli-normal",
       "learning_item_id": "item-illi-nilli",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 835,
       "file_format": "wav",
       "relative_path": "content/audio/item-illi-nilli-normal.wav"
     },
     {
       "id": "audio-item-illi-nilli-slow",
       "learning_item_id": "item-illi-nilli",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1040,
       "file_format": "wav",
       "relative_path": "content/audio/item-illi-nilli-slow.wav"
     },
     {
       "id": "audio-item-ellige-hogi-normal",
       "learning_item_id": "item-ellige-hogi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 986,
       "file_format": "wav",
       "relative_path": "content/audio/item-ellige-hogi-normal.wav"
     },
     {
       "id": "audio-item-ellige-hogi-slow",
       "learning_item_id": "item-ellige-hogi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1214,
       "file_format": "wav",
       "relative_path": "content/audio/item-ellige-hogi-slow.wav"
     },
     {
       "id": "audio-item-tumba-doora-normal",
       "learning_item_id": "item-tumba-doora",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 866,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-doora-normal.wav"
     },
     {
       "id": "audio-item-tumba-doora-slow",
       "learning_item_id": "item-tumba-doora",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1077,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-doora-slow.wav"
     },
     {
       "id": "audio-item-bere-varthe-normal",
       "learning_item_id": "item-bere-varthe",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1334,
       "file_format": "wav",
       "relative_path": "content/audio/item-bere-varthe-normal.wav"
     },
     {
       "id": "audio-item-bere-varthe-slow",
       "learning_item_id": "item-bere-varthe",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1644,
       "file_format": "wav",
       "relative_path": "content/audio/item-bere-varthe-slow.wav"
     },
     {
       "id": "audio-item-ondu-normal",
       "learning_item_id": "item-ondu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 595,
       "file_format": "wav",
       "relative_path": "content/audio/item-ondu-normal.wav"
     },
     {
       "id": "audio-item-ondu-slow",
       "learning_item_id": "item-ondu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 742,
       "file_format": "wav",
       "relative_path": "content/audio/item-ondu-slow.wav"
     },
     {
       "id": "audio-item-eradu-normal",
       "learning_item_id": "item-eradu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 630,
       "file_format": "wav",
       "relative_path": "content/audio/item-eradu-normal.wav"
     },
     {
       "id": "audio-item-eradu-slow",
       "learning_item_id": "item-eradu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 778,
       "file_format": "wav",
       "relative_path": "content/audio/item-eradu-slow.wav"
     },
     {
       "id": "audio-item-mooru-normal",
       "learning_item_id": "item-mooru",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 567,
       "file_format": "wav",
       "relative_path": "content/audio/item-mooru-normal.wav"
     },
     {
       "id": "audio-item-mooru-slow",
       "learning_item_id": "item-mooru",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 690,
       "file_format": "wav",
       "relative_path": "content/audio/item-mooru-slow.wav"
     },
     {
       "id": "audio-item-naalku-normal",
       "learning_item_id": "item-naalku",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 741,
       "file_format": "wav",
       "relative_path": "content/audio/item-naalku-normal.wav"
     },
     {
       "id": "audio-item-naalku-slow",
       "learning_item_id": "item-naalku",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 912,
       "file_format": "wav",
       "relative_path": "content/audio/item-naalku-slow.wav"
     },
     {
       "id": "audio-item-aidu-num-normal",
       "learning_item_id": "item-aidu-num",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 578,
       "file_format": "wav",
       "relative_path": "content/audio/item-aidu-num-normal.wav"
     },
     {
       "id": "audio-item-aidu-num-slow",
       "learning_item_id": "item-aidu-num",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 715,
       "file_format": "wav",
       "relative_path": "content/audio/item-aidu-num-slow.wav"
     },
     {
       "id": "audio-item-aaru-normal",
       "learning_item_id": "item-aaru",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 544,
       "file_format": "wav",
       "relative_path": "content/audio/item-aaru-normal.wav"
     },
     {
       "id": "audio-item-aaru-slow",
       "learning_item_id": "item-aaru",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 668,
       "file_format": "wav",
       "relative_path": "content/audio/item-aaru-slow.wav"
     },
     {
       "id": "audio-item-elu-normal",
       "learning_item_id": "item-elu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 560,
       "file_format": "wav",
       "relative_path": "content/audio/item-elu-normal.wav"
     },
     {
       "id": "audio-item-elu-slow",
       "learning_item_id": "item-elu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 686,
       "file_format": "wav",
       "relative_path": "content/audio/item-elu-slow.wav"
     },
     {
       "id": "audio-item-entu-normal",
       "learning_item_id": "item-entu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 649,
       "file_format": "wav",
       "relative_path": "content/audio/item-entu-normal.wav"
     },
     {
       "id": "audio-item-entu-slow",
       "learning_item_id": "item-entu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 796,
       "file_format": "wav",
       "relative_path": "content/audio/item-entu-slow.wav"
     },
     {
       "id": "audio-item-ombattu-normal",
       "learning_item_id": "item-ombattu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 811,
       "file_format": "wav",
       "relative_path": "content/audio/item-ombattu-normal.wav"
     },
     {
       "id": "audio-item-ombattu-slow",
       "learning_item_id": "item-ombattu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 994,
       "file_format": "wav",
       "relative_path": "content/audio/item-ombattu-slow.wav"
     },
     {
       "id": "audio-item-hattu-normal",
       "learning_item_id": "item-hattu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 664,
       "file_format": "wav",
       "relative_path": "content/audio/item-hattu-normal.wav"
     },
     {
       "id": "audio-item-hattu-slow",
       "learning_item_id": "item-hattu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 824,
       "file_format": "wav",
       "relative_path": "content/audio/item-hattu-slow.wav"
     },
     {
       "id": "audio-item-eshtu-normal",
       "learning_item_id": "item-eshtu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 649,
       "file_format": "wav",
       "relative_path": "content/audio/item-eshtu-normal.wav"
     },
     {
       "id": "audio-item-eshtu-slow",
       "learning_item_id": "item-eshtu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 796,
       "file_format": "wav",
       "relative_path": "content/audio/item-eshtu-slow.wav"
     },
     {
       "id": "audio-item-idli-normal",
       "learning_item_id": "item-idli",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 920,
       "file_format": "wav",
       "relative_path": "content/audio/item-idli-normal.wav"
     },
     {
       "id": "audio-item-idli-slow",
       "learning_item_id": "item-idli",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1137,
       "file_format": "wav",
       "relative_path": "content/audio/item-idli-slow.wav"
     },
     {
       "id": "audio-item-dosa-normal",
       "learning_item_id": "item-dosa",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 683,
       "file_format": "wav",
       "relative_path": "content/audio/item-dosa-normal.wav"
     },
     {
       "id": "audio-item-dosa-slow",
       "learning_item_id": "item-dosa",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 841,
       "file_format": "wav",
       "relative_path": "content/audio/item-dosa-slow.wav"
     },
     {
       "id": "audio-item-kafe-normal",
       "learning_item_id": "item-kafe",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 931,
       "file_format": "wav",
       "relative_path": "content/audio/item-kafe-normal.wav"
     },
     {
       "id": "audio-item-kafe-slow",
       "learning_item_id": "item-kafe",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1149,
       "file_format": "wav",
       "relative_path": "content/audio/item-kafe-slow.wav"
     },
     {
       "id": "audio-item-swasthi-normal",
       "learning_item_id": "item-swasthi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1299,
       "file_format": "wav",
       "relative_path": "content/audio/item-swasthi-normal.wav"
     },
     {
       "id": "audio-item-swasthi-slow",
       "learning_item_id": "item-swasthi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1597,
       "file_format": "wav",
       "relative_path": "content/audio/item-swasthi-slow.wav"
     },
     {
       "id": "audio-item-shakaahaari-normal",
       "learning_item_id": "item-shakaahaari",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1042,
       "file_format": "wav",
       "relative_path": "content/audio/item-shakaahaari-normal.wav"
     },
     {
       "id": "audio-item-shakaahaari-slow",
       "learning_item_id": "item-shakaahaari",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1282,
       "file_format": "wav",
       "relative_path": "content/audio/item-shakaahaari-slow.wav"
     },
     {
       "id": "audio-item-mirchi-kammi-normal",
       "learning_item_id": "item-mirchi-kammi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1124,
       "file_format": "wav",
       "relative_path": "content/audio/item-mirchi-kammi-normal.wav"
     },
     {
       "id": "audio-item-mirchi-kammi-slow",
       "learning_item_id": "item-mirchi-kammi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1388,
       "file_format": "wav",
       "relative_path": "content/audio/item-mirchi-kammi-slow.wav"
     },
     {
       "id": "audio-item-bili-kodi-normal",
       "learning_item_id": "item-bili-kodi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 786,
       "file_format": "wav",
       "relative_path": "content/audio/item-bili-kodi-normal.wav"
     },
     {
       "id": "audio-item-bili-kodi-slow",
       "learning_item_id": "item-bili-kodi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 957,
       "file_format": "wav",
       "relative_path": "content/audio/item-bili-kodi-slow.wav"
     },
     {
       "id": "audio-item-ruchiyagi-normal",
       "learning_item_id": "item-ruchiyagi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1192,
       "file_format": "wav",
       "relative_path": "content/audio/item-ruchiyagi-normal.wav"
     },
     {
       "id": "audio-item-ruchiyagi-slow",
       "learning_item_id": "item-ruchiyagi",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1467,
       "file_format": "wav",
       "relative_path": "content/audio/item-ruchiyagi-slow.wav"
     },
     {
       "id": "audio-item-beku-normal",
       "learning_item_id": "item-beku",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 649,
       "file_format": "wav",
       "relative_path": "content/audio/item-beku-normal.wav"
     },
     {
       "id": "audio-item-beku-slow",
       "learning_item_id": "item-beku",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 796,
       "file_format": "wav",
       "relative_path": "content/audio/item-beku-slow.wav"
     },
     {
       "id": "audio-item-beda-normal",
       "learning_item_id": "item-beda",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 579,
       "file_format": "wav",
       "relative_path": "content/audio/item-beda-normal.wav"
     },
     {
       "id": "audio-item-beda-slow",
       "learning_item_id": "item-beda",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 715,
       "file_format": "wav",
       "relative_path": "content/audio/item-beda-slow.wav"
     },
     {
       "id": "audio-item-eshtu-beela-normal",
       "learning_item_id": "item-eshtu-beela",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 975,
       "file_format": "wav",
       "relative_path": "content/audio/item-eshtu-beela-normal.wav"
     },
     {
       "id": "audio-item-eshtu-beela-slow",
       "learning_item_id": "item-eshtu-beela",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1203,
       "file_format": "wav",
       "relative_path": "content/audio/item-eshtu-beela-slow.wav"
     },
     {
       "id": "audio-item-kodthira-normal",
       "learning_item_id": "item-kodthira",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 766,
       "file_format": "wav",
       "relative_path": "content/audio/item-kodthira-normal.wav"
     },
     {
       "id": "audio-item-kodthira-slow",
       "learning_item_id": "item-kodthira",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 944,
       "file_format": "wav",
       "relative_path": "content/audio/item-kodthira-slow.wav"
     },
     {
       "id": "audio-item-tumba-jasta-normal",
       "learning_item_id": "item-tumba-jasta",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1040,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-jasta-normal.wav"
     },
     {
       "id": "audio-item-tumba-jasta-slow",
       "learning_item_id": "item-tumba-jasta",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1274,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-jasta-slow.wav"
     },
     {
       "id": "audio-item-swalpa-kami-normal",
       "learning_item_id": "item-swalpa-kami",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1154,
       "file_format": "wav",
       "relative_path": "content/audio/item-swalpa-kami-normal.wav"
     },
     {
       "id": "audio-item-swalpa-kami-slow",
       "learning_item_id": "item-swalpa-kami",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1416,
       "file_format": "wav",
       "relative_path": "content/audio/item-swalpa-kami-slow.wav"
     },
     {
       "id": "audio-item-cash-ide-normal",
       "learning_item_id": "item-cash-ide",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 892,
       "file_format": "wav",
       "relative_path": "content/audio/item-cash-ide-normal.wav"
     },
     {
       "id": "audio-item-cash-ide-slow",
       "learning_item_id": "item-cash-ide",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1104,
       "file_format": "wav",
       "relative_path": "content/audio/item-cash-ide-slow.wav"
     },
     {
       "id": "audio-item-samayavaagilla-normal",
       "learning_item_id": "item-samayavaagilla",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1200,
       "file_format": "wav",
       "relative_path": "content/audio/item-samayavaagilla-normal.wav"
     },
     {
       "id": "audio-item-samayavaagilla-slow",
       "learning_item_id": "item-samayavaagilla",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1474,
       "file_format": "wav",
       "relative_path": "content/audio/item-samayavaagilla-slow.wav"
     },
     {
       "id": "audio-item-bala-normal",
       "learning_item_id": "item-bala",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 567,
       "file_format": "wav",
       "relative_path": "content/audio/item-bala-normal.wav"
     },
     {
       "id": "audio-item-bala-slow",
       "learning_item_id": "item-bala",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 692,
       "file_format": "wav",
       "relative_path": "content/audio/item-bala-slow.wav"
     },
     {
       "id": "audio-item-eda-normal",
       "learning_item_id": "item-eda",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 544,
       "file_format": "wav",
       "relative_path": "content/audio/item-eda-normal.wav"
     },
     {
       "id": "audio-item-eda-slow",
       "learning_item_id": "item-eda",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 669,
       "file_format": "wav",
       "relative_path": "content/audio/item-eda-slow.wav"
     },
     {
       "id": "audio-item-nera-normal",
       "learning_item_id": "item-nera",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 579,
       "file_format": "wav",
       "relative_path": "content/audio/item-nera-normal.wav"
     },
     {
       "id": "audio-item-nera-slow",
       "learning_item_id": "item-nera",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 703,
       "file_format": "wav",
       "relative_path": "content/audio/item-nera-slow.wav"
     },
     {
       "id": "audio-item-elligide-normal",
       "learning_item_id": "item-elligide",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 672,
       "file_format": "wav",
       "relative_path": "content/audio/item-elligide-normal.wav"
     },
     {
       "id": "audio-item-elligide-slow",
       "learning_item_id": "item-elligide",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 832,
       "file_format": "wav",
       "relative_path": "content/audio/item-elligide-slow.wav"
     },
     {
       "id": "audio-item-hattira-normal",
       "learning_item_id": "item-hattira",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 757,
       "file_format": "wav",
       "relative_path": "content/audio/item-hattira-normal.wav"
     },
     {
       "id": "audio-item-hattira-slow",
       "learning_item_id": "item-hattira",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 928,
       "file_format": "wav",
       "relative_path": "content/audio/item-hattira-slow.wav"
     },
     {
       "id": "audio-item-doora-normal",
       "learning_item_id": "item-doora",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 590,
       "file_format": "wav",
       "relative_path": "content/audio/item-doora-normal.wav"
     },
     {
       "id": "audio-item-doora-slow",
       "learning_item_id": "item-doora",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 725,
       "file_format": "wav",
       "relative_path": "content/audio/item-doora-slow.wav"
     },
     {
       "id": "audio-item-illiyeee-normal",
       "learning_item_id": "item-illiyeee",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 706,
       "file_format": "wav",
       "relative_path": "content/audio/item-illiyeee-normal.wav"
     },
     {
       "id": "audio-item-illiyeee-slow",
       "learning_item_id": "item-illiyeee",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 866,
       "file_format": "wav",
       "relative_path": "content/audio/item-illiyeee-slow.wav"
     },
     {
       "id": "audio-item-dayavittu-helu-normal",
       "learning_item_id": "item-dayavittu-helu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 1159,
       "file_format": "wav",
       "relative_path": "content/audio/item-dayavittu-helu-normal.wav"
     },
     {
       "id": "audio-item-dayavittu-helu-slow",
       "learning_item_id": "item-dayavittu-helu",
-      "source": "human",
+      "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 650,
+      "duration_ms": 1433,
       "file_format": "wav",
       "relative_path": "content/audio/item-dayavittu-helu-slow.wav"
+    },
+    {
+      "id": "audio-item-nanu-vasisutteni-normal",
+      "learning_item_id": "item-nanu-vasisutteni",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1856,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-nanu-vasisutteni-normal.wav"
+    },
+    {
+      "id": "audio-item-nanu-vasisutteni-slow",
+      "learning_item_id": "item-nanu-vasisutteni",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 2294,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-nanu-vasisutteni-slow.wav"
+    },
+    {
+      "id": "audio-item-security-helu-normal",
+      "learning_item_id": "item-security-helu",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1398,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-security-helu-normal.wav"
+    },
+    {
+      "id": "audio-item-security-helu-slow",
+      "learning_item_id": "item-security-helu",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1718,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-security-helu-slow.wav"
+    },
+    {
+      "id": "audio-item-yavaga-barthira-normal",
+      "learning_item_id": "item-yavaga-barthira",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1315,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-yavaga-barthira-normal.wav"
+    },
+    {
+      "id": "audio-item-yavaga-barthira-slow",
+      "learning_item_id": "item-yavaga-barthira",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1626,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-yavaga-barthira-slow.wav"
+    },
+    {
+      "id": "audio-item-parcel-ide-normal",
+      "learning_item_id": "item-parcel-ide",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1224,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-parcel-ide-normal.wav"
+    },
+    {
+      "id": "audio-item-parcel-ide-slow",
+      "learning_item_id": "item-parcel-ide",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1504,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-parcel-ide-slow.wav"
+    },
+    {
+      "id": "audio-item-sahaya-beku-normal",
+      "learning_item_id": "item-sahaya-beku",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1177,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-sahaya-beku-normal.wav"
+    },
+    {
+      "id": "audio-item-sahaya-beku-slow",
+      "learning_item_id": "item-sahaya-beku",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1451,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-sahaya-beku-slow.wav"
+    },
+    {
+      "id": "audio-item-neeru-illa-normal",
+      "learning_item_id": "item-neeru-illa",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 846,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-neeru-illa-normal.wav"
+    },
+    {
+      "id": "audio-item-neeru-illa-slow",
+      "learning_item_id": "item-neeru-illa",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1051,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-neeru-illa-slow.wav"
+    },
+    {
+      "id": "audio-item-current-illa-normal",
+      "learning_item_id": "item-current-illa",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 906,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-current-illa-normal.wav"
+    },
+    {
+      "id": "audio-item-current-illa-slow",
+      "learning_item_id": "item-current-illa",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1118,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-current-illa-slow.wav"
+    },
+    {
+      "id": "audio-item-olleyavaru-normal",
+      "learning_item_id": "item-olleyavaru",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1168,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-olleyavaru-normal.wav"
+    },
+    {
+      "id": "audio-item-olleyavaru-slow",
+      "learning_item_id": "item-olleyavaru",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1436,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-olleyavaru-slow.wav"
+    },
+    {
+      "id": "audio-item-vaidyara-bheti-normal",
+      "learning_item_id": "item-vaidyara-bheti",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1182,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-vaidyara-bheti-normal.wav"
+    },
+    {
+      "id": "audio-item-vaidyara-bheti-slow",
+      "learning_item_id": "item-vaidyara-bheti",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1469,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-vaidyara-bheti-slow.wav"
+    },
+    {
+      "id": "audio-item-tumba-novu-normal",
+      "learning_item_id": "item-tumba-novu",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 877,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-tumba-novu-normal.wav"
+    },
+    {
+      "id": "audio-item-tumba-novu-slow",
+      "learning_item_id": "item-tumba-novu",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1088,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-tumba-novu-slow.wav"
+    },
+    {
+      "id": "audio-item-maththu-kodi-normal",
+      "learning_item_id": "item-maththu-kodi",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 892,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-maththu-kodi-normal.wav"
+    },
+    {
+      "id": "audio-item-maththu-kodi-slow",
+      "learning_item_id": "item-maththu-kodi",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1097,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-maththu-kodi-slow.wav"
+    },
+    {
+      "id": "audio-item-fever-ide-normal",
+      "learning_item_id": "item-fever-ide",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 863,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-fever-ide-normal.wav"
+    },
+    {
+      "id": "audio-item-fever-ide-slow",
+      "learning_item_id": "item-fever-ide",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1055,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-fever-ide-slow.wav"
+    },
+    {
+      "id": "audio-item-hospital-ellige-normal",
+      "learning_item_id": "item-hospital-ellige",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1276,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-hospital-ellige-normal.wav"
+    },
+    {
+      "id": "audio-item-hospital-ellige-slow",
+      "learning_item_id": "item-hospital-ellige",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1562,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-hospital-ellige-slow.wav"
+    },
+    {
+      "id": "audio-item-visranti-beku-normal",
+      "learning_item_id": "item-visranti-beku",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1229,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-visranti-beku-normal.wav"
+    },
+    {
+      "id": "audio-item-visranti-beku-slow",
+      "learning_item_id": "item-visranti-beku",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1516,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-visranti-beku-slow.wav"
+    },
+    {
+      "id": "audio-item-weak-iddini-normal",
+      "learning_item_id": "item-weak-iddini",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1321,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-weak-iddini-normal.wav"
+    },
+    {
+      "id": "audio-item-weak-iddini-slow",
+      "learning_item_id": "item-weak-iddini",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1630,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-weak-iddini-slow.wav"
+    },
+    {
+      "id": "audio-item-naale-beku-normal",
+      "learning_item_id": "item-naale-beku",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1020,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-naale-beku-normal.wav"
+    },
+    {
+      "id": "audio-item-naale-beku-slow",
+      "learning_item_id": "item-naale-beku",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1260,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-naale-beku-slow.wav"
+    },
+    {
+      "id": "audio-item-meeting-ide-normal",
+      "learning_item_id": "item-meeting-ide",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 962,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-meeting-ide-normal.wav"
+    },
+    {
+      "id": "audio-item-meeting-ide-slow",
+      "learning_item_id": "item-meeting-ide",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1190,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-meeting-ide-slow.wav"
+    },
+    {
+      "id": "audio-item-office-ge-hogi-normal",
+      "learning_item_id": "item-office-ge-hogi",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1241,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-office-ge-hogi-normal.wav"
+    },
+    {
+      "id": "audio-item-office-ge-hogi-slow",
+      "learning_item_id": "item-office-ge-hogi",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1528,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-office-ge-hogi-slow.wav"
+    },
+    {
+      "id": "audio-item-samayakke-banni-normal",
+      "learning_item_id": "item-samayakke-banni",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1259,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-samayakke-banni-normal.wav"
+    },
+    {
+      "id": "audio-item-samayakke-banni-slow",
+      "learning_item_id": "item-samayakke-banni",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1556,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-samayakke-banni-slow.wav"
+    },
+    {
+      "id": "audio-item-report-kalsi-normal",
+      "learning_item_id": "item-report-kalsi",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1167,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-report-kalsi-normal.wav"
+    },
+    {
+      "id": "audio-item-report-kalsi-slow",
+      "learning_item_id": "item-report-kalsi",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1441,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-report-kalsi-slow.wav"
+    },
+    {
+      "id": "audio-item-manager-ondu-normal",
+      "learning_item_id": "item-manager-ondu",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1036,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-manager-ondu-normal.wav"
+    },
+    {
+      "id": "audio-item-manager-ondu-slow",
+      "learning_item_id": "item-manager-ondu",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1265,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-manager-ondu-slow.wav"
+    },
+    {
+      "id": "audio-item-email-beku-normal",
+      "learning_item_id": "item-email-beku",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1020,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-email-beku-normal.wav"
+    },
+    {
+      "id": "audio-item-email-beku-slow",
+      "learning_item_id": "item-email-beku",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1261,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-email-beku-slow.wav"
+    },
+    {
+      "id": "audio-item-call-madthini-normal",
+      "learning_item_id": "item-call-madthini",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1099,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-call-madthini-normal.wav"
+    },
+    {
+      "id": "audio-item-call-madthini-slow",
+      "learning_item_id": "item-call-madthini",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1356,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-call-madthini-slow.wav"
+    },
+    {
+      "id": "audio-item-work-aitu-normal",
+      "learning_item_id": "item-work-aitu",
+      "source": "tts",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 1093,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-work-aitu-normal.wav"
+    },
+    {
+      "id": "audio-item-work-aitu-slow",
+      "learning_item_id": "item-work-aitu",
+      "source": "tts",
+      "speaking_speed": "slow",
+      "review_status": "approved",
+      "duration_ms": 1340,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-work-aitu-slow.wav"
     },
     {
       "id": "audio-item-sari-ai-variation",
@@ -1926,7 +2772,7 @@
       "source": "ai",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 450,
+      "duration_ms": 597,
       "file_format": "wav",
       "relative_path": "content/audio/item-sari-normal.wav"
     }
@@ -2200,6 +3046,126 @@
     {
       "lesson_id": "lesson-dir-2",
       "learning_item_id": "item-dayavittu-helu",
+      "sort_order": 4
+    },
+    {
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-nanu-vasisutteni",
+      "sort_order": 1
+    },
+    {
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-security-helu",
+      "sort_order": 2
+    },
+    {
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-yavaga-barthira",
+      "sort_order": 3
+    },
+    {
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-parcel-ide",
+      "sort_order": 4
+    },
+    {
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-sahaya-beku",
+      "sort_order": 1
+    },
+    {
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-neeru-illa",
+      "sort_order": 2
+    },
+    {
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-current-illa",
+      "sort_order": 3
+    },
+    {
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-olleyavaru",
+      "sort_order": 4
+    },
+    {
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-vaidyara-bheti",
+      "sort_order": 1
+    },
+    {
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-tumba-novu",
+      "sort_order": 2
+    },
+    {
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-maththu-kodi",
+      "sort_order": 3
+    },
+    {
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-fever-ide",
+      "sort_order": 4
+    },
+    {
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-hospital-ellige",
+      "sort_order": 1
+    },
+    {
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-visranti-beku",
+      "sort_order": 2
+    },
+    {
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-weak-iddini",
+      "sort_order": 3
+    },
+    {
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-naale-beku",
+      "sort_order": 4
+    },
+    {
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-meeting-ide",
+      "sort_order": 1
+    },
+    {
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-office-ge-hogi",
+      "sort_order": 2
+    },
+    {
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-samayakke-banni",
+      "sort_order": 3
+    },
+    {
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-report-kalsi",
+      "sort_order": 4
+    },
+    {
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-manager-ondu",
+      "sort_order": 1
+    },
+    {
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-email-beku",
+      "sort_order": 2
+    },
+    {
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-call-madthini",
+      "sort_order": 3
+    },
+    {
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-work-aitu",
       "sort_order": 4
     }
   ],
@@ -3750,6 +4716,721 @@
               {
                 "label": "mīṭar prakāra",
                 "hint": "By meter",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ex-neigh-1-flash",
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-nanu-vasisutteni",
+      "exercise_type": "vocabulary_flashcard",
+      "sort_order": 1,
+      "prompt": {
+        "instruction": "Learn this phrase."
+      }
+    },
+    {
+      "id": "ex-neigh-1-mcq",
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-security-helu",
+      "exercise_type": "listen_identify",
+      "sort_order": 2,
+      "prompt": {
+        "instruction": "What does this phrase mean?",
+        "choices": [
+          "When will you come?",
+          "Tell security",
+          "A parcel has arrived",
+          "Thank you"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-neigh-1-en-kn",
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-security-helu",
+      "exercise_type": "english_to_kannada",
+      "sort_order": 3,
+      "prompt": {
+        "instruction": "How do you say 'Tell security' in Kannada?"
+      }
+    },
+    {
+      "id": "ex-neigh-1-kn-en",
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-yavaga-barthira",
+      "exercise_type": "kannada_to_english",
+      "sort_order": 4,
+      "prompt": {
+        "instruction": "Choose the best English meaning.",
+        "choices": [
+          "I live right here",
+          "When will you come?",
+          "A parcel has arrived",
+          "Good night"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-neigh-1-fill",
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-security-helu",
+      "exercise_type": "fill_blank",
+      "sort_order": 5,
+      "prompt": {
+        "instruction": "Tell security — sekyuriti ge ____",
+        "blanked_transliteration": "sekyuriti ge _____",
+        "accepted": [
+          "hēḷi",
+          "heli"
+        ]
+      }
+    },
+    {
+      "id": "ex-neigh-1-repeat",
+      "lesson_id": "lesson-neigh-1",
+      "learning_item_id": "item-parcel-ide",
+      "exercise_type": "listen_repeat",
+      "sort_order": 6,
+      "prompt": {
+        "instruction": "Listen and repeat aloud. Mark how you did."
+      }
+    },
+    {
+      "id": "ex-neigh-1-convo",
+      "lesson_id": "lesson-neigh-1",
+      "exercise_type": "scripted_conversation",
+      "sort_order": 7,
+      "prompt": {
+        "instruction": "Parcel at the gate.",
+        "steps": [
+          {
+            "narration": "Security asks who you are.",
+            "partner": {
+              "kannada": "ಯಾರು?",
+              "transliteration": "yāru?",
+              "english": "Who is it?"
+            }
+          },
+          {
+            "narration": "Say you live here.",
+            "choices": [
+              {
+                "label": "nānu illiyē vāsisuttēne",
+                "hint": "I live right here",
+                "correct": true
+              },
+              {
+                "label": "bill koḍi",
+                "hint": "Give the bill",
+                "correct": false
+              },
+              {
+                "label": "ondu",
+                "hint": "One",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ex-neigh-2-flash",
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-sahaya-beku",
+      "exercise_type": "vocabulary_flashcard",
+      "sort_order": 1,
+      "prompt": {
+        "instruction": "Learn this phrase."
+      }
+    },
+    {
+      "id": "ex-neigh-2-mcq",
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-neeru-illa",
+      "exercise_type": "listen_identify",
+      "sort_order": 2,
+      "prompt": {
+        "instruction": "What does this phrase mean?",
+        "choices": [
+          "No power",
+          "No water",
+          "You are very kind",
+          "Thank you"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-neigh-2-en-kn",
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-neeru-illa",
+      "exercise_type": "english_to_kannada",
+      "sort_order": 3,
+      "prompt": {
+        "instruction": "How do you say 'No water' in Kannada?"
+      }
+    },
+    {
+      "id": "ex-neigh-2-kn-en",
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-current-illa",
+      "exercise_type": "kannada_to_english",
+      "sort_order": 4,
+      "prompt": {
+        "instruction": "Choose the best English meaning.",
+        "choices": [
+          "I need help",
+          "No power",
+          "You are very kind",
+          "Good night"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-neigh-2-order",
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-sahaya-beku",
+      "exercise_type": "sentence_construction",
+      "sort_order": 5,
+      "prompt": {
+        "instruction": "Arrange the words (transliteration tiles).",
+        "tiles": [
+          "bēku",
+          "sahāya"
+        ],
+        "solution": [
+          "sahāya",
+          "bēku"
+        ]
+      }
+    },
+    {
+      "id": "ex-neigh-2-repeat",
+      "lesson_id": "lesson-neigh-2",
+      "learning_item_id": "item-olleyavaru",
+      "exercise_type": "listen_repeat",
+      "sort_order": 6,
+      "prompt": {
+        "instruction": "Listen and repeat aloud. Mark how you did."
+      }
+    },
+    {
+      "id": "ex-neigh-2-convo",
+      "lesson_id": "lesson-neigh-2",
+      "exercise_type": "scripted_conversation",
+      "sort_order": 7,
+      "prompt": {
+        "instruction": "Knock on a neighbour's door.",
+        "steps": [
+          {
+            "narration": "You need help at home.",
+            "partner": {
+              "kannada": "ಏನಾಯ್ತು?",
+              "transliteration": "ēnāytu?",
+              "english": "What happened?"
+            }
+          },
+          {
+            "narration": "Explain no power.",
+            "choices": [
+              {
+                "label": "kareṇṭ illa",
+                "hint": "No power",
+                "correct": true
+              },
+              {
+                "label": "dōse",
+                "hint": "Dosa",
+                "correct": false
+              },
+              {
+                "label": "āṭō biḍi",
+                "hint": "Stop the auto",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ex-health-1-flash",
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-vaidyara-bheti",
+      "exercise_type": "vocabulary_flashcard",
+      "sort_order": 1,
+      "prompt": {
+        "instruction": "Learn this phrase."
+      }
+    },
+    {
+      "id": "ex-health-1-mcq",
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-tumba-novu",
+      "exercise_type": "listen_identify",
+      "sort_order": 2,
+      "prompt": {
+        "instruction": "What does this phrase mean?",
+        "choices": [
+          "Give medicine",
+          "A lot of pain",
+          "I have a fever",
+          "Thank you"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-health-1-en-kn",
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-tumba-novu",
+      "exercise_type": "english_to_kannada",
+      "sort_order": 3,
+      "prompt": {
+        "instruction": "How do you say 'A lot of pain' in Kannada?"
+      }
+    },
+    {
+      "id": "ex-health-1-kn-en",
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-maththu-kodi",
+      "exercise_type": "kannada_to_english",
+      "sort_order": 4,
+      "prompt": {
+        "instruction": "Choose the best English meaning.",
+        "choices": [
+          "Doctor's appointment",
+          "Give medicine",
+          "I have a fever",
+          "Good night"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-health-1-fill",
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-fever-ide",
+      "exercise_type": "fill_blank",
+      "sort_order": 5,
+      "prompt": {
+        "instruction": "I have a fever",
+        "blanked_transliteration": "jvara _____",
+        "accepted": [
+          "ide"
+        ]
+      }
+    },
+    {
+      "id": "ex-health-1-repeat",
+      "lesson_id": "lesson-health-1",
+      "learning_item_id": "item-fever-ide",
+      "exercise_type": "listen_repeat",
+      "sort_order": 6,
+      "prompt": {
+        "instruction": "Listen and repeat aloud. Mark how you did."
+      }
+    },
+    {
+      "id": "ex-health-1-convo",
+      "lesson_id": "lesson-health-1",
+      "exercise_type": "scripted_conversation",
+      "sort_order": 7,
+      "prompt": {
+        "instruction": "At the pharmacy counter.",
+        "steps": [
+          {
+            "narration": "Pharmacist asks what you need.",
+            "partner": {
+              "kannada": "ಏನು ಬೇಕು?",
+              "transliteration": "ēnu bēku?",
+              "english": "What do you need?"
+            }
+          },
+          {
+            "narration": "Ask for medicine.",
+            "choices": [
+              {
+                "label": "maddu koḍi",
+                "hint": "Give medicine",
+                "correct": true
+              },
+              {
+                "label": "ripōrṭ kaḷisi",
+                "hint": "Send report",
+                "correct": false
+              },
+              {
+                "label": "bala",
+                "hint": "Right",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ex-health-2-flash",
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-hospital-ellige",
+      "exercise_type": "vocabulary_flashcard",
+      "sort_order": 1,
+      "prompt": {
+        "instruction": "Learn this phrase."
+      }
+    },
+    {
+      "id": "ex-health-2-mcq",
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-visranti-beku",
+      "exercise_type": "listen_identify",
+      "sort_order": 2,
+      "prompt": {
+        "instruction": "What does this phrase mean?",
+        "choices": [
+          "I feel weak",
+          "I need rest",
+          "I need it tomorrow",
+          "Thank you"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-health-2-en-kn",
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-visranti-beku",
+      "exercise_type": "english_to_kannada",
+      "sort_order": 3,
+      "prompt": {
+        "instruction": "How do you say 'I need rest' in Kannada?"
+      }
+    },
+    {
+      "id": "ex-health-2-kn-en",
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-weak-iddini",
+      "exercise_type": "kannada_to_english",
+      "sort_order": 4,
+      "prompt": {
+        "instruction": "Choose the best English meaning.",
+        "choices": [
+          "Where is the hospital?",
+          "I feel weak",
+          "I need it tomorrow",
+          "Good night"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-health-2-order",
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-hospital-ellige",
+      "exercise_type": "sentence_construction",
+      "sort_order": 5,
+      "prompt": {
+        "instruction": "Arrange the words (transliteration tiles).",
+        "tiles": [
+          "ellige?",
+          "āspatre"
+        ],
+        "solution": [
+          "āspatre",
+          "ellige?"
+        ]
+      }
+    },
+    {
+      "id": "ex-health-2-repeat",
+      "lesson_id": "lesson-health-2",
+      "learning_item_id": "item-naale-beku",
+      "exercise_type": "listen_repeat",
+      "sort_order": 6,
+      "prompt": {
+        "instruction": "Listen and repeat aloud. Mark how you did."
+      }
+    },
+    {
+      "id": "ex-health-2-convo",
+      "lesson_id": "lesson-health-2",
+      "exercise_type": "scripted_conversation",
+      "sort_order": 7,
+      "prompt": {
+        "instruction": "You feel weak today.",
+        "steps": [
+          {
+            "narration": "Friend checks on you.",
+            "partner": {
+              "kannada": "ಏನಾಯ್ತು?",
+              "transliteration": "ēnāytu?",
+              "english": "What happened?"
+            }
+          },
+          {
+            "narration": "Say you need rest.",
+            "choices": [
+              {
+                "label": "viśrānti bēku",
+                "hint": "I need rest",
+                "correct": true
+              },
+              {
+                "label": "kelasa āytu",
+                "hint": "Work is done",
+                "correct": false
+              },
+              {
+                "label": "eshtu bēla?",
+                "hint": "Price?",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ex-work-1-flash",
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-meeting-ide",
+      "exercise_type": "vocabulary_flashcard",
+      "sort_order": 1,
+      "prompt": {
+        "instruction": "Learn this phrase."
+      }
+    },
+    {
+      "id": "ex-work-1-mcq",
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-office-ge-hogi",
+      "exercise_type": "listen_identify",
+      "sort_order": 2,
+      "prompt": {
+        "instruction": "What does this phrase mean?",
+        "choices": [
+          "Come on time",
+          "Go to the office",
+          "Send the report",
+          "Thank you"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-work-1-en-kn",
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-office-ge-hogi",
+      "exercise_type": "english_to_kannada",
+      "sort_order": 3,
+      "prompt": {
+        "instruction": "How do you say 'Go to the office' in Kannada?"
+      }
+    },
+    {
+      "id": "ex-work-1-kn-en",
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-samayakke-banni",
+      "exercise_type": "kannada_to_english",
+      "sort_order": 4,
+      "prompt": {
+        "instruction": "Choose the best English meaning.",
+        "choices": [
+          "There is a meeting",
+          "Come on time",
+          "Send the report",
+          "Good night"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-work-1-fill",
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-meeting-ide",
+      "exercise_type": "fill_blank",
+      "sort_order": 5,
+      "prompt": {
+        "instruction": "There is a meeting",
+        "blanked_transliteration": "mīṭiṅg _____",
+        "accepted": [
+          "ide"
+        ]
+      }
+    },
+    {
+      "id": "ex-work-1-repeat",
+      "lesson_id": "lesson-work-1",
+      "learning_item_id": "item-report-kalsi",
+      "exercise_type": "listen_repeat",
+      "sort_order": 6,
+      "prompt": {
+        "instruction": "Listen and repeat aloud. Mark how you did."
+      }
+    },
+    {
+      "id": "ex-work-1-convo",
+      "lesson_id": "lesson-work-1",
+      "exercise_type": "scripted_conversation",
+      "sort_order": 7,
+      "prompt": {
+        "instruction": "Before a team meeting.",
+        "steps": [
+          {
+            "narration": "Colleague pings you.",
+            "partner": {
+              "kannada": "ಮೀಟಿಂಗ್?",
+              "transliteration": "mīṭiṅg?",
+              "english": "Meeting?"
+            }
+          },
+          {
+            "narration": "Confirm and ask them to be on time.",
+            "choices": [
+              {
+                "label": "samayakke banni",
+                "hint": "Come on time",
+                "correct": true
+              },
+              {
+                "label": "nīru illa",
+                "hint": "No water",
+                "correct": false
+              },
+              {
+                "label": "ombattu",
+                "hint": "Nine",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ex-work-2-flash",
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-manager-ondu",
+      "exercise_type": "vocabulary_flashcard",
+      "sort_order": 1,
+      "prompt": {
+        "instruction": "Learn this phrase."
+      }
+    },
+    {
+      "id": "ex-work-2-mcq",
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-email-beku",
+      "exercise_type": "listen_identify",
+      "sort_order": 2,
+      "prompt": {
+        "instruction": "What does this phrase mean?",
+        "choices": [
+          "I'll make a call",
+          "I need an email",
+          "Work is done",
+          "Thank you"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-work-2-en-kn",
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-email-beku",
+      "exercise_type": "english_to_kannada",
+      "sort_order": 3,
+      "prompt": {
+        "instruction": "How do you say 'I need an email' in Kannada?"
+      }
+    },
+    {
+      "id": "ex-work-2-kn-en",
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-call-madthini",
+      "exercise_type": "kannada_to_english",
+      "sort_order": 4,
+      "prompt": {
+        "instruction": "Choose the best English meaning.",
+        "choices": [
+          "One minute",
+          "I'll make a call",
+          "Work is done",
+          "Good night"
+        ],
+        "correct_index": 1
+      }
+    },
+    {
+      "id": "ex-work-2-order",
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-call-madthini",
+      "exercise_type": "sentence_construction",
+      "sort_order": 5,
+      "prompt": {
+        "instruction": "Arrange the words (transliteration tiles).",
+        "tiles": [
+          "māḍtīni",
+          "kāl"
+        ],
+        "solution": [
+          "kāl",
+          "māḍtīni"
+        ]
+      }
+    },
+    {
+      "id": "ex-work-2-repeat",
+      "lesson_id": "lesson-work-2",
+      "learning_item_id": "item-work-aitu",
+      "exercise_type": "listen_repeat",
+      "sort_order": 6,
+      "prompt": {
+        "instruction": "Listen and repeat aloud. Mark how you did."
+      }
+    },
+    {
+      "id": "ex-work-2-convo",
+      "lesson_id": "lesson-work-2",
+      "exercise_type": "scripted_conversation",
+      "sort_order": 7,
+      "prompt": {
+        "instruction": "Wrapping up a task.",
+        "steps": [
+          {
+            "narration": "Manager asks for status.",
+            "partner": {
+              "kannada": "ಆಯ್ತಾ?",
+              "transliteration": "āytā?",
+              "english": "Is it done?"
+            }
+          },
+          {
+            "narration": "Say work is finished.",
+            "choices": [
+              {
+                "label": "kelasa āytu",
+                "hint": "Work is done",
+                "correct": true
+              },
+              {
+                "label": "jvara ide",
+                "hint": "I have fever",
+                "correct": false
+              },
+              {
+                "label": "tumba jāsti",
+                "hint": "Too expensive",
                 "correct": false
               }
             ]

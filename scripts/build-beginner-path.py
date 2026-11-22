@@ -16,7 +16,7 @@ def audio_for(item_id: str) -> list[dict[str, Any]]:
         {
             "id": f"audio-{item_id}-normal",
             "learning_item_id": item_id,
-            "source": "human",
+            "source": "tts",
             "speaking_speed": "normal",
             "review_status": "approved",
             "duration_ms": 450,
@@ -26,7 +26,7 @@ def audio_for(item_id: str) -> list[dict[str, Any]]:
         {
             "id": f"audio-{item_id}-slow",
             "learning_item_id": item_id,
-            "source": "human",
+            "source": "tts",
             "speaking_speed": "slow",
             "review_status": "approved",
             "duration_ms": 650,
@@ -286,6 +286,45 @@ def build() -> dict[str, Any]:
         reg("item-dayavittu-helu", "ದಯವಿಟ್ಟು ಹೇಳಿ", "dayavittu hēḷi", "Please tell me", tags=["directions", "politeness"], difficulty=2, register="neutral"),
     ]
 
+    neigh1 = [
+        reg("item-nanu-vasisutteni", "ನಾನು ಇಲ್ಲಿಯೇ ವಾಸಿಸುತ್ತೇನೆ", "nānu illiyē vāsisuttēne", "I live right here", tags=["home", "neighbours"], difficulty=2),
+        reg("item-security-helu", "ಸೆಕ್ಯುರಿಟಿಗೆ ಹೇಳಿ", "sekyuriti ge hēḷi", "Tell security", tags=["home"], difficulty=2),
+        reg("item-yavaga-barthira", "ಯಾವಾಗ ಬರುತ್ತೀರಾ?", "yāvāga baruttīrā?", "When will you come?", tags=["home", "question"], difficulty=2),
+        reg("item-parcel-ide", "ಪಾರ್ಸೆಲ್ ಬಂದಿದೆ", "pārsel bandide", "A parcel has arrived", tags=["home"], difficulty=2),
+    ]
+    neigh2 = [
+        reg("item-sahaya-beku", "ಸಹಾಯ ಬೇಕು", "sahāya bēku", "I need help", tags=["home", "neighbours"], difficulty=2),
+        reg("item-neeru-illa", "ನೀರು ಇಲ್ಲ", "nīru illa", "No water", tags=["home"], difficulty=2),
+        reg("item-current-illa", "ಕರೆಂಟ್ ಇಲ್ಲ", "kareṇṭ illa", "No power", tags=["home"], difficulty=2),
+        reg("item-olleyavaru", "ತುಂಬಾ ಒಳ್ಳೆಯವರು", "tumba oḷḷeyavaru", "You are very kind", tags=["neighbours", "politeness"], difficulty=2),
+    ]
+
+    health1 = [
+        reg("item-vaidyara-bheti", "ವೈದ್ಯರ ಭೇಟಿ", "vaidyara bhēṭi", "Doctor's appointment", tags=["health"], difficulty=3),
+        reg("item-tumba-novu", "ತುಂಬಾ ನೋವು", "tumba nōvu", "A lot of pain", tags=["health"], difficulty=2),
+        reg("item-maththu-kodi", "ಮದ್ದು ಕೊಡಿ", "maddu koḍi", "Give medicine", tags=["health", "pharmacy"], difficulty=2),
+        reg("item-fever-ide", "ಜ್ವರ ಇದೆ", "jvara ide", "I have a fever", tags=["health"], difficulty=2),
+    ]
+    health2 = [
+        reg("item-hospital-ellige", "ಆಸ್ಪತ್ರೆ ಎಲ್ಲಿಗೆ?", "āspatre ellige?", "Where is the hospital?", tags=["health", "directions"], difficulty=2),
+        reg("item-visranti-beku", "ವಿಶ್ರಾಂತಿ ಬೇಕು", "viśrānti bēku", "I need rest", tags=["health"], difficulty=2),
+        reg("item-weak-iddini", "ದುರ್ಬಲವಾಗಿದ್ದೀನಿ", "durbalavāgiddīni", "I feel weak", tags=["health"], difficulty=3),
+        reg("item-naale-beku", "ನಾಳೆ ಬೇಕು", "nāḷe bēku", "I need it tomorrow", tags=["health", "time"], difficulty=2),
+    ]
+
+    work1 = [
+        reg("item-meeting-ide", "ಮೀಟಿಂಗ್ ಇದೆ", "mīṭiṅg ide", "There is a meeting", tags=["work"], difficulty=2),
+        reg("item-office-ge-hogi", "ಆಫೀಸ್‌ಗೆ ಹೋಗಿ", "āfīs ge hōgi", "Go to the office", tags=["work"], difficulty=2),
+        reg("item-samayakke-banni", "ಸಮಯಕ್ಕೆ ಬನ್ನಿ", "samayakke banni", "Come on time", tags=["work"], difficulty=2),
+        reg("item-report-kalsi", "ರಿಪೋರ್ಟ್ ಕಳಿಸಿ", "ripōrṭ kaḷisi", "Send the report", tags=["work"], difficulty=3),
+    ]
+    work2 = [
+        reg("item-manager-ondu", "ಒಂದು ನಿಮಿಷ", "ondu nimisha", "One minute", context="Hold on — common with colleagues.", tags=["work"], difficulty=1),
+        reg("item-email-beku", "ಇಮೇಲ್ ಬೇಕು", "imēl bēku", "I need an email", tags=["work"], difficulty=2),
+        reg("item-call-madthini", "ಕಾಲ್ ಮಾಡ್ತೀನಿ", "kāl māḍtīni", "I'll make a call", tags=["work"], difficulty=2),
+        reg("item-work-aitu", "ಕೆಲಸ ಆಯ್ತು", "kelasa āytu", "Work is done", tags=["work", "response"], difficulty=2),
+    ]
+
     lessons_meta = [
         ("lesson-greetings-1", "unit-1-greetings", 1, "Hello and thank you", "Core polite phrases you'll use many times a day.", 12, greet1),
         ("lesson-greetings-2", "unit-1-greetings", 2, "Yes, please, and goodbye", "Polite words to open and close any chat.", 12, greet2),
@@ -299,6 +338,12 @@ def build() -> dict[str, Any]:
         ("lesson-shop-2", "unit-5-shopping", 2, "Bargaining gently", "When the quote feels too high.", 12, shop2),
         ("lesson-dir-1", "unit-6-directions", 1, "Left, right, straight", "Follow local directions on foot.", 12, dir1),
         ("lesson-dir-2", "unit-6-directions", 2, "Near, far, right here", "Pin down where something is.", 12, dir2),
+        ("lesson-neigh-1", "unit-7-home", 1, "Flat and security", "Deliveries, guards, and telling people you live here.", 12, neigh1),
+        ("lesson-neigh-2", "unit-7-home", 2, "Asking neighbours", "Power, water, and quick favours.", 12, neigh2),
+        ("lesson-health-1", "unit-8-health", 1, "Doctor and pharmacy", "Pain, fever, and medicine.", 14, health1),
+        ("lesson-health-2", "unit-8-health", 2, "Feeling unwell", "Rest, hospital directions, and timing.", 14, health2),
+        ("lesson-work-1", "unit-9-work", 1, "Office basics", "Meetings, reports, and being on time.", 14, work1),
+        ("lesson-work-2", "unit-9-work", 2, "Quick work phrases", "Email, calls, and wrapping up tasks.", 12, work2),
     ]
 
     # Preserve hand-tuned exercises for first two lessons
@@ -638,6 +683,108 @@ def build() -> dict[str, Any]:
                 },
             ],
         },
+        "lesson-neigh-1": {
+            "instruction": "Parcel at the gate.",
+            "steps": [
+                {
+                    "narration": "Security asks who you are.",
+                    "partner": {"kannada": "ಯಾರು?", "transliteration": "yāru?", "english": "Who is it?"},
+                },
+                {
+                    "narration": "Say you live here.",
+                    "choices": [
+                        {"label": "nānu illiyē vāsisuttēne", "hint": "I live right here", "correct": True},
+                        {"label": "bill koḍi", "hint": "Give the bill", "correct": False},
+                        {"label": "ondu", "hint": "One", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-neigh-2": {
+            "instruction": "Knock on a neighbour's door.",
+            "steps": [
+                {
+                    "narration": "You need help at home.",
+                    "partner": {"kannada": "ಏನಾಯ್ತು?", "transliteration": "ēnāytu?", "english": "What happened?"},
+                },
+                {
+                    "narration": "Explain no power.",
+                    "choices": [
+                        {"label": "kareṇṭ illa", "hint": "No power", "correct": True},
+                        {"label": "dōse", "hint": "Dosa", "correct": False},
+                        {"label": "āṭō biḍi", "hint": "Stop the auto", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-health-1": {
+            "instruction": "At the pharmacy counter.",
+            "steps": [
+                {
+                    "narration": "Pharmacist asks what you need.",
+                    "partner": {"kannada": "ಏನು ಬೇಕು?", "transliteration": "ēnu bēku?", "english": "What do you need?"},
+                },
+                {
+                    "narration": "Ask for medicine.",
+                    "choices": [
+                        {"label": "maddu koḍi", "hint": "Give medicine", "correct": True},
+                        {"label": "ripōrṭ kaḷisi", "hint": "Send report", "correct": False},
+                        {"label": "bala", "hint": "Right", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-health-2": {
+            "instruction": "You feel weak today.",
+            "steps": [
+                {
+                    "narration": "Friend checks on you.",
+                    "partner": {"kannada": "ಏನಾಯ್ತು?", "transliteration": "ēnāytu?", "english": "What happened?"},
+                },
+                {
+                    "narration": "Say you need rest.",
+                    "choices": [
+                        {"label": "viśrānti bēku", "hint": "I need rest", "correct": True},
+                        {"label": "kelasa āytu", "hint": "Work is done", "correct": False},
+                        {"label": "eshtu bēla?", "hint": "Price?", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-work-1": {
+            "instruction": "Before a team meeting.",
+            "steps": [
+                {
+                    "narration": "Colleague pings you.",
+                    "partner": {"kannada": "ಮೀಟಿಂಗ್?", "transliteration": "mīṭiṅg?", "english": "Meeting?"},
+                },
+                {
+                    "narration": "Confirm and ask them to be on time.",
+                    "choices": [
+                        {"label": "samayakke banni", "hint": "Come on time", "correct": True},
+                        {"label": "nīru illa", "hint": "No water", "correct": False},
+                        {"label": "ombattu", "hint": "Nine", "correct": False},
+                    ],
+                },
+            ],
+        },
+        "lesson-work-2": {
+            "instruction": "Wrapping up a task.",
+            "steps": [
+                {
+                    "narration": "Manager asks for status.",
+                    "partner": {"kannada": "ಆಯ್ತಾ?", "transliteration": "āytā?", "english": "Is it done?"},
+                },
+                {
+                    "narration": "Say work is finished.",
+                    "choices": [
+                        {"label": "kelasa āytu", "hint": "Work is done", "correct": True},
+                        {"label": "jvara ide", "hint": "I have fever", "correct": False},
+                        {"label": "tumba jāsti", "hint": "Too expensive", "correct": False},
+                    ],
+                },
+            ],
+        },
         "lesson-dir-2": {
             "instruction": "You're almost there.",
             "steps": [
@@ -699,6 +846,24 @@ def build() -> dict[str, Any]:
             "blank": "nē___",
             "accepted": ["ra"],
         },
+        "lesson-neigh-1": {
+            "item_id": "item-security-helu",
+            "instruction": "Tell security — sekyuriti ge ____",
+            "blank": "sekyuriti ge _____",
+            "accepted": ["hēḷi", "heli"],
+        },
+        "lesson-health-1": {
+            "item_id": "item-fever-ide",
+            "instruction": "I have a fever",
+            "blank": "jvara _____",
+            "accepted": ["ide"],
+        },
+        "lesson-work-1": {
+            "item_id": "item-meeting-ide",
+            "instruction": "There is a meeting",
+            "blank": "mīṭiṅg _____",
+            "accepted": ["ide"],
+        },
     }
 
     tile_specs: dict[str, dict[str, Any]] = {
@@ -721,6 +886,21 @@ def build() -> dict[str, Any]:
             "item_id": "item-dayavittu-helu",
             "tiles": ["hēḷi", "dayavittu"],
             "solution": ["dayavittu", "hēḷi"],
+        },
+        "lesson-neigh-2": {
+            "item_id": "item-sahaya-beku",
+            "tiles": ["bēku", "sahāya"],
+            "solution": ["sahāya", "bēku"],
+        },
+        "lesson-health-2": {
+            "item_id": "item-hospital-ellige",
+            "tiles": ["ellige?", "āspatre"],
+            "solution": ["āspatre", "ellige?"],
+        },
+        "lesson-work-2": {
+            "item_id": "item-call-madthini",
+            "tiles": ["māḍtīni", "kāl"],
+            "solution": ["kāl", "māḍtīni"],
         },
     }
 
@@ -776,7 +956,7 @@ def build() -> dict[str, Any]:
         )
 
     bundle = {
-        "content_version": 4,
+        "content_version": 5,
         "course": {
             "id": "course-kannada-quest",
             "title": "Kannada Quest",
@@ -788,7 +968,7 @@ def build() -> dict[str, Any]:
                 "course_id": "course-kannada-quest",
                 "ordinal": 1,
                 "title": "Survival Kannada",
-                "description": "Greetings, yes/no, numbers, food, shopping, travel, and directions.",
+                "description": "Everyday Bengaluru Kannada: travel, food, home, health, and work.",
             }
         ],
         "units": [
@@ -798,6 +978,9 @@ def build() -> dict[str, Any]:
             {"id": "unit-4-food", "level_id": "level-1-survival", "ordinal": 4, "title": "Food & cafes", "description": "Order tea, idli, and pay the bill."},
             {"id": "unit-5-shopping", "level_id": "level-1-survival", "ordinal": 5, "title": "Shopping", "description": "Want this, what's the price, a little less."},
             {"id": "unit-6-directions", "level_id": "level-1-survival", "ordinal": 6, "title": "On foot", "description": "Left, right, near, and far."},
+            {"id": "unit-7-home", "level_id": "level-1-survival", "ordinal": 7, "title": "Home & neighbours", "description": "Security, deliveries, and asking next door."},
+            {"id": "unit-8-health", "level_id": "level-1-survival", "ordinal": 8, "title": "Health", "description": "Doctor, pharmacy, and feeling unwell."},
+            {"id": "unit-9-work", "level_id": "level-1-survival", "ordinal": 9, "title": "Work", "description": "Meetings, email, and quick office chat."},
         ],
         "lessons": lessons_json,
         "learning_items": all_items,

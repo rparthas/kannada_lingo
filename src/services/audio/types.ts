@@ -3,7 +3,7 @@ export type PlaybackSpeed = "normal" | "slow";
 export interface AudioAssetRef {
   learningItemId: string;
   relativePath?: string;
-  source: "human" | "ai";
+  source: "human" | "ai" | "tts";
   speakingSpeed: PlaybackSpeed;
 }
 

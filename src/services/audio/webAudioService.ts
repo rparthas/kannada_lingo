@@ -57,7 +57,7 @@ function pickAsset(
   preferSource?: "human" | "ai",
 ): AudioAssetDto | undefined {
   const approved = assets.filter((a) => a.relativePath);
-  const human = approved.filter((a) => a.source === "human");
+  const human = approved.filter((a) => a.source === "human" || a.source === "tts");
   const pool = preferSource === "ai" ? approved : human.length ? human : approved;
   const exact = pool.find((a) => a.speakingSpeed === speed);
   if (exact) return exact;
@@ -159,7 +159,8 @@ export function assetRefFromDto(
   return {
     learningItemId: dto.learningItemId,
     relativePath: dto.relativePath,
-    source: dto.source === "ai" ? "ai" : "human",
+    source:
+      dto.source === "ai" ? "ai" : dto.source === "tts" ? "tts" : "human",
     speakingSpeed: (dto.speakingSpeed as PlaybackSpeed) ?? speed,
   };
 }

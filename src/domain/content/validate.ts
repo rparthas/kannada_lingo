@@ -97,7 +97,7 @@ export function validateCurriculumBundle(
     audio
       .filter(
         (a) =>
-          a.source === "human" &&
+          (a.source === "human" || a.source === "tts") &&
           (a.speaking_speed ?? "normal") === "normal" &&
           (a.review_status ?? "approved") === "approved",
       )
