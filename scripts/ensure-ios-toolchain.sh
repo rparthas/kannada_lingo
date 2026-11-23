@@ -65,4 +65,4 @@ fi
 
 echo "==> Toolchain ready."
 echo "    fish: source \$HOME/.cargo/env.fish && set -x APPLE_DEVELOPMENT_TEAM <team> && npm run ios:dev"
-echo "    (see docs/FISH_SETUP.md)"
+echo "    (see docs/DEVELOPER_SETUP.md)"

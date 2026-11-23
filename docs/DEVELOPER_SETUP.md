@@ -1,34 +1,70 @@
 # Developer setup
 
-## Prerequisites
+Node 22+, **rustup** (not Homebrew Rust alone), **Xcode.app** for iOS, `APPLE_DEVELOPMENT_TEAM` in `.env` for device builds.
 
-- Node 22+
-- Rust via **rustup** (required for iOS). On **fish**: `source $HOME/.cargo/env.fish` (see `docs/FISH_SETUP.md`).
-- **Xcode 15+** for iOS (full app, not only Command Line Tools)
-- Apple Developer signing for physical devices (`APPLE_DEVELOPMENT_TEAM` or `bundle.iOS.developmentTeam` in `tauri.conf.json`)
-
-## Commands
+## Desktop
 
 ```bash
 npm install
-npm run ios:setup     # rustup targets, CocoaPods, tauri ios init (stops early if Xcode missing)
 npm run test
-npm run dev           # Vite UI only
-npm run tauri dev     # Desktop shell + UI
-# After Xcode + APPLE_DEVELOPMENT_TEAM (see docs/PHASE0_BLOCKERS.md):
-npm run ios:dev
+npm run dev          # UI only
+npm run tauri dev    # desktop shell
 ```
-
-## Rust tests (backup + migrations)
 
 ```bash
 cd src-tauri && cargo test
+npm run content:validate
+npm run content:build   # macOS: regenerate TTS audio
 ```
 
-## Content import
+To re-import bundled curriculum in dev, delete the app’s `learner.sqlite` (or wipe app data).
 
-Bundled curriculum is embedded at build time from `content/curriculum/beginner-path.json`. To refresh learner DB during development, delete the app data directory or remove `learner.sqlite` from the platform app data folder.
+## iOS
 
-## Phase 0
+**Fish** — add once to `~/.config/fish/config.fish` so Tauri sees rustup:
 
-See `docs/PHASE0_DEVICE_CHECKLIST.md` before treating iOS features as complete.
+```fish
+source $HOME/.cargo/env.fish 2>/dev/null; or true
+fish_add_path -m $HOME/.local/bin
+```
+
+**bash/zsh:** `source "$HOME/.cargo/env"` and ensure `$HOME/.cargo/bin` is on `PATH`.
+
+```bash
+npm run ios:setup
+cp .env.example .env    # set APPLE_DEVELOPMENT_TEAM
+npm run test
+npm run ios:dev         # simulator or connected device
+```
+
+Simulator-only CI build:
+
+```bash
+npm run ios:build -- --ci --target aarch64-sim
+```
+
+If **simctl** exits 72: install Xcode.app, then `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`.
+
+If **device signing** fails: Xcode → Settings → Accounts → sign in; open `src-tauri/gen/apple/kannada-quest.xcodeproj` → automatically manage signing for `kannada-quest_iOS`.
+
+## Device smoke test (optional)
+
+On a physical iPhone/iPad when you care about mic, Files, and speakers—not simulator alone.
+
+| Check | ☐ |
+|-------|---|
+| Launch, first-run import, lesson offline (airplane mode) | |
+| Progress after force quit; Kannada script | |
+| Audio normal/slow; mic on listen-repeat | |
+| Backup export/import via Files | |
+| iPad portrait + landscape | |
+
+## Docs
+
+| Doc | Purpose |
+|-----|---------|
+| [`vision.md`](vision.md) | Product vision |
+| [`constitution/mission.md`](constitution/mission.md) | Mission and boundaries |
+| [`constitution/techstack.md`](constitution/techstack.md) | Architecture |
+| [`constitution/roadmap.md`](constitution/roadmap.md) | Phases and priorities |
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | Layer summary |
