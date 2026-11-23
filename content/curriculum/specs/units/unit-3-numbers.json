@@ -1,0 +1,258 @@
+{
+  "id": "unit-3-numbers",
+  "level_id": "level-1-survival",
+  "ordinal": 3,
+  "title": "Numbers & prices",
+  "description": "Count and ask how much.",
+  "phrases": [
+    {
+      "id": "item-ondu",
+      "kannada_text": "ಒಂದು",
+      "transliteration": "ondu",
+      "english_meaning": "One (1)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-eradu",
+      "kannada_text": "ಎರಡು",
+      "transliteration": "eraḍu",
+      "english_meaning": "Two (2)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-mooru",
+      "kannada_text": "ಮೂರು",
+      "transliteration": "mūru",
+      "english_meaning": "Three (3)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-naalku",
+      "kannada_text": "ನಾಲ್ಕು",
+      "transliteration": "nālku",
+      "english_meaning": "Four (4)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-aidu-num",
+      "kannada_text": "ಐದು",
+      "transliteration": "aidu",
+      "english_meaning": "Five (5)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-aaru",
+      "kannada_text": "ಆರು",
+      "transliteration": "āru",
+      "english_meaning": "Six (6)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-elu",
+      "kannada_text": "ಏಳು",
+      "transliteration": "ēḷu",
+      "english_meaning": "Seven (7)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-entu",
+      "kannada_text": "ಎಂಟು",
+      "transliteration": "eṇṭu",
+      "english_meaning": "Eight (8)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-ombattu",
+      "kannada_text": "ಒಂಬತ್ತು",
+      "transliteration": "ombattu",
+      "english_meaning": "Nine (9)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-hattu",
+      "kannada_text": "ಹತ್ತು",
+      "transliteration": "hattu",
+      "english_meaning": "Ten (10)",
+      "register": "informal",
+      "tags": [
+        "numbers"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-eshtu",
+      "kannada_text": "ಎಷ್ಟು?",
+      "transliteration": "eshtu?",
+      "english_meaning": "How much? / How many?",
+      "register": "informal",
+      "tags": [
+        "numbers",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-numbers-1",
+      "ordinal": 1,
+      "title": "Numbers 1–5",
+      "description": "Count things you order and pay for.",
+      "estimated_minutes": 10,
+      "phrase_ids": [
+        "item-ondu",
+        "item-eradu",
+        "item-mooru",
+        "item-naalku",
+        "item-aidu-num"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Count items at a tea stall.",
+        "steps": [
+          {
+            "narration": "Vendor asks how many cups.",
+            "partner": {
+              "kannada": "ಎಷ್ಟು?",
+              "transliteration": "eshtu?",
+              "english": "How many?"
+            }
+          },
+          {
+            "narration": "You want two.",
+            "choices": [
+              {
+                "label": "eraḍu",
+                "hint": "Two",
+                "correct": true
+              },
+              {
+                "label": "ondu",
+                "hint": "One",
+                "correct": false
+              },
+              {
+                "label": "hattu",
+                "hint": "Ten",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-mooru",
+        "instruction": "Complete the number: Three",
+        "blank": "mū___",
+        "accepted": [
+          "ru",
+          "ooru"
+        ]
+      }
+    },
+    {
+      "id": "lesson-numbers-2",
+      "ordinal": 2,
+      "title": "Six to ten and how much",
+      "description": "Bigger counts and asking price.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-aaru",
+        "item-elu",
+        "item-entu",
+        "item-ombattu",
+        "item-hattu",
+        "item-eshtu"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Ask the price at a fruit cart.",
+        "steps": [
+          {
+            "narration": "You point at the mangoes.",
+            "partner": {
+              "kannada": "ಇವು ಚೆನ್ನಾಗಿ ಇವೆ",
+              "transliteration": "ivu cennāgi ive",
+              "english": "These are good"
+            }
+          },
+          {
+            "narration": "Ask how much.",
+            "choices": [
+              {
+                "label": "eshtu?",
+                "hint": "How much?",
+                "correct": true
+              },
+              {
+                "label": "bēḍa",
+                "hint": "Don't want",
+                "correct": false
+              },
+              {
+                "label": "nēra",
+                "hint": "Straight",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-eshtu",
+        "instruction": "How much?",
+        "blank": "esh___?",
+        "accepted": [
+          "tu"
+        ]
+      }
+    }
+  ]
+}

@@ -89,12 +89,15 @@ Responsibilities:
 
 - Authoritative phrase, lesson, and exercise definitions.
 - Audio asset references imported into `audio_assets`.
+- **Source specs:** `content/curriculum/specs/` (`course.json` + `units/*.json`).
+- **Built bundle:** `content/curriculum/beginner-path.json` from `scripts/build-beginner-path.py`.
 
 Rules:
 
-- Bump `content_version` when curriculum changes.
+- Edit unit JSON specs, not `beginner-path.json`, for routine curriculum changes.
+- Bump `content_version` in `course.json` when curriculum changes.
 - Run `npm run content:validate` before shipping content changes.
-- Prefer tooling (`content:build`) over hand-editing generated assets.
+- Prefer `npm run content:build` over hand-editing generated assets.
 
 ## 4. Data Flow
 
@@ -111,14 +114,47 @@ Rules:
 | AI | `MockAIContentProvider`; `VITE_AI_PROVIDER=unconfigured` in production | Secure backend or on-device boundary; keys never in the app bundle |
 | Content updates | Reinstall / dev DB reset | Future import CLI for content-only updates |
 
-## 6. Testing Standards
+## 6. Testing and TDD
 
-Prioritize automated tests for:
+**Default workflow:** test-driven development (red → green) in vertical slices. Agents and contributors should follow this unless the change is documentation-only or explicitly exploratory.
 
-- Answer evaluation and SM-2 scheduling.
-- Backup export/import roundtrips and integrity rejection.
-- Migration scripts.
-- Critical UI flows where regressions are costly.
+### Loop
+
+1. **Red** — Add or extend a test at a public seam; run the suite and confirm it fails for the right reason.
+2. **Green** — Change production code with the smallest diff that passes.
+3. **Repeat** — One behavior per cycle; avoid drafting many tests before any implementation.
+
+Refactor after green when needed; do not add new behavior without a failing test first.
+
+### Seams (where tests belong)
+
+| Concern | Seam | Tests |
+|---------|------|--------|
+| Scheduling, grading, XP | `src/domain/**` exports | `tests/unit/*.test.ts` (Vitest) |
+| Curriculum integrity | `validateCurriculumBundle` | `tests/unit/content-validate.test.ts` |
+| Shipped bundle | `content/curriculum/beginner-path.json` | `npm run content:validate` |
+| SQLite, migrations, backup | Rust modules + commands | `src-tauri`: `cargo test` |
+| UI | Components | Only when behavior is not visible from domain/API; prefer Testing Library smoke tests |
+
+Domain logic stays in TypeScript **without** Tauri imports so it remains fast to test. Rust tests focus on data integrity and backup roundtrips.
+
+### Commands (run before claiming done)
+
+```bash
+npm run test
+cd src-tauri && cargo test
+npm run content:validate   # when specs or beginner-path.json change
+```
+
+### Quality bar
+
+- Assert **behavior** learners or callers care about, not internal structure.
+- Use **independent** expected values (spec, fixture, worked example)—not a duplicate of the implementation.
+- Do not merge scheduling, grading, or import rules only in UI without domain tests.
+
+### Cursor / agent instruction
+
+Project rule: [`.cursor/rules/tdd.mdc`](../../.cursor/rules/tdd.mdc) (`alwaysApply`).
 
 ## 7. Engineering Principles
 

@@ -1,0 +1,29 @@
+{
+  "content_version": 6,
+  "course": {
+    "id": "course-kannada-quest",
+    "title": "Kannada Quest",
+    "description": "Practical spoken Bengaluru Kannada for everyday situations."
+  },
+  "levels": [
+    {
+      "id": "level-1-survival",
+      "course_id": "course-kannada-quest",
+      "ordinal": 1,
+      "title": "Survival Kannada",
+      "description": "Travel, home, health, work, money, phone, family, and social chat."
+    }
+  ],
+  "extra_audio_assets": [
+    {
+      "id": "audio-item-sari-ai-variation",
+      "learning_item_id": "item-sari",
+      "source": "ai",
+      "speaking_speed": "normal",
+      "review_status": "approved",
+      "duration_ms": 450,
+      "file_format": "wav",
+      "relative_path": "content/audio/item-sari-normal.wav"
+    }
+  ]
+}

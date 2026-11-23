@@ -60,6 +60,10 @@ AI may explain grammar or nuance when configured through a secure boundary. It m
 
 Keep domain logic framework-agnostic, persistence explicit, and content import reproducible so the app can evolve without entangling learning rules with UI or platform APIs.
 
+### 10. Test-driven delivery
+
+Exercise new behavior through automated tests at domain and persistence seams before treating work as done. See [`techstack.md`](techstack.md) § Testing and TDD and [`.cursor/rules/tdd.mdc`](../../.cursor/rules/tdd.mdc).
+
 ## Platform
 
 - Mobile-first (iOS primary; desktop Tauri for development and regression).

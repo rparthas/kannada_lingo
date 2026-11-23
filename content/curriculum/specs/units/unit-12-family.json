@@ -1,0 +1,229 @@
+{
+  "id": "unit-12-family",
+  "level_id": "level-1-survival",
+  "ordinal": 12,
+  "title": "Family & school",
+  "description": "School run, homework, and pickup.",
+  "phrases": [
+    {
+      "id": "item-school-ge",
+      "kannada_text": "ಸ್ಕೂಲ್‌ಗೆ ಹೋಗೋಣ",
+      "transliteration": "skūl ge hōgōṇa",
+      "english_meaning": "Let's go to school",
+      "register": "informal",
+      "tags": [
+        "family",
+        "school"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-magu-elli",
+      "kannada_text": "ಮಗು ಎಲ್ಲಿದೆ?",
+      "transliteration": "magu elligide?",
+      "english_meaning": "Where is the child?",
+      "register": "informal",
+      "tags": [
+        "family"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-pickup-beku",
+      "kannada_text": "ಪಿಕಪ್ ಬೇಕು",
+      "transliteration": "pikap bēku",
+      "english_meaning": "Need a pickup",
+      "register": "informal",
+      "tags": [
+        "family",
+        "school"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "accepted_answers": [
+        "pickup beku"
+      ]
+    },
+    {
+      "id": "item-banni-ready",
+      "kannada_text": "ಬನ್ನಿ ರೆಡಿ",
+      "transliteration": "banni reḍi",
+      "english_meaning": "Come on, get ready",
+      "register": "informal",
+      "tags": [
+        "family"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-homework-ide",
+      "kannada_text": "ಹೋಮ್ ವರ್ಕ್ ಇದೆ",
+      "transliteration": "hōm vark ide",
+      "english_meaning": "There is homework",
+      "register": "informal",
+      "tags": [
+        "family",
+        "school"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-exam-ide",
+      "kannada_text": "ಪರೀಕ್ಷೆ ಇದೆ",
+      "transliteration": "parīkṣe ide",
+      "english_meaning": "There is an exam",
+      "register": "informal",
+      "tags": [
+        "family",
+        "school"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-tiffin-beku",
+      "kannada_text": "ಟಿಫಿನ್ ಬೇಕು",
+      "transliteration": "ṭifin bēku",
+      "english_meaning": "Need a lunch box",
+      "register": "informal",
+      "tags": [
+        "family"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-bus-bidalu",
+      "kannada_text": "ಬಸ್ ಬಿಡಲು",
+      "transliteration": "bas biḍalu",
+      "english_meaning": "To drop at the bus",
+      "register": "informal",
+      "tags": [
+        "family",
+        "school"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-school-1",
+      "ordinal": 1,
+      "title": "School run",
+      "description": "Getting kids ready and pickup.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-school-ge",
+        "item-magu-elli",
+        "item-pickup-beku",
+        "item-banni-ready"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "School morning rush.",
+        "steps": [
+          {
+            "narration": "You need to leave soon.",
+            "partner": {
+              "kannada": "ಏನ್ ಮಾಡೋದು?",
+              "transliteration": "ēn māḍōdu?",
+              "english": "What to do?"
+            }
+          },
+          {
+            "narration": "Suggest going to school.",
+            "choices": [
+              {
+                "label": "skūl ge hōgōṇa",
+                "hint": "Let's go to school",
+                "correct": true
+              },
+              {
+                "label": "kāfi kuḍiyōṇa?",
+                "hint": "Coffee?",
+                "correct": false
+              },
+              {
+                "label": "kārḍ svāip māḍi",
+                "hint": "Swipe card",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-magu-elli",
+        "instruction": "Where is the child?",
+        "blank": "magu ell____?",
+        "accepted": [
+          "igide",
+          "elligide"
+        ]
+      }
+    },
+    {
+      "id": "lesson-school-2",
+      "ordinal": 2,
+      "title": "Homework and bus",
+      "description": "Exams, tiffin, and the bus stop.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-homework-ide",
+        "item-exam-ide",
+        "item-tiffin-beku",
+        "item-bus-bidalu"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "After school pickup.",
+        "steps": [
+          {
+            "narration": "Parent asks about school.",
+            "partner": {
+              "kannada": "ಏನ್ ಆಯ್ತು?",
+              "transliteration": "ēn āytu?",
+              "english": "How did it go?"
+            }
+          },
+          {
+            "narration": "Mention homework.",
+            "choices": [
+              {
+                "label": "hōm vark ide",
+                "hint": "There is homework",
+                "correct": true
+              },
+              {
+                "label": "habbada śubhāśayagaḷu",
+                "hint": "Festival greetings",
+                "correct": false
+              },
+              {
+                "label": "haṇa kadi me",
+                "hint": "Short on money",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-tiffin-beku",
+        "tiles": [
+          "bēku",
+          "ṭifin"
+        ],
+        "solution": [
+          "ṭifin",
+          "bēku"
+        ]
+      }
+    }
+  ]
+}

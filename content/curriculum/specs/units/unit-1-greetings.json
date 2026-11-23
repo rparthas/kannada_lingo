@@ -1,0 +1,392 @@
+{
+  "id": "unit-1-greetings",
+  "level_id": "level-1-survival",
+  "ordinal": 1,
+  "title": "Greetings & basics",
+  "description": "Start every conversation politely.",
+  "phrases": [
+    {
+      "id": "item-namaskara",
+      "kannada_text": "ನಮಸ್ಕಾರ",
+      "transliteration": "namaskāra",
+      "english_meaning": "Hello (formal greeting)",
+      "register": "neutral",
+      "tags": [
+        "greeting",
+        "home"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "context_note": "Safe default with shop staff and neighbours."
+    },
+    {
+      "id": "item-hengidira",
+      "kannada_text": "ಹೇಗಿದ್ದೀರಾ?",
+      "transliteration": "hēgiddīrā?",
+      "english_meaning": "How are you? (respectful)",
+      "register": "formal",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "context_note": "Use with elders or polite settings."
+    },
+    {
+      "id": "item-chennagi-idini",
+      "kannada_text": "ಚೆನ್ನಾಗಿ ಇದ್ದೀನಿ",
+      "transliteration": "cennāgi iddīni",
+      "english_meaning": "I am fine",
+      "register": "informal",
+      "tags": [
+        "greeting",
+        "response"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-dhanyavada",
+      "kannada_text": "ಧನ್ಯವಾದ",
+      "transliteration": "dhanyavāda",
+      "english_meaning": "Thank you",
+      "register": "neutral",
+      "tags": [
+        "politeness"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-sari",
+      "kannada_text": "ಸರಿ",
+      "transliteration": "sari",
+      "english_meaning": "Okay / all right",
+      "register": "informal",
+      "tags": [
+        "response"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "accepted_answers": [
+        "okay",
+        "ok",
+        "alright"
+      ]
+    },
+    {
+      "id": "item-illa",
+      "kannada_text": "ಇಲ್ಲ",
+      "transliteration": "illa",
+      "english_meaning": "No",
+      "register": "informal",
+      "tags": [
+        "response"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "context_note": "General negation."
+    },
+    {
+      "id": "item-houdu",
+      "kannada_text": "ಹೌದು",
+      "transliteration": "houdu",
+      "english_meaning": "Yes",
+      "register": "informal",
+      "tags": [
+        "response"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "accepted_answers": [
+        "haudu"
+      ]
+    },
+    {
+      "id": "item-dayavittu",
+      "kannada_text": "ದಯವಿಟ್ಟು",
+      "transliteration": "dayavittu",
+      "english_meaning": "Please",
+      "register": "neutral",
+      "tags": [
+        "politeness"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-kshamisi",
+      "kannada_text": "ಕ್ಷಮಿಸಿ",
+      "transliteration": "kṣamisi",
+      "english_meaning": "Sorry / excuse me",
+      "register": "informal",
+      "tags": [
+        "politeness"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-matte-sigona",
+      "kannada_text": "ಮತ್ತೆ ಸಿಗೋಣ",
+      "transliteration": "matte sigōna",
+      "english_meaning": "See you again",
+      "register": "informal",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "context_note": "Friendly goodbye."
+    },
+    {
+      "id": "item-shubha-ratri",
+      "kannada_text": "ಶುಭ ರಾತ್ರಿ",
+      "transliteration": "śubha rātri",
+      "english_meaning": "Good night",
+      "register": "informal",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-greetings-1",
+      "ordinal": 1,
+      "title": "Hello and thank you",
+      "description": "Core polite phrases you'll use many times a day.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-namaskara",
+        "item-hengidira",
+        "item-chennagi-idini",
+        "item-dhanyavada",
+        "item-sari",
+        "item-illa"
+      ],
+      "exercise_mode": "hand",
+      "exercises": [
+        {
+          "id": "ex-greet-flash-1",
+          "lesson_id": "lesson-greetings-1",
+          "learning_item_id": "item-namaskara",
+          "exercise_type": "vocabulary_flashcard",
+          "sort_order": 1,
+          "prompt": {
+            "instruction": "Learn this greeting."
+          }
+        },
+        {
+          "id": "ex-greet-mcq-1",
+          "lesson_id": "lesson-greetings-1",
+          "learning_item_id": "item-namaskara",
+          "exercise_type": "listen_identify",
+          "sort_order": 2,
+          "prompt": {
+            "instruction": "What does this phrase mean?",
+            "choices": [
+              "Thank you",
+              "Hello (formal greeting)",
+              "Good night",
+              "Where are you going?"
+            ],
+            "correct_index": 1
+          }
+        },
+        {
+          "id": "ex-greet-en-kn-1",
+          "lesson_id": "lesson-greetings-1",
+          "learning_item_id": "item-dhanyavada",
+          "exercise_type": "english_to_kannada",
+          "sort_order": 3,
+          "prompt": {
+            "instruction": "How do you say 'Thank you' in Kannada?"
+          }
+        },
+        {
+          "id": "ex-greet-kn-en-1",
+          "lesson_id": "lesson-greetings-1",
+          "learning_item_id": "item-sari",
+          "exercise_type": "kannada_to_english",
+          "sort_order": 4,
+          "prompt": {
+            "instruction": "Choose the best English meaning.",
+            "choices": [
+              "No",
+              "Please wait",
+              "Okay / all right",
+              "How are you?"
+            ],
+            "correct_index": 2
+          }
+        },
+        {
+          "id": "ex-greet-fill-1",
+          "lesson_id": "lesson-greetings-1",
+          "learning_item_id": "item-chennagi-idini",
+          "exercise_type": "fill_blank",
+          "sort_order": 5,
+          "prompt": {
+            "instruction": "Complete the reply: 'I am fine'",
+            "blanked_transliteration": "cennāgi _____",
+            "accepted": [
+              "iddīni",
+              "iddini"
+            ]
+          }
+        },
+        {
+          "id": "ex-greet-convo-1",
+          "lesson_id": "lesson-greetings-1",
+          "exercise_type": "scripted_conversation",
+          "sort_order": 6,
+          "prompt": {
+            "instruction": "Short exchange at a neighbourhood shop.",
+            "steps": [
+              {
+                "narration": "The shopkeeper greets you.",
+                "partner": {
+                  "kannada": "ನಮಸ್ಕಾರ",
+                  "transliteration": "namaskāra",
+                  "english": "Hello"
+                }
+              },
+              {
+                "narration": "Reply with the same polite greeting.",
+                "choices": [
+                  {
+                    "label": "namaskāra",
+                    "hint": "Hello (formal)",
+                    "correct": true
+                  },
+                  {
+                    "label": "illa",
+                    "hint": "No",
+                    "correct": false
+                  },
+                  {
+                    "label": "dhanyavāda",
+                    "hint": "Thank you",
+                    "correct": false
+                  }
+                ],
+                "explanation": "Mirror a greeting with namaskāra before you ask for anything."
+              },
+              {
+                "narration": "They ask how you are.",
+                "partner": {
+                  "kannada": "ಹೇಗಿದ್ದೀರಾ?",
+                  "transliteration": "hēgiddīrā?",
+                  "english": "How are you?"
+                }
+              },
+              {
+                "narration": "Choose a natural reply.",
+                "choices": [
+                  {
+                    "label": "cennāgi iddīni",
+                    "hint": "I am fine",
+                    "correct": true
+                  },
+                  {
+                    "label": "sari",
+                    "hint": "Okay",
+                    "correct": false
+                  },
+                  {
+                    "label": "āṭō biḍi",
+                    "hint": "Stop the auto",
+                    "correct": false
+                  }
+                ],
+                "explanation": "cennāgi iddīni is the usual polite answer."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-greetings-2",
+      "ordinal": 2,
+      "title": "Yes, please, and goodbye",
+      "description": "Polite words to open and close any chat.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-houdu",
+        "item-dayavittu",
+        "item-kshamisi",
+        "item-matte-sigona",
+        "item-shubha-ratri"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Wrap up a short chat politely.",
+        "steps": [
+          {
+            "narration": "You need to leave.",
+            "partner": {
+              "kannada": "ಹೋಗಬೇಕಾ?",
+              "transliteration": "hōgabēkā?",
+              "english": "Do you need to go?"
+            }
+          },
+          {
+            "narration": "Say yes politely.",
+            "choices": [
+              {
+                "label": "houdu",
+                "hint": "Yes",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "eshtu?",
+                "hint": "How much?",
+                "correct": false
+              }
+            ],
+            "explanation": "houdu confirms without sounding abrupt."
+          },
+          {
+            "narration": "Say goodbye.",
+            "choices": [
+              {
+                "label": "matte sigōna",
+                "hint": "See you again",
+                "correct": true
+              },
+              {
+                "label": "kṣamisi",
+                "hint": "Sorry",
+                "correct": false
+              },
+              {
+                "label": "bill koḍi",
+                "hint": "Give the bill",
+                "correct": false
+              }
+            ],
+            "explanation": "matte sigōna is a warm way to close."
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-dayavittu",
+        "instruction": "Complete: 'Please'",
+        "blank": "dayavi____",
+        "accepted": [
+          "ttu",
+          "vittu"
+        ]
+      }
+    }
+  ]
+}

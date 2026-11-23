@@ -1,0 +1,223 @@
+{
+  "id": "unit-11-phone",
+  "level_id": "level-1-survival",
+  "ordinal": 11,
+  "title": "Phone",
+  "description": "Calls, texts, and bad signal.",
+  "phrases": [
+    {
+      "id": "item-phone-elli",
+      "kannada_text": "ಫೋನ್ ಎಲ್ಲಿದೆ?",
+      "transliteration": "phōn elligide?",
+      "english_meaning": "Where's the phone?",
+      "register": "informal",
+      "tags": [
+        "phone"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-call-bantu",
+      "kannada_text": "ಕಾಲ್ ಬರುತ್ತಿದೆ",
+      "transliteration": "kāl baruttide",
+      "english_meaning": "A call is coming in",
+      "register": "informal",
+      "tags": [
+        "phone"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-message-kalsi",
+      "kannada_text": "ಮೆಸೇಜ್ ಕಳಿಸಿ",
+      "transliteration": "mesēj kaḷisi",
+      "english_meaning": "Send a message",
+      "register": "informal",
+      "tags": [
+        "phone"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-network-illa",
+      "kannada_text": "ನೆಟ್‌ವರ್ಕ್ ಇಲ್ಲ",
+      "transliteration": "neṭvark illa",
+      "english_meaning": "No network signal",
+      "register": "informal",
+      "tags": [
+        "phone"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-tumba-late",
+      "kannada_text": "ತುಂಬಾ ಲೇಟ್ ಆಯ್ತು",
+      "transliteration": "tumba lēṭ āytu",
+      "english_meaning": "Got very late",
+      "register": "informal",
+      "tags": [
+        "phone",
+        "time"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-callback-madthini",
+      "kannada_text": "ಕಾಲ್ ಬ್ಯಾಕ್ ಮಾಡ್ತೀನಿ",
+      "transliteration": "kāl byāk māḍtīni",
+      "english_meaning": "I'll call you back",
+      "register": "informal",
+      "tags": [
+        "phone"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-voice-clear-illa",
+      "kannada_text": "ಧ್ವನಿ ಸ್ಪಷ್ಟವಿಲ್ಲ",
+      "transliteration": "dhvani spaṣṭavilla",
+      "english_meaning": "Voice isn't clear",
+      "register": "informal",
+      "tags": [
+        "phone"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-badige-hogi",
+      "kannada_text": "ಬ್ಯಾಡಗೆ ಹೋಗಿ",
+      "transliteration": "byāḍige hōgi",
+      "english_meaning": "Go offline / hang up",
+      "register": "informal",
+      "tags": [
+        "phone"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved",
+      "context_note": "Colloquial way to say the call dropped."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-phone-1",
+      "ordinal": 1,
+      "title": "Calls and texts",
+      "description": "Ringing, messages, and signal.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-phone-elli",
+        "item-call-bantu",
+        "item-message-kalsi",
+        "item-network-illa"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Your phone rings in a meeting.",
+        "steps": [
+          {
+            "narration": "Colleague hears it.",
+            "partner": {
+              "kannada": "ನಿಮ್ಮ ಫೋನ್",
+              "transliteration": "nimma phōn",
+              "english": "Your phone"
+            }
+          },
+          {
+            "narration": "Say a call is coming.",
+            "choices": [
+              {
+                "label": "kāl baruttide",
+                "hint": "A call is coming in",
+                "correct": true
+              },
+              {
+                "label": "neṭvark illa",
+                "hint": "No network",
+                "correct": false
+              },
+              {
+                "label": "ṭifin bēku",
+                "hint": "Need lunch box",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-message-kalsi",
+        "instruction": "Send a message",
+        "blank": "mesēj _____",
+        "accepted": [
+          "kaḷisi",
+          "kalisi"
+        ]
+      }
+    },
+    {
+      "id": "lesson-phone-2",
+      "ordinal": 2,
+      "title": "Call problems",
+      "description": "Late, callback, and bad connection.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-tumba-late",
+        "item-callback-madthini",
+        "item-voice-clear-illa",
+        "item-badige-hogi"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Bad connection on a call.",
+        "steps": [
+          {
+            "narration": "You can barely hear them.",
+            "partner": {
+              "kannada": "ಕೇಳಿಸ್ತಾ?",
+              "transliteration": "kēḷistā?",
+              "english": "Can you hear?"
+            }
+          },
+          {
+            "narration": "Say the voice isn't clear.",
+            "choices": [
+              {
+                "label": "dhvani spaṣṭavilla",
+                "hint": "Voice isn't clear",
+                "correct": true
+              },
+              {
+                "label": "khusiyāytu",
+                "hint": "I'm happy",
+                "correct": false
+              },
+              {
+                "label": "parīkṣe ide",
+                "hint": "Exam coming",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-callback-madthini",
+        "tiles": [
+          "māḍtīni",
+          "kāl byāk"
+        ],
+        "solution": [
+          "kāl byāk",
+          "māḍtīni"
+        ]
+      }
+    }
+  ]
+}

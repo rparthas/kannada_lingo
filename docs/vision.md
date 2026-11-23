@@ -30,6 +30,7 @@ Kannada Quest should be more than a phrasebook or a streak counter. It should be
 
 ## Related docs
 
+- [`features/README.md`](features/README.md) — feature backlog and build briefs
 - [`constitution/mission.md`](constitution/mission.md) — audience, boundaries, expanded principles
-- [`constitution/techstack.md`](constitution/techstack.md) — architecture and engineering rules
+- [`constitution/techstack.md`](constitution/techstack.md) — architecture, TDD, and engineering rules
 - [`constitution/roadmap.md`](constitution/roadmap.md) — phase status and priorities

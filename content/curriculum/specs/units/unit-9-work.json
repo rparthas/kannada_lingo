@@ -1,0 +1,222 @@
+{
+  "id": "unit-9-work",
+  "level_id": "level-1-survival",
+  "ordinal": 9,
+  "title": "Work",
+  "description": "Meetings, email, and quick office chat.",
+  "phrases": [
+    {
+      "id": "item-meeting-ide",
+      "kannada_text": "ಮೀಟಿಂಗ್ ಇದೆ",
+      "transliteration": "mīṭiṅg ide",
+      "english_meaning": "There is a meeting",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-office-ge-hogi",
+      "kannada_text": "ಆಫೀಸ್‌ಗೆ ಹೋಗಿ",
+      "transliteration": "āfīs ge hōgi",
+      "english_meaning": "Go to the office",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-samayakke-banni",
+      "kannada_text": "ಸಮಯಕ್ಕೆ ಬನ್ನಿ",
+      "transliteration": "samayakke banni",
+      "english_meaning": "Come on time",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-report-kalsi",
+      "kannada_text": "ರಿಪೋರ್ಟ್ ಕಳಿಸಿ",
+      "transliteration": "ripōrṭ kaḷisi",
+      "english_meaning": "Send the report",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-manager-ondu",
+      "kannada_text": "ಒಂದು ನಿಮಿಷ",
+      "transliteration": "ondu nimisha",
+      "english_meaning": "One minute",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "context_note": "Hold on — common with colleagues."
+    },
+    {
+      "id": "item-email-beku",
+      "kannada_text": "ಇಮೇಲ್ ಬೇಕು",
+      "transliteration": "imēl bēku",
+      "english_meaning": "I need an email",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-call-madthini",
+      "kannada_text": "ಕಾಲ್ ಮಾಡ್ತೀನಿ",
+      "transliteration": "kāl māḍtīni",
+      "english_meaning": "I'll make a call",
+      "register": "informal",
+      "tags": [
+        "work"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-work-aitu",
+      "kannada_text": "ಕೆಲಸ ಆಯ್ತು",
+      "transliteration": "kelasa āytu",
+      "english_meaning": "Work is done",
+      "register": "informal",
+      "tags": [
+        "work",
+        "response"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-work-1",
+      "ordinal": 1,
+      "title": "Office basics",
+      "description": "Meetings, reports, and being on time.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-meeting-ide",
+        "item-office-ge-hogi",
+        "item-samayakke-banni",
+        "item-report-kalsi"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Before a team meeting.",
+        "steps": [
+          {
+            "narration": "Colleague pings you.",
+            "partner": {
+              "kannada": "ಮೀಟಿಂಗ್?",
+              "transliteration": "mīṭiṅg?",
+              "english": "Meeting?"
+            }
+          },
+          {
+            "narration": "Confirm and ask them to be on time.",
+            "choices": [
+              {
+                "label": "samayakke banni",
+                "hint": "Come on time",
+                "correct": true
+              },
+              {
+                "label": "nīru illa",
+                "hint": "No water",
+                "correct": false
+              },
+              {
+                "label": "ombattu",
+                "hint": "Nine",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-meeting-ide",
+        "instruction": "There is a meeting",
+        "blank": "mīṭiṅg _____",
+        "accepted": [
+          "ide"
+        ]
+      }
+    },
+    {
+      "id": "lesson-work-2",
+      "ordinal": 2,
+      "title": "Quick work phrases",
+      "description": "Email, calls, and wrapping up tasks.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-manager-ondu",
+        "item-email-beku",
+        "item-call-madthini",
+        "item-work-aitu"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Wrapping up a task.",
+        "steps": [
+          {
+            "narration": "Manager asks for status.",
+            "partner": {
+              "kannada": "ಆಯ್ತಾ?",
+              "transliteration": "āytā?",
+              "english": "Is it done?"
+            }
+          },
+          {
+            "narration": "Say work is finished.",
+            "choices": [
+              {
+                "label": "kelasa āytu",
+                "hint": "Work is done",
+                "correct": true
+              },
+              {
+                "label": "jvara ide",
+                "hint": "I have fever",
+                "correct": false
+              },
+              {
+                "label": "tumba jāsti",
+                "hint": "Too expensive",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-call-madthini",
+        "tiles": [
+          "māḍtīni",
+          "kāl"
+        ],
+        "solution": [
+          "kāl",
+          "māḍtīni"
+        ]
+      }
+    }
+  ]
+}

@@ -41,6 +41,7 @@ iOS and content tooling: [`docs/DEVELOPER_SETUP.md`](docs/DEVELOPER_SETUP.md).
 | [`docs/constitution/mission.md`](docs/constitution/mission.md) | Mission and boundaries |
 | [`docs/constitution/techstack.md`](docs/constitution/techstack.md) | Stack and architecture |
 | [`docs/constitution/roadmap.md`](docs/constitution/roadmap.md) | Phases and priorities |
+| [`docs/features/README.md`](docs/features/README.md) | Feature backlog and briefs |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Short layer summary |
 
 [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) points at the roadmap.

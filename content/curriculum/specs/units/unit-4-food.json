@@ -1,0 +1,232 @@
+{
+  "id": "unit-4-food",
+  "level_id": "level-1-survival",
+  "ordinal": 4,
+  "title": "Food & cafes",
+  "description": "Order tea, idli, and pay the bill.",
+  "phrases": [
+    {
+      "id": "item-idli",
+      "kannada_text": "ಒಂದು ಇಡ್ಲಿ",
+      "transliteration": "ondu idli",
+      "english_meaning": "One idli",
+      "register": "informal",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-dosa",
+      "kannada_text": "ದೋಸೆ",
+      "transliteration": "dōse",
+      "english_meaning": "Dosa",
+      "register": "informal",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved",
+      "accepted_answers": [
+        "dosa"
+      ]
+    },
+    {
+      "id": "item-kafe",
+      "kannada_text": "ಒಂದು ಚಹಾ",
+      "transliteration": "ondu chahā",
+      "english_meaning": "One tea",
+      "register": "informal",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "accepted_answers": [
+        "ondu chai",
+        "one tea"
+      ]
+    },
+    {
+      "id": "item-swasthi",
+      "kannada_text": "ನನಗೆ ಇದು ಬೇಕು",
+      "transliteration": "nanagē idu bēku",
+      "english_meaning": "I want this",
+      "register": "informal",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-shakaahaari",
+      "kannada_text": "ಶಾಕಾಹಾರಿ",
+      "transliteration": "śākāhāri",
+      "english_meaning": "Vegetarian",
+      "register": "informal",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-mirchi-kammi",
+      "kannada_text": "ಮೆಣಸು ಕಡಿಮೆ",
+      "transliteration": "meṇasu kadi me",
+      "english_meaning": "Less spice",
+      "register": "informal",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-bili-kodi",
+      "kannada_text": "ಬಿಲ್ ಕೊಡಿ",
+      "transliteration": "bill koḍi",
+      "english_meaning": "Give the bill",
+      "register": "informal",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-ruchiyagi",
+      "kannada_text": "ರುಚಿಯಾಗಿ ಇತ್ತು",
+      "transliteration": "ruciyāgi ittu",
+      "english_meaning": "It was tasty",
+      "register": "informal",
+      "tags": [
+        "food",
+        "response"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-food-1",
+      "ordinal": 1,
+      "title": "Ordering basics",
+      "description": "Idli, dosa, tea, and pointing at the menu.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-idli",
+        "item-dosa",
+        "item-kafe",
+        "item-swasthi"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Order at a busy darshini counter.",
+        "steps": [
+          {
+            "narration": "The server looks at you.",
+            "partner": {
+              "kannada": "ಏನು ಬೇಕು?",
+              "transliteration": "ēnu bēku?",
+              "english": "What do you want?"
+            }
+          },
+          {
+            "narration": "Order one dosa.",
+            "choices": [
+              {
+                "label": "ondu dōse",
+                "hint": "One dosa — use dōse",
+                "correct": true
+              },
+              {
+                "label": "bill koḍi",
+                "hint": "Give the bill",
+                "correct": false
+              },
+              {
+                "label": "eḍa",
+                "hint": "Left",
+                "correct": false
+              }
+            ],
+            "explanation": "ondu idli / ondu chahā follow the same pattern."
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-swasthi",
+        "instruction": "I want this — nanagē idu ____",
+        "blank": "nanagē idu _____",
+        "accepted": [
+          "bēku",
+          "beku"
+        ]
+      }
+    },
+    {
+      "id": "lesson-food-2",
+      "ordinal": 2,
+      "title": "Preferences and paying",
+      "description": "Spice level, veg, and the bill.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-shakaahaari",
+        "item-mirchi-kammi",
+        "item-bili-kodi",
+        "item-ruchiyagi"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Finish a meal politely.",
+        "steps": [
+          {
+            "narration": "You finished eating.",
+            "partner": {
+              "kannada": "ಬಿಲ್ ಬೇಕಾ?",
+              "transliteration": "bill bēkā?",
+              "english": "Need the bill?"
+            }
+          },
+          {
+            "narration": "Yes — ask for the bill.",
+            "choices": [
+              {
+                "label": "bill koḍi",
+                "hint": "Give the bill",
+                "correct": true
+              },
+              {
+                "label": "houdu",
+                "hint": "Yes",
+                "correct": false
+              },
+              {
+                "label": "hattira",
+                "hint": "Near",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-bili-kodi",
+        "tiles": [
+          "koḍi",
+          "bill"
+        ],
+        "solution": [
+          "bill",
+          "koḍi"
+        ]
+      }
+    }
+  ]
+}

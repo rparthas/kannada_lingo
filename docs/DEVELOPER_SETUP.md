@@ -6,7 +6,7 @@ Node 22+, **rustup** (not Homebrew Rust alone), **Xcode.app** for iOS, `APPLE_DE
 
 ```bash
 npm install
-npm run test
+npm run test         # Vitest (TDD default — see constitution/techstack §6)
 npm run dev          # UI only
 npm run tauri dev    # desktop shell
 ```
@@ -14,8 +14,10 @@ npm run tauri dev    # desktop shell
 ```bash
 cd src-tauri && cargo test
 npm run content:validate
-npm run content:build   # macOS: regenerate TTS audio
+npm run content:build   # specs → beginner-path.json + macOS TTS audio
 ```
+
+Curriculum authoring: [`content/curriculum/specs/README.md`](../content/curriculum/specs/README.md).
 
 To re-import bundled curriculum in dev, delete the app’s `learner.sqlite` (or wipe app data).
 
@@ -65,6 +67,6 @@ On a physical iPhone/iPad when you care about mic, Files, and speakers—not sim
 |-----|---------|
 | [`vision.md`](vision.md) | Product vision |
 | [`constitution/mission.md`](constitution/mission.md) | Mission and boundaries |
-| [`constitution/techstack.md`](constitution/techstack.md) | Architecture |
+| [`constitution/techstack.md`](constitution/techstack.md) | Architecture, **TDD** (§6) |
 | [`constitution/roadmap.md`](constitution/roadmap.md) | Phases and priorities |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | Layer summary |

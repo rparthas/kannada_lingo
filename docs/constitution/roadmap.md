@@ -120,3 +120,7 @@ Use the device smoke table in `docs/DEVELOPER_SETUP.md`. Simulator feasibility i
 5. New levels and optional AI.
 
 Changes to mission or platform should align with `docs/constitution/mission.md` and `docs/vision.md`.
+
+Feature-level plans live in [`docs/features/README.md`](../features/README.md).
+
+**Personal fork note:** Solo use with ~weekly installs from the repo — no App Store. Priorities: [`docs/features/personal-release-cadence.md`](../features/personal-release-cadence.md) (Phase 7 store release optional/deferred).

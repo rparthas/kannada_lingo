@@ -1,0 +1,223 @@
+{
+  "id": "unit-8-health",
+  "level_id": "level-1-survival",
+  "ordinal": 8,
+  "title": "Health",
+  "description": "Doctor, pharmacy, and feeling unwell.",
+  "phrases": [
+    {
+      "id": "item-vaidyara-bheti",
+      "kannada_text": "ವೈದ್ಯರ ಭೇಟಿ",
+      "transliteration": "vaidyara bhēṭi",
+      "english_meaning": "Doctor's appointment",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-tumba-novu",
+      "kannada_text": "ತುಂಬಾ ನೋವು",
+      "transliteration": "tumba nōvu",
+      "english_meaning": "A lot of pain",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-maththu-kodi",
+      "kannada_text": "ಮದ್ದು ಕೊಡಿ",
+      "transliteration": "maddu koḍi",
+      "english_meaning": "Give medicine",
+      "register": "informal",
+      "tags": [
+        "health",
+        "pharmacy"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-fever-ide",
+      "kannada_text": "ಜ್ವರ ಇದೆ",
+      "transliteration": "jvara ide",
+      "english_meaning": "I have a fever",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-hospital-ellige",
+      "kannada_text": "ಆಸ್ಪತ್ರೆ ಎಲ್ಲಿಗೆ?",
+      "transliteration": "āspatre ellige?",
+      "english_meaning": "Where is the hospital?",
+      "register": "informal",
+      "tags": [
+        "health",
+        "directions"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-visranti-beku",
+      "kannada_text": "ವಿಶ್ರಾಂತಿ ಬೇಕು",
+      "transliteration": "viśrānti bēku",
+      "english_meaning": "I need rest",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-weak-iddini",
+      "kannada_text": "ದುರ್ಬಲವಾಗಿದ್ದೀನಿ",
+      "transliteration": "durbalavāgiddīni",
+      "english_meaning": "I feel weak",
+      "register": "informal",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-naale-beku",
+      "kannada_text": "ನಾಳೆ ಬೇಕು",
+      "transliteration": "nāḷe bēku",
+      "english_meaning": "I need it tomorrow",
+      "register": "informal",
+      "tags": [
+        "health",
+        "time"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-health-1",
+      "ordinal": 1,
+      "title": "Doctor and pharmacy",
+      "description": "Pain, fever, and medicine.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-vaidyara-bheti",
+        "item-tumba-novu",
+        "item-maththu-kodi",
+        "item-fever-ide"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "At the pharmacy counter.",
+        "steps": [
+          {
+            "narration": "Pharmacist asks what you need.",
+            "partner": {
+              "kannada": "ಏನು ಬೇಕು?",
+              "transliteration": "ēnu bēku?",
+              "english": "What do you need?"
+            }
+          },
+          {
+            "narration": "Ask for medicine.",
+            "choices": [
+              {
+                "label": "maddu koḍi",
+                "hint": "Give medicine",
+                "correct": true
+              },
+              {
+                "label": "ripōrṭ kaḷisi",
+                "hint": "Send report",
+                "correct": false
+              },
+              {
+                "label": "bala",
+                "hint": "Right",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-fever-ide",
+        "instruction": "I have a fever",
+        "blank": "jvara _____",
+        "accepted": [
+          "ide"
+        ]
+      }
+    },
+    {
+      "id": "lesson-health-2",
+      "ordinal": 2,
+      "title": "Feeling unwell",
+      "description": "Rest, hospital directions, and timing.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-hospital-ellige",
+        "item-visranti-beku",
+        "item-weak-iddini",
+        "item-naale-beku"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "You feel weak today.",
+        "steps": [
+          {
+            "narration": "Friend checks on you.",
+            "partner": {
+              "kannada": "ಏನಾಯ್ತು?",
+              "transliteration": "ēnāytu?",
+              "english": "What happened?"
+            }
+          },
+          {
+            "narration": "Say you need rest.",
+            "choices": [
+              {
+                "label": "viśrānti bēku",
+                "hint": "I need rest",
+                "correct": true
+              },
+              {
+                "label": "kelasa āytu",
+                "hint": "Work is done",
+                "correct": false
+              },
+              {
+                "label": "eshtu bēla?",
+                "hint": "Price?",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-hospital-ellige",
+        "tiles": [
+          "ellige?",
+          "āspatre"
+        ],
+        "solution": [
+          "āspatre",
+          "ellige?"
+        ]
+      }
+    }
+  ]
+}

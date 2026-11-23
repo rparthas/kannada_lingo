@@ -1,0 +1,341 @@
+{
+  "id": "unit-2-travel",
+  "level_id": "level-1-survival",
+  "ordinal": 2,
+  "title": "Auto & directions",
+  "description": "Phrases for cabs and finding your way.",
+  "phrases": [
+    {
+      "id": "item-auto-bidu",
+      "kannada_text": "ಆಟೋ ಬಿಡಿ",
+      "transliteration": "āṭō biḍi",
+      "english_meaning": "Stop the auto here",
+      "register": "informal",
+      "tags": [
+        "auto",
+        "transport"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-elli-hogbeku",
+      "kannada_text": "ಎಲ್ಲಿಗೆ ಹೋಗಬೇಕು?",
+      "transliteration": "ellige hōgabēku?",
+      "english_meaning": "Where do you need to go?",
+      "register": "informal",
+      "tags": [
+        "auto",
+        "question"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-meter-prati",
+      "kannada_text": "ಮೀಟರ್ ಪ್ರಕಾರ",
+      "transliteration": "mīṭar prakāra",
+      "english_meaning": "By the meter (fare)",
+      "register": "informal",
+      "tags": [
+        "auto",
+        "fare"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-aidu-nimisha",
+      "kannada_text": "ಐದು ನಿಮಿಷ ಬೇಕು",
+      "transliteration": "aidu nimisha bēku",
+      "english_meaning": "Five minutes, please",
+      "register": "informal",
+      "tags": [
+        "time"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-illi-nilli",
+      "kannada_text": "ಇಲ್ಲಿ ನಿಲ್ಲಿ",
+      "transliteration": "illi nilli",
+      "english_meaning": "Stop here",
+      "register": "informal",
+      "tags": [
+        "auto",
+        "transport"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-ellige-hogi",
+      "kannada_text": "ಅಲ್ಲಿಗೆ ಹೋಗಿ",
+      "transliteration": "allige hōgi",
+      "english_meaning": "Go there",
+      "register": "informal",
+      "tags": [
+        "auto",
+        "direction"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-tumba-doora",
+      "kannada_text": "ತುಂಬಾ ದೂರ",
+      "transliteration": "tumba dūra",
+      "english_meaning": "Very far",
+      "register": "informal",
+      "tags": [
+        "auto"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-bere-varthe",
+      "kannada_text": "ಬೇರೆ ವಾತೆ ಇದೆಯಾ?",
+      "transliteration": "bēre vāte ideyā?",
+      "english_meaning": "Is there another route?",
+      "register": "informal",
+      "tags": [
+        "auto",
+        "question"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-auto-1",
+      "ordinal": 1,
+      "title": "Talking to your auto driver",
+      "description": "Fare, destination, and simple requests.",
+      "estimated_minutes": 15,
+      "phrase_ids": [
+        "item-auto-bidu",
+        "item-elli-hogbeku",
+        "item-meter-prati",
+        "item-aidu-nimisha"
+      ],
+      "exercise_mode": "hand",
+      "exercises": [
+        {
+          "id": "ex-auto-flash-1",
+          "lesson_id": "lesson-auto-1",
+          "learning_item_id": "item-auto-bidu",
+          "exercise_type": "vocabulary_flashcard",
+          "sort_order": 1,
+          "prompt": {
+            "instruction": "Phrase for stopping your auto."
+          }
+        },
+        {
+          "id": "ex-auto-mcq-1",
+          "lesson_id": "lesson-auto-1",
+          "learning_item_id": "item-meter-prati",
+          "exercise_type": "listen_identify",
+          "sort_order": 2,
+          "prompt": {
+            "instruction": "What does this mean for your ride?",
+            "choices": [
+              "Stop here",
+              "By the meter (fare)",
+              "Turn left",
+              "I don't know"
+            ],
+            "correct_index": 1
+          }
+        },
+        {
+          "id": "ex-auto-en-kn-1",
+          "lesson_id": "lesson-auto-1",
+          "learning_item_id": "item-auto-bidu",
+          "exercise_type": "english_to_kannada",
+          "sort_order": 3,
+          "prompt": {
+            "instruction": "Say: 'Stop the auto here'."
+          }
+        },
+        {
+          "id": "ex-auto-order-1",
+          "lesson_id": "lesson-auto-1",
+          "learning_item_id": "item-auto-bidu",
+          "exercise_type": "sentence_construction",
+          "sort_order": 4,
+          "prompt": {
+            "instruction": "Arrange the words (transliteration tiles).",
+            "tiles": [
+              "biḍi",
+              "āṭō"
+            ],
+            "solution": [
+              "āṭō",
+              "biḍi"
+            ]
+          }
+        },
+        {
+          "id": "ex-auto-repeat-1",
+          "lesson_id": "lesson-auto-1",
+          "learning_item_id": "item-meter-prati",
+          "exercise_type": "listen_repeat",
+          "sort_order": 5,
+          "prompt": {
+            "instruction": "Listen and repeat aloud. Mark how you did."
+          }
+        },
+        {
+          "id": "ex-auto-convo-1",
+          "lesson_id": "lesson-auto-1",
+          "exercise_type": "scripted_conversation",
+          "sort_order": 6,
+          "prompt": {
+            "instruction": "You're in an auto — pick what to say next.",
+            "steps": [
+              {
+                "narration": "The driver quotes a flat fare.",
+                "partner": {
+                  "kannada": "ಐವತ್ತು ರೂಪಾಯಿ",
+                  "transliteration": "aivattu rūpāyi",
+                  "english": "Fifty rupees"
+                }
+              },
+              {
+                "narration": "Ask to use the meter instead.",
+                "choices": [
+                  {
+                    "label": "mīṭar prakāra",
+                    "hint": "By the meter",
+                    "correct": true
+                  },
+                  {
+                    "label": "illa",
+                    "hint": "No",
+                    "correct": false
+                  },
+                  {
+                    "label": "namaskāra",
+                    "hint": "Hello",
+                    "correct": false
+                  }
+                ],
+                "explanation": "mīṭar prakāra politely asks for meter fare."
+              },
+              {
+                "narration": "You're near your stop.",
+                "partner": {
+                  "kannada": "ಎಲ್ಲಿ ಇಳಿಯಬೇಕು?",
+                  "transliteration": "elli iḷiyabēku?",
+                  "english": "Where should you get down?"
+                }
+              },
+              {
+                "narration": "Tell the driver to stop here.",
+                "choices": [
+                  {
+                    "label": "āṭō biḍi",
+                    "hint": "Stop the auto here",
+                    "correct": true
+                  },
+                  {
+                    "label": "ellige hōgabēku?",
+                    "hint": "Where to go?",
+                    "correct": false
+                  },
+                  {
+                    "label": "aidu nimisha bēku",
+                    "hint": "Five minutes please",
+                    "correct": false
+                  }
+                ],
+                "explanation": "āṭō biḍi is what locals say to stop the ride."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-auto-2",
+      "ordinal": 2,
+      "title": "Routes and stopping",
+      "description": "Steer the ride when maps fail.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-illi-nilli",
+        "item-ellige-hogi",
+        "item-tumba-doora",
+        "item-bere-varthe"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Steer the driver when the route looks wrong.",
+        "steps": [
+          {
+            "narration": "The driver takes a long detour.",
+            "partner": {
+              "kannada": "ಇಲ್ಲಿ ರಸ್ತೆ ಸುಲಭ",
+              "transliteration": "illi raste sulabha",
+              "english": "This road is easy"
+            }
+          },
+          {
+            "narration": "Ask if there is another route.",
+            "choices": [
+              {
+                "label": "bēre vāte ideyā?",
+                "hint": "Another route?",
+                "correct": true
+              },
+              {
+                "label": "ondu idli",
+                "hint": "One idli",
+                "correct": false
+              },
+              {
+                "label": "śubha rātri",
+                "hint": "Good night",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "narration": "You're finally close.",
+            "choices": [
+              {
+                "label": "illi nilli",
+                "hint": "Stop here",
+                "correct": true
+              },
+              {
+                "label": "tumba dūra",
+                "hint": "Very far",
+                "correct": false
+              },
+              {
+                "label": "bala",
+                "hint": "Right",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-illi-nilli",
+        "tiles": [
+          "nilli",
+          "illi"
+        ],
+        "solution": [
+          "illi",
+          "nilli"
+        ]
+      }
+    }
+  ]
+}

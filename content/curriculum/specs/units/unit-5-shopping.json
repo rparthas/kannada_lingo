@@ -1,0 +1,241 @@
+{
+  "id": "unit-5-shopping",
+  "level_id": "level-1-survival",
+  "ordinal": 5,
+  "title": "Shopping",
+  "description": "Want this, what's the price, a little less.",
+  "phrases": [
+    {
+      "id": "item-beku",
+      "kannada_text": "ಬೇಕು",
+      "transliteration": "bēku",
+      "english_meaning": "Want / need",
+      "register": "informal",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-beda",
+      "kannada_text": "ಬೇಡ",
+      "transliteration": "bēḍa",
+      "english_meaning": "Don't want",
+      "register": "informal",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-eshtu-beela",
+      "kannada_text": "ಎಷ್ಟು ಬೇಲ?",
+      "transliteration": "eshtu bēla?",
+      "english_meaning": "What's the price?",
+      "register": "informal",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-kodthira",
+      "kannada_text": "ಕೊಡ್ತೀರಾ?",
+      "transliteration": "koḍtīrā?",
+      "english_meaning": "Will you give it?",
+      "register": "informal",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-tumba-jasta",
+      "kannada_text": "ತುಂಬಾ ಜಾಸ್ತಿ",
+      "transliteration": "tumba jāsti",
+      "english_meaning": "Too expensive",
+      "register": "informal",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-swalpa-kami",
+      "kannada_text": "ಸ್ವಲ್ಪ ಕಡಿಮೆ",
+      "transliteration": "svalpa kadi me",
+      "english_meaning": "A little less",
+      "register": "informal",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-cash-ide",
+      "kannada_text": "ಕ್ಯಾಶ್ ಇದೆ",
+      "transliteration": "kyāsh ide",
+      "english_meaning": "I have cash",
+      "register": "informal",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-samayavaagilla",
+      "kannada_text": "ಸಮಯವಾಗಿಲ್ಲ",
+      "transliteration": "samayavāgilla",
+      "english_meaning": "No time",
+      "register": "informal",
+      "tags": [
+        "response"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-shop-1",
+      "ordinal": 1,
+      "title": "Want this, how much?",
+      "description": "Market and kirana counter phrases.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-beku",
+        "item-beda",
+        "item-eshtu-beela",
+        "item-kodthira"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "At a kirana shop counter.",
+        "steps": [
+          {
+            "narration": "You point at biscuits.",
+            "partner": {
+              "kannada": "ಇದಾ?",
+              "transliteration": "idā?",
+              "english": "This one?"
+            }
+          },
+          {
+            "narration": "Say you want it.",
+            "choices": [
+              {
+                "label": "bēku",
+                "hint": "Want / need",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dūra",
+                "hint": "Far",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "narration": "Ask the price.",
+            "choices": [
+              {
+                "label": "eshtu bēla?",
+                "hint": "What's the price?",
+                "correct": true
+              },
+              {
+                "label": "matte sigōna",
+                "hint": "See you",
+                "correct": false
+              },
+              {
+                "label": "śākāhāri",
+                "hint": "Vegetarian",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-beku",
+        "instruction": "Want / need",
+        "blank": "bē___",
+        "accepted": [
+          "ku",
+          "eku"
+        ]
+      }
+    },
+    {
+      "id": "lesson-shop-2",
+      "ordinal": 2,
+      "title": "Bargaining gently",
+      "description": "When the quote feels too high.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-tumba-jasta",
+        "item-swalpa-kami",
+        "item-cash-ide",
+        "item-samayavaagilla"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "The quote feels high.",
+        "steps": [
+          {
+            "narration": "Seller says a number.",
+            "partner": {
+              "kannada": "ಐನೂರು ರೂಪಾಯಿ",
+              "transliteration": "ainūru rūpāyi",
+              "english": "Five hundred rupees"
+            }
+          },
+          {
+            "narration": "Say it's too expensive.",
+            "choices": [
+              {
+                "label": "tumba jāsti",
+                "hint": "Too expensive",
+                "correct": true
+              },
+              {
+                "label": "cennāgi iddīni",
+                "hint": "I am fine",
+                "correct": false
+              },
+              {
+                "label": "āru",
+                "hint": "Six",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-swalpa-kami",
+        "tiles": [
+          "kadi me",
+          "svalpa"
+        ],
+        "solution": [
+          "svalpa",
+          "kadi me"
+        ]
+      }
+    }
+  ]
+}

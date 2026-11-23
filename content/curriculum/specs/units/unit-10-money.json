@@ -1,0 +1,223 @@
+{
+  "id": "unit-10-money",
+  "level_id": "level-1-survival",
+  "ordinal": 10,
+  "title": "Money & bank",
+  "description": "ATM, UPI, receipts, and change.",
+  "phrases": [
+    {
+      "id": "item-atm-ellige",
+      "kannada_text": "ATM ಎಲ್ಲಿದೆ?",
+      "transliteration": "ATM elligide?",
+      "english_meaning": "Where is the ATM?",
+      "register": "informal",
+      "tags": [
+        "money"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-upi-madthini",
+      "kannada_text": "UPI ಮಾಡ್ತೀನಿ",
+      "transliteration": "UPI māḍtīni",
+      "english_meaning": "I'll pay by UPI",
+      "register": "informal",
+      "tags": [
+        "money"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-account-number",
+      "kannada_text": "ಖಾತೆ ಸಂಖ್ಯೆ",
+      "transliteration": "khāte sankhye",
+      "english_meaning": "Account number",
+      "register": "informal",
+      "tags": [
+        "money",
+        "bank"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-withdraw-beku",
+      "kannada_text": "ಹಣ ತೆಗೆದುಕೊಳ್ಳಬೇಕು",
+      "transliteration": "haṇa tegedukoḷḷabēku",
+      "english_meaning": "I need to withdraw cash",
+      "register": "informal",
+      "tags": [
+        "money"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-suttu-kodi",
+      "kannada_text": "ಸುತ್ತು ಕೊಡಿ",
+      "transliteration": "suttu koḍi",
+      "english_meaning": "Give change",
+      "register": "informal",
+      "tags": [
+        "money"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-receipt-kodi",
+      "kannada_text": "ರಶೀದಿ ಕೊಡಿ",
+      "transliteration": "raśīdi koḍi",
+      "english_meaning": "Give the receipt",
+      "register": "informal",
+      "tags": [
+        "money",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-card-swipe",
+      "kannada_text": "ಕಾರ್ಡ್ ಸ್ವೈಪ್ ಮಾಡಿ",
+      "transliteration": "kārḍ svāip māḍi",
+      "english_meaning": "Swipe the card",
+      "register": "informal",
+      "tags": [
+        "money"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-paisa-kammi",
+      "kannada_text": "ಹಣ ಕಡಿಮೆ",
+      "transliteration": "haṇa kadi me",
+      "english_meaning": "Short on money",
+      "register": "informal",
+      "tags": [
+        "money"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-money-1",
+      "ordinal": 1,
+      "title": "ATM and UPI",
+      "description": "Cash, accounts, and digital pay.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-atm-ellige",
+        "item-upi-madthini",
+        "item-account-number",
+        "item-withdraw-beku"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Paying at a shop with UPI.",
+        "steps": [
+          {
+            "narration": "Shopkeeper asks cash or UPI.",
+            "partner": {
+              "kannada": "UPI ಇದೆಯಾ?",
+              "transliteration": "UPI ideyā?",
+              "english": "Do you have UPI?"
+            }
+          },
+          {
+            "narration": "Say you'll pay by UPI.",
+            "choices": [
+              {
+                "label": "UPI māḍtīni",
+                "hint": "I'll pay by UPI",
+                "correct": true
+              },
+              {
+                "label": "suttu koḍi",
+                "hint": "Give change",
+                "correct": false
+              },
+              {
+                "label": "skūl ge hōgōṇa",
+                "hint": "Go to school",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-atm-ellige",
+        "instruction": "Where is the ATM?",
+        "blank": "ATM ell____?",
+        "accepted": [
+          "igide",
+          "elligide"
+        ]
+      }
+    },
+    {
+      "id": "lesson-money-2",
+      "ordinal": 2,
+      "title": "Receipts and cards",
+      "description": "Change, receipts, and swiping.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-suttu-kodi",
+        "item-receipt-kodi",
+        "item-card-swipe",
+        "item-paisa-kammi"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "At the counter after paying.",
+        "steps": [
+          {
+            "narration": "You paid cash.",
+            "partner": {
+              "kannada": "ಸರಿ",
+              "transliteration": "sari",
+              "english": "Okay"
+            }
+          },
+          {
+            "narration": "Ask for the receipt.",
+            "choices": [
+              {
+                "label": "raśīdi koḍi",
+                "hint": "Give the receipt",
+                "correct": true
+              },
+              {
+                "label": "ATM elligide?",
+                "hint": "Where is ATM?",
+                "correct": false
+              },
+              {
+                "label": "maḷeyāgtide",
+                "hint": "It is raining",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-card-swipe",
+        "tiles": [
+          "māḍi",
+          "kārḍ svāip"
+        ],
+        "solution": [
+          "kārḍ svāip",
+          "māḍi"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "id": "unit-6-directions",
+  "level_id": "level-1-survival",
+  "ordinal": 6,
+  "title": "On foot",
+  "description": "Left, right, near, and far.",
+  "phrases": [
+    {
+      "id": "item-bala",
+      "kannada_text": "ಬಲ",
+      "transliteration": "bala",
+      "english_meaning": "Right (direction)",
+      "register": "informal",
+      "tags": [
+        "directions"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-eda",
+      "kannada_text": "ಎಡ",
+      "transliteration": "eḍa",
+      "english_meaning": "Left",
+      "register": "informal",
+      "tags": [
+        "directions"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-nera",
+      "kannada_text": "ನೇರ",
+      "transliteration": "nēra",
+      "english_meaning": "Straight ahead",
+      "register": "informal",
+      "tags": [
+        "directions"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-elligide",
+      "kannada_text": "ಎಲ್ಲಿದೆ?",
+      "transliteration": "elligide?",
+      "english_meaning": "Where is it?",
+      "register": "informal",
+      "tags": [
+        "directions",
+        "question"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-hattira",
+      "kannada_text": "ಹತ್ತಿರ",
+      "transliteration": "hattira",
+      "english_meaning": "Near / close by",
+      "register": "informal",
+      "tags": [
+        "directions"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-doora",
+      "kannada_text": "ದೂರ",
+      "transliteration": "dūra",
+      "english_meaning": "Far",
+      "register": "informal",
+      "tags": [
+        "directions"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-illiyeee",
+      "kannada_text": "ಇಲ್ಲಿಯೇ",
+      "transliteration": "illiyē",
+      "english_meaning": "Right here",
+      "register": "informal",
+      "tags": [
+        "directions"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-dayavittu-helu",
+      "kannada_text": "ದಯವಿಟ್ಟು ಹೇಳಿ",
+      "transliteration": "dayavittu hēḷi",
+      "english_meaning": "Please tell me",
+      "register": "neutral",
+      "tags": [
+        "directions",
+        "politeness"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-dir-1",
+      "ordinal": 1,
+      "title": "Left, right, straight",
+      "description": "Follow local directions on foot.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-bala",
+        "item-eda",
+        "item-nera",
+        "item-elligide"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Someone gives you directions.",
+        "steps": [
+          {
+            "narration": "You ask where the metro is.",
+            "partner": {
+              "kannada": "ಮೆಟ್ರೋ ಎಲ್ಲಿದೆ?",
+              "transliteration": "metro elligide?",
+              "english": "Where is the metro?"
+            }
+          },
+          {
+            "narration": "They say turn right.",
+            "partner": {
+              "kannada": "ಬಲ ತಿರುಗಿ",
+              "transliteration": "bala tirugi",
+              "english": "Turn right"
+            }
+          },
+          {
+            "narration": "Repeat the direction word.",
+            "choices": [
+              {
+                "label": "bala",
+                "hint": "Right",
+                "correct": true
+              },
+              {
+                "label": "eḍa",
+                "hint": "Left",
+                "correct": false
+              },
+              {
+                "label": "ondu",
+                "hint": "One",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-nera",
+        "instruction": "Straight ahead",
+        "blank": "nē___",
+        "accepted": [
+          "ra"
+        ]
+      }
+    },
+    {
+      "id": "lesson-dir-2",
+      "ordinal": 2,
+      "title": "Near, far, right here",
+      "description": "Pin down where something is.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-hattira",
+        "item-doora",
+        "item-illiyeee",
+        "item-dayavittu-helu"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "You're almost there.",
+        "steps": [
+          {
+            "narration": "A neighbour points.",
+            "partner": {
+              "kannada": "ಅಲ್ಲಿ",
+              "transliteration": "alli",
+              "english": "There"
+            }
+          },
+          {
+            "narration": "Confirm it's close.",
+            "choices": [
+              {
+                "label": "hattira",
+                "hint": "Near",
+                "correct": true
+              },
+              {
+                "label": "dūra",
+                "hint": "Far",
+                "correct": false
+              },
+              {
+                "label": "bēḍa",
+                "hint": "Don't want",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "narration": "Say it's right here.",
+            "choices": [
+              {
+                "label": "illiyē",
+                "hint": "Right here",
+                "correct": true
+              },
+              {
+                "label": "tumba dūra",
+                "hint": "Very far",
+                "correct": false
+              },
+              {
+                "label": "mīṭar prakāra",
+                "hint": "By meter",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-dayavittu-helu",
+        "tiles": [
+          "hēḷi",
+          "dayavittu"
+        ],
+        "solution": [
+          "dayavittu",
+          "hēḷi"
+        ]
+      }
+    }
+  ]
+}

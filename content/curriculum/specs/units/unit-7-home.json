@@ -1,0 +1,225 @@
+{
+  "id": "unit-7-home",
+  "level_id": "level-1-survival",
+  "ordinal": 7,
+  "title": "Home & neighbours",
+  "description": "Security, deliveries, and asking next door.",
+  "phrases": [
+    {
+      "id": "item-nanu-vasisutteni",
+      "kannada_text": "ನಾನು ಇಲ್ಲಿಯೇ ವಾಸಿಸುತ್ತೇನೆ",
+      "transliteration": "nānu illiyē vāsisuttēne",
+      "english_meaning": "I live right here",
+      "register": "informal",
+      "tags": [
+        "home",
+        "neighbours"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-security-helu",
+      "kannada_text": "ಸೆಕ್ಯುರಿಟಿಗೆ ಹೇಳಿ",
+      "transliteration": "sekyuriti ge hēḷi",
+      "english_meaning": "Tell security",
+      "register": "informal",
+      "tags": [
+        "home"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-yavaga-barthira",
+      "kannada_text": "ಯಾವಾಗ ಬರುತ್ತೀರಾ?",
+      "transliteration": "yāvāga baruttīrā?",
+      "english_meaning": "When will you come?",
+      "register": "informal",
+      "tags": [
+        "home",
+        "question"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-parcel-ide",
+      "kannada_text": "ಪಾರ್ಸೆಲ್ ಬಂದಿದೆ",
+      "transliteration": "pārsel bandide",
+      "english_meaning": "A parcel has arrived",
+      "register": "informal",
+      "tags": [
+        "home"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-sahaya-beku",
+      "kannada_text": "ಸಹಾಯ ಬೇಕು",
+      "transliteration": "sahāya bēku",
+      "english_meaning": "I need help",
+      "register": "informal",
+      "tags": [
+        "home",
+        "neighbours"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-neeru-illa",
+      "kannada_text": "ನೀರು ಇಲ್ಲ",
+      "transliteration": "nīru illa",
+      "english_meaning": "No water",
+      "register": "informal",
+      "tags": [
+        "home"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-current-illa",
+      "kannada_text": "ಕರೆಂಟ್ ಇಲ್ಲ",
+      "transliteration": "kareṇṭ illa",
+      "english_meaning": "No power",
+      "register": "informal",
+      "tags": [
+        "home"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-olleyavaru",
+      "kannada_text": "ತುಂಬಾ ಒಳ್ಳೆಯವರು",
+      "transliteration": "tumba oḷḷeyavaru",
+      "english_meaning": "You are very kind",
+      "register": "informal",
+      "tags": [
+        "neighbours",
+        "politeness"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-neigh-1",
+      "ordinal": 1,
+      "title": "Flat and security",
+      "description": "Deliveries, guards, and telling people you live here.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-nanu-vasisutteni",
+        "item-security-helu",
+        "item-yavaga-barthira",
+        "item-parcel-ide"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Parcel at the gate.",
+        "steps": [
+          {
+            "narration": "Security asks who you are.",
+            "partner": {
+              "kannada": "ಯಾರು?",
+              "transliteration": "yāru?",
+              "english": "Who is it?"
+            }
+          },
+          {
+            "narration": "Say you live here.",
+            "choices": [
+              {
+                "label": "nānu illiyē vāsisuttēne",
+                "hint": "I live right here",
+                "correct": true
+              },
+              {
+                "label": "bill koḍi",
+                "hint": "Give the bill",
+                "correct": false
+              },
+              {
+                "label": "ondu",
+                "hint": "One",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-security-helu",
+        "instruction": "Tell security — sekyuriti ge ____",
+        "blank": "sekyuriti ge _____",
+        "accepted": [
+          "hēḷi",
+          "heli"
+        ]
+      }
+    },
+    {
+      "id": "lesson-neigh-2",
+      "ordinal": 2,
+      "title": "Asking neighbours",
+      "description": "Power, water, and quick favours.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-sahaya-beku",
+        "item-neeru-illa",
+        "item-current-illa",
+        "item-olleyavaru"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Knock on a neighbour's door.",
+        "steps": [
+          {
+            "narration": "You need help at home.",
+            "partner": {
+              "kannada": "ಏನಾಯ್ತು?",
+              "transliteration": "ēnāytu?",
+              "english": "What happened?"
+            }
+          },
+          {
+            "narration": "Explain no power.",
+            "choices": [
+              {
+                "label": "kareṇṭ illa",
+                "hint": "No power",
+                "correct": true
+              },
+              {
+                "label": "dōse",
+                "hint": "Dosa",
+                "correct": false
+              },
+              {
+                "label": "āṭō biḍi",
+                "hint": "Stop the auto",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-sahaya-beku",
+        "tiles": [
+          "bēku",
+          "sahāya"
+        ],
+        "solution": [
+          "sahāya",
+          "bēku"
+        ]
+      }
+    }
+  ]
+}

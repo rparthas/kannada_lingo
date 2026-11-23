@@ -1704,7 +1704,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 915,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-namaskara-normal.wav"
     },
@@ -1714,7 +1714,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1121,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-namaskara-slow.wav"
     },
@@ -1724,7 +1724,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 897,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-hengidira-normal.wav"
     },
@@ -1734,7 +1734,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1100,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-hengidira-slow.wav"
     },
@@ -1744,7 +1744,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1253,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-chennagi-idini-normal.wav"
     },
@@ -1754,7 +1754,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1550,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-chennagi-idini-slow.wav"
     },
@@ -1764,7 +1764,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 880,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-dhanyavada-normal.wav"
     },
@@ -1774,7 +1774,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1085,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-dhanyavada-slow.wav"
     },
@@ -1784,7 +1784,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 597,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-sari-normal.wav"
     },
@@ -1794,7 +1794,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 743,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-sari-slow.wav"
     },
@@ -1804,7 +1804,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 556,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-illa-normal.wav"
     },
@@ -1814,7 +1814,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 692,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-illa-slow.wav"
     },
@@ -1824,7 +1824,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 664,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-houdu-normal.wav"
     },
@@ -1834,7 +1834,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 824,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-houdu-slow.wav"
     },
@@ -1844,7 +1844,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 915,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-dayavittu-normal.wav"
     },
@@ -1854,7 +1854,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1131,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-dayavittu-slow.wav"
     },
@@ -1864,7 +1864,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 822,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-kshamisi-normal.wav"
     },
@@ -1874,7 +1874,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1011,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-kshamisi-slow.wav"
     },
@@ -1884,7 +1884,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1043,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-matte-sigona-normal.wav"
     },
@@ -1894,7 +1894,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1282,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-matte-sigona-slow.wav"
     },
@@ -1904,7 +1904,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1031,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-shubha-ratri-normal.wav"
     },
@@ -1914,7 +1914,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1259,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-shubha-ratri-slow.wav"
     },
@@ -1924,7 +1924,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 846,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-auto-bidu-normal.wav"
     },
@@ -1934,7 +1934,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1052,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-auto-bidu-slow.wav"
     },
@@ -1944,7 +1944,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1300,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-elli-hogbeku-normal.wav"
     },
@@ -1954,7 +1954,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1610,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-elli-hogbeku-slow.wav"
     },
@@ -1964,7 +1964,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1136,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-meter-prati-normal.wav"
     },
@@ -1974,7 +1974,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1399,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-meter-prati-slow.wav"
     },
@@ -1984,7 +1984,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1392,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-aidu-nimisha-normal.wav"
     },
@@ -1994,7 +1994,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1713,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-aidu-nimisha-slow.wav"
     },
@@ -2004,7 +2004,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 835,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-illi-nilli-normal.wav"
     },
@@ -2014,7 +2014,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1040,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-illi-nilli-slow.wav"
     },
@@ -2024,7 +2024,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 986,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-ellige-hogi-normal.wav"
     },
@@ -2034,7 +2034,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1214,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-ellige-hogi-slow.wav"
     },
@@ -2044,7 +2044,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 866,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-doora-normal.wav"
     },
@@ -2054,7 +2054,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1077,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-doora-slow.wav"
     },
@@ -2064,7 +2064,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1334,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-bere-varthe-normal.wav"
     },
@@ -2074,7 +2074,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1644,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-bere-varthe-slow.wav"
     },
@@ -2084,7 +2084,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 595,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-ondu-normal.wav"
     },
@@ -2094,7 +2094,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 742,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-ondu-slow.wav"
     },
@@ -2104,7 +2104,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 630,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-eradu-normal.wav"
     },
@@ -2114,7 +2114,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 778,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-eradu-slow.wav"
     },
@@ -2124,7 +2124,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 567,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-mooru-normal.wav"
     },
@@ -2134,7 +2134,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 690,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-mooru-slow.wav"
     },
@@ -2144,7 +2144,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 741,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-naalku-normal.wav"
     },
@@ -2154,7 +2154,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 912,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-naalku-slow.wav"
     },
@@ -2164,7 +2164,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 578,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-aidu-num-normal.wav"
     },
@@ -2174,7 +2174,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 715,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-aidu-num-slow.wav"
     },
@@ -2184,7 +2184,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 544,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-aaru-normal.wav"
     },
@@ -2194,7 +2194,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 668,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-aaru-slow.wav"
     },
@@ -2204,7 +2204,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 560,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-elu-normal.wav"
     },
@@ -2214,7 +2214,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 686,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-elu-slow.wav"
     },
@@ -2224,7 +2224,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 649,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-entu-normal.wav"
     },
@@ -2234,7 +2234,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 796,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-entu-slow.wav"
     },
@@ -2244,7 +2244,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 811,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-ombattu-normal.wav"
     },
@@ -2254,7 +2254,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 994,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-ombattu-slow.wav"
     },
@@ -2264,7 +2264,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 664,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-hattu-normal.wav"
     },
@@ -2274,7 +2274,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 824,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-hattu-slow.wav"
     },
@@ -2284,7 +2284,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 649,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-eshtu-normal.wav"
     },
@@ -2294,7 +2294,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 796,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-eshtu-slow.wav"
     },
@@ -2304,7 +2304,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 920,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-idli-normal.wav"
     },
@@ -2314,7 +2314,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1137,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-idli-slow.wav"
     },
@@ -2324,7 +2324,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 683,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-dosa-normal.wav"
     },
@@ -2334,7 +2334,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 841,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-dosa-slow.wav"
     },
@@ -2344,7 +2344,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 931,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-kafe-normal.wav"
     },
@@ -2354,7 +2354,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1149,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-kafe-slow.wav"
     },
@@ -2364,7 +2364,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1299,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-swasthi-normal.wav"
     },
@@ -2374,7 +2374,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1597,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-swasthi-slow.wav"
     },
@@ -2384,7 +2384,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1042,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-shakaahaari-normal.wav"
     },
@@ -2394,7 +2394,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1282,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-shakaahaari-slow.wav"
     },
@@ -2404,7 +2404,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1124,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-mirchi-kammi-normal.wav"
     },
@@ -2414,7 +2414,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1388,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-mirchi-kammi-slow.wav"
     },
@@ -2424,7 +2424,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 786,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-bili-kodi-normal.wav"
     },
@@ -2434,7 +2434,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 957,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-bili-kodi-slow.wav"
     },
@@ -2444,7 +2444,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1192,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-ruchiyagi-normal.wav"
     },
@@ -2454,7 +2454,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1467,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-ruchiyagi-slow.wav"
     },
@@ -2464,7 +2464,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 649,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-beku-normal.wav"
     },
@@ -2474,7 +2474,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 796,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-beku-slow.wav"
     },
@@ -2484,7 +2484,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 579,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-beda-normal.wav"
     },
@@ -2494,7 +2494,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 715,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-beda-slow.wav"
     },
@@ -2504,7 +2504,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 975,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-eshtu-beela-normal.wav"
     },
@@ -2514,7 +2514,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1203,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-eshtu-beela-slow.wav"
     },
@@ -2524,7 +2524,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 766,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-kodthira-normal.wav"
     },
@@ -2534,7 +2534,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 944,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-kodthira-slow.wav"
     },
@@ -2544,7 +2544,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1040,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-jasta-normal.wav"
     },
@@ -2554,7 +2554,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1274,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-jasta-slow.wav"
     },
@@ -2564,7 +2564,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1154,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-swalpa-kami-normal.wav"
     },
@@ -2574,7 +2574,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1416,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-swalpa-kami-slow.wav"
     },
@@ -2584,7 +2584,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 892,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-cash-ide-normal.wav"
     },
@@ -2594,7 +2594,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1104,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-cash-ide-slow.wav"
     },
@@ -2604,7 +2604,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1200,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-samayavaagilla-normal.wav"
     },
@@ -2614,7 +2614,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1474,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-samayavaagilla-slow.wav"
     },
@@ -2624,7 +2624,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 567,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-bala-normal.wav"
     },
@@ -2634,7 +2634,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 692,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-bala-slow.wav"
     },
@@ -2644,7 +2644,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 544,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-eda-normal.wav"
     },
@@ -2654,7 +2654,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 669,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-eda-slow.wav"
     },
@@ -2664,7 +2664,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 579,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-nera-normal.wav"
     },
@@ -2674,7 +2674,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 703,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-nera-slow.wav"
     },
@@ -2684,7 +2684,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 672,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-elligide-normal.wav"
     },
@@ -2694,7 +2694,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 832,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-elligide-slow.wav"
     },
@@ -2704,7 +2704,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 757,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-hattira-normal.wav"
     },
@@ -2714,7 +2714,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 928,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-hattira-slow.wav"
     },
@@ -2724,7 +2724,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 590,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-doora-normal.wav"
     },
@@ -2734,7 +2734,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 725,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-doora-slow.wav"
     },
@@ -2744,7 +2744,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 706,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-illiyeee-normal.wav"
     },
@@ -2754,7 +2754,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 866,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-illiyeee-slow.wav"
     },
@@ -2764,7 +2764,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1159,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-dayavittu-helu-normal.wav"
     },
@@ -2774,7 +2774,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1433,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-dayavittu-helu-slow.wav"
     },
@@ -2784,7 +2784,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1856,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-nanu-vasisutteni-normal.wav"
     },
@@ -2794,7 +2794,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 2294,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-nanu-vasisutteni-slow.wav"
     },
@@ -2804,7 +2804,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1398,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-security-helu-normal.wav"
     },
@@ -2814,7 +2814,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1718,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-security-helu-slow.wav"
     },
@@ -2824,7 +2824,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1315,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-yavaga-barthira-normal.wav"
     },
@@ -2834,7 +2834,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1626,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-yavaga-barthira-slow.wav"
     },
@@ -2844,7 +2844,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1224,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-parcel-ide-normal.wav"
     },
@@ -2854,7 +2854,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1504,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-parcel-ide-slow.wav"
     },
@@ -2864,7 +2864,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1177,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-sahaya-beku-normal.wav"
     },
@@ -2874,7 +2874,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1451,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-sahaya-beku-slow.wav"
     },
@@ -2884,7 +2884,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 846,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-neeru-illa-normal.wav"
     },
@@ -2894,7 +2894,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1051,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-neeru-illa-slow.wav"
     },
@@ -2904,7 +2904,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 906,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-current-illa-normal.wav"
     },
@@ -2914,7 +2914,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1118,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-current-illa-slow.wav"
     },
@@ -2924,7 +2924,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1168,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-olleyavaru-normal.wav"
     },
@@ -2934,7 +2934,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1436,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-olleyavaru-slow.wav"
     },
@@ -2944,7 +2944,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1182,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-vaidyara-bheti-normal.wav"
     },
@@ -2954,7 +2954,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1469,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-vaidyara-bheti-slow.wav"
     },
@@ -2964,7 +2964,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 877,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-novu-normal.wav"
     },
@@ -2974,7 +2974,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1088,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-novu-slow.wav"
     },
@@ -2984,7 +2984,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 892,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-maththu-kodi-normal.wav"
     },
@@ -2994,7 +2994,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1097,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-maththu-kodi-slow.wav"
     },
@@ -3004,7 +3004,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 863,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-fever-ide-normal.wav"
     },
@@ -3014,7 +3014,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1055,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-fever-ide-slow.wav"
     },
@@ -3024,7 +3024,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1276,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-hospital-ellige-normal.wav"
     },
@@ -3034,7 +3034,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1562,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-hospital-ellige-slow.wav"
     },
@@ -3044,7 +3044,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1229,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-visranti-beku-normal.wav"
     },
@@ -3054,7 +3054,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1516,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-visranti-beku-slow.wav"
     },
@@ -3064,7 +3064,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1321,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-weak-iddini-normal.wav"
     },
@@ -3074,7 +3074,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1630,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-weak-iddini-slow.wav"
     },
@@ -3084,7 +3084,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1020,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-naale-beku-normal.wav"
     },
@@ -3094,7 +3094,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1260,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-naale-beku-slow.wav"
     },
@@ -3104,7 +3104,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 962,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-meeting-ide-normal.wav"
     },
@@ -3114,7 +3114,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1190,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-meeting-ide-slow.wav"
     },
@@ -3124,7 +3124,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1241,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-office-ge-hogi-normal.wav"
     },
@@ -3134,7 +3134,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1528,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-office-ge-hogi-slow.wav"
     },
@@ -3144,7 +3144,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1259,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-samayakke-banni-normal.wav"
     },
@@ -3154,7 +3154,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1556,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-samayakke-banni-slow.wav"
     },
@@ -3164,7 +3164,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1167,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-report-kalsi-normal.wav"
     },
@@ -3174,7 +3174,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1441,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-report-kalsi-slow.wav"
     },
@@ -3184,7 +3184,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1036,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-manager-ondu-normal.wav"
     },
@@ -3194,7 +3194,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1265,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-manager-ondu-slow.wav"
     },
@@ -3204,7 +3204,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1020,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-email-beku-normal.wav"
     },
@@ -3214,7 +3214,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1261,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-email-beku-slow.wav"
     },
@@ -3224,7 +3224,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1099,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-call-madthini-normal.wav"
     },
@@ -3234,7 +3234,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1356,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-call-madthini-slow.wav"
     },
@@ -3244,7 +3244,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1093,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-work-aitu-normal.wav"
     },
@@ -3254,7 +3254,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1340,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-work-aitu-slow.wav"
     },
@@ -3264,7 +3264,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1160,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-atm-ellige-normal.wav"
     },
@@ -3274,7 +3274,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1434,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-atm-ellige-slow.wav"
     },
@@ -3284,7 +3284,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1287,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-upi-madthini-normal.wav"
     },
@@ -3294,7 +3294,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1585,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-upi-madthini-slow.wav"
     },
@@ -3304,7 +3304,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1173,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-account-number-normal.wav"
     },
@@ -3314,7 +3314,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1443,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-account-number-slow.wav"
     },
@@ -3324,7 +3324,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1640,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-withdraw-beku-normal.wav"
     },
@@ -3334,7 +3334,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 2031,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-withdraw-beku-slow.wav"
     },
@@ -3344,7 +3344,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 957,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-suttu-kodi-normal.wav"
     },
@@ -3354,7 +3354,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1184,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-suttu-kodi-slow.wav"
     },
@@ -3364,7 +3364,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1042,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-receipt-kodi-normal.wav"
     },
@@ -3374,7 +3374,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1281,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-receipt-kodi-slow.wav"
     },
@@ -3384,7 +3384,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1250,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-card-swipe-normal.wav"
     },
@@ -3394,7 +3394,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1533,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-card-swipe-slow.wav"
     },
@@ -3404,7 +3404,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1001,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-paisa-kammi-normal.wav"
     },
@@ -3414,7 +3414,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1230,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-paisa-kammi-slow.wav"
     },
@@ -3424,7 +3424,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 979,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-phone-elli-normal.wav"
     },
@@ -3434,7 +3434,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1206,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-phone-elli-slow.wav"
     },
@@ -3444,7 +3444,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1052,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-call-bantu-normal.wav"
     },
@@ -3454,7 +3454,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1299,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-call-bantu-slow.wav"
     },
@@ -3464,7 +3464,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1229,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-message-kalsi-normal.wav"
     },
@@ -3474,7 +3474,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1515,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-message-kalsi-slow.wav"
     },
@@ -3484,7 +3484,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1031,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-network-illa-normal.wav"
     },
@@ -3494,7 +3494,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1272,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-network-illa-slow.wav"
     },
@@ -3504,7 +3504,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1261,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-late-normal.wav"
     },
@@ -3514,7 +3514,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1553,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-late-slow.wav"
     },
@@ -3524,7 +3524,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1378,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-callback-madthini-normal.wav"
     },
@@ -3534,7 +3534,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1705,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-callback-madthini-slow.wav"
     },
@@ -3544,7 +3544,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1356,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-voice-clear-illa-normal.wav"
     },
@@ -3554,7 +3554,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1665,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-voice-clear-illa-slow.wav"
     },
@@ -3564,7 +3564,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1136,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-badige-hogi-normal.wav"
     },
@@ -3574,7 +3574,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1400,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-badige-hogi-slow.wav"
     },
@@ -3584,7 +3584,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1282,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-school-ge-normal.wav"
     },
@@ -3594,7 +3594,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1579,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-school-ge-slow.wav"
     },
@@ -3604,7 +3604,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 973,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-magu-elli-normal.wav"
     },
@@ -3614,7 +3614,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1189,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-magu-elli-slow.wav"
     },
@@ -3624,7 +3624,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 956,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-pickup-beku-normal.wav"
     },
@@ -3634,7 +3634,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1189,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-pickup-beku-slow.wav"
     },
@@ -3644,7 +3644,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 881,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-banni-ready-normal.wav"
     },
@@ -3654,7 +3654,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1087,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-banni-ready-slow.wav"
     },
@@ -3664,7 +3664,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1082,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-homework-ide-normal.wav"
     },
@@ -3674,7 +3674,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1334,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-homework-ide-slow.wav"
     },
@@ -3684,7 +3684,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1038,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-exam-ide-normal.wav"
     },
@@ -3694,7 +3694,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1283,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-exam-ide-slow.wav"
     },
@@ -3704,7 +3704,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 945,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-tiffin-beku-normal.wav"
     },
@@ -3714,7 +3714,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1155,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-tiffin-beku-slow.wav"
     },
@@ -3724,7 +3724,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 913,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-bus-bidalu-normal.wav"
     },
@@ -3734,7 +3734,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1131,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-bus-bidalu-slow.wav"
     },
@@ -3744,7 +3744,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1043,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-malleyagide-normal.wav"
     },
@@ -3754,7 +3754,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1282,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-malleyagide-slow.wav"
     },
@@ -3764,7 +3764,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 959,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-bisi-normal.wav"
     },
@@ -3774,7 +3774,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1193,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-tumba-bisi-slow.wav"
     },
@@ -3784,7 +3784,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1150,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-coffee-kudiyona-normal.wav"
     },
@@ -3794,7 +3794,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1420,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-coffee-kudiyona-slow.wav"
     },
@@ -3804,7 +3804,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1194,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-visheshave-illa-normal.wav"
     },
@@ -3814,7 +3814,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1481,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-visheshave-illa-slow.wav"
     },
@@ -3824,7 +3824,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 999,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-happy-aytu-normal.wav"
     },
@@ -3834,7 +3834,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1234,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-happy-aytu-slow.wav"
     },
@@ -3844,7 +3844,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1160,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-avaga-bartini-normal.wav"
     },
@@ -3854,7 +3854,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1423,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-avaga-bartini-slow.wav"
     },
@@ -3864,7 +3864,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1663,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-festival-shubha-normal.wav"
     },
@@ -3874,7 +3874,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 2054,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-festival-shubha-slow.wav"
     },
@@ -3884,7 +3884,7 @@
       "source": "tts",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 1031,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-madodu-en-normal.wav"
     },
@@ -3894,7 +3894,7 @@
       "source": "tts",
       "speaking_speed": "slow",
       "review_status": "approved",
-      "duration_ms": 1271,
+      "duration_ms": 650,
       "file_format": "wav",
       "relative_path": "content/audio/item-madodu-en-slow.wav"
     },
@@ -3904,7 +3904,7 @@
       "source": "ai",
       "speaking_speed": "normal",
       "review_status": "approved",
-      "duration_ms": 597,
+      "duration_ms": 450,
       "file_format": "wav",
       "relative_path": "content/audio/item-sari-normal.wav"
     }

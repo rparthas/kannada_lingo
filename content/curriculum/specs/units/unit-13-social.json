@@ -1,0 +1,265 @@
+{
+  "id": "unit-13-social",
+  "level_id": "level-1-survival",
+  "ordinal": 13,
+  "title": "Social chat",
+  "description": "Weather, coffee, plans, and festivals.",
+  "phrases": [
+    {
+      "id": "item-malleyagide",
+      "kannada_text": "ಮಳೆಯಾಗ್ತಿದೆ",
+      "transliteration": "maḷeyāgtide",
+      "english_meaning": "It is raining",
+      "register": "informal",
+      "tags": [
+        "social",
+        "weather"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-tumba-bisi",
+      "kannada_text": "ತುಂಬಾ ಬಿಸಿ",
+      "transliteration": "tumba bisi",
+      "english_meaning": "Very hot (weather)",
+      "register": "informal",
+      "tags": [
+        "social",
+        "weather"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-coffee-kudiyona",
+      "kannada_text": "ಕಾಫಿ ಕುಡಿಯೋಣ?",
+      "transliteration": "kāfi kuḍiyōṇa?",
+      "english_meaning": "Shall we have coffee?",
+      "register": "informal",
+      "tags": [
+        "social"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-visheshave-illa",
+      "kannada_text": "ವಿಶೇಷವೇ ಇಲ್ಲ",
+      "transliteration": "viśeṣavē illa",
+      "english_meaning": "Nothing special",
+      "register": "informal",
+      "tags": [
+        "social",
+        "response"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-happy-aytu",
+      "kannada_text": "ಖುಶಿಯಾಯ್ತು",
+      "transliteration": "khusiyāytu",
+      "english_meaning": "I'm happy about it",
+      "register": "informal",
+      "tags": [
+        "social"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-avaga-bartini",
+      "kannada_text": "ಅವಾಗ ಬರ್ತೀನಿ",
+      "transliteration": "avāga bartīni",
+      "english_meaning": "I'll come then",
+      "register": "informal",
+      "tags": [
+        "social",
+        "time"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-festival-shubha",
+      "kannada_text": "ಹಬ್ಬದ ಶುಭಾಶಯಗಳು",
+      "transliteration": "habbada śubhāśayagaḷu",
+      "english_meaning": "Festival greetings",
+      "register": "informal",
+      "tags": [
+        "social"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-madodu-en",
+      "kannada_text": "ಮಾಡೋದು ಏನು?",
+      "transliteration": "māḍōdu ēnu?",
+      "english_meaning": "What shall we do?",
+      "register": "informal",
+      "tags": [
+        "social"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-social-1",
+      "ordinal": 1,
+      "title": "Weather and coffee",
+      "description": "Rain, heat, and casual invites.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-malleyagide",
+        "item-tumba-bisi",
+        "item-coffee-kudiyona",
+        "item-visheshave-illa"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Small talk about weather.",
+        "steps": [
+          {
+            "narration": "Friend looks outside.",
+            "partner": {
+              "kannada": "ಮಳೆಯಾಗ್ತಿದೆ",
+              "transliteration": "maḷeyāgtide",
+              "english": "It is raining"
+            }
+          },
+          {
+            "narration": "Agree it's raining.",
+            "choices": [
+              {
+                "label": "maḷeyāgtide",
+                "hint": "It is raining",
+                "correct": true
+              },
+              {
+                "label": "tumba bisi",
+                "hint": "Very hot",
+                "correct": false
+              },
+              {
+                "label": "māḍōdu ēnu?",
+                "hint": "What shall we do?",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "narration": "Invite for coffee.",
+            "choices": [
+              {
+                "label": "kāfi kuḍiyōṇa?",
+                "hint": "Shall we have coffee?",
+                "correct": true
+              },
+              {
+                "label": "bas biḍalu",
+                "hint": "Bus drop",
+                "correct": false
+              },
+              {
+                "label": "khāte sankhye",
+                "hint": "Account number",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-malleyagide",
+        "instruction": "It is raining",
+        "blank": "maḷeyāg____",
+        "accepted": [
+          "tide",
+          "gtide"
+        ]
+      }
+    },
+    {
+      "id": "lesson-social-2",
+      "ordinal": 2,
+      "title": "Plans and festivals",
+      "description": "Happy news, timing, and wishes.",
+      "estimated_minutes": 12,
+      "phrase_ids": [
+        "item-happy-aytu",
+        "item-avaga-bartini",
+        "item-festival-shubha",
+        "item-madodu-en"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Making plans after good news.",
+        "steps": [
+          {
+            "narration": "Friend shares happy news.",
+            "partner": {
+              "kannada": "ಖುಷಿ ಆಯ್ತು!",
+              "transliteration": "khusi āytu!",
+              "english": "So happy!"
+            }
+          },
+          {
+            "narration": "React positively.",
+            "choices": [
+              {
+                "label": "khusiyāytu",
+                "hint": "I'm happy about it",
+                "correct": true
+              },
+              {
+                "label": "viśeṣavē illa",
+                "hint": "Nothing special",
+                "correct": false
+              },
+              {
+                "label": "pikap bēku",
+                "hint": "Need pickup",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "narration": "Say when you'll come.",
+            "choices": [
+              {
+                "label": "avāga bartīni",
+                "hint": "I'll come then",
+                "correct": true
+              },
+              {
+                "label": "kāl byāk māḍtīni",
+                "hint": "Call back",
+                "correct": false
+              },
+              {
+                "label": "mesēj kaḷisi",
+                "hint": "Send message",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "tiles": {
+        "item_id": "item-festival-shubha",
+        "tiles": [
+          "śubhāśayagaḷu",
+          "habbada"
+        ],
+        "solution": [
+          "habbada",
+          "śubhāśayagaḷu"
+        ]
+      }
+    }
+  ]
+}
