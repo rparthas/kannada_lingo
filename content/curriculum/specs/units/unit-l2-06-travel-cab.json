@@ -1,0 +1,243 @@
+{
+  "id": "unit-l2-06-travel-cab",
+  "level_id": "level-2-everyday",
+  "ordinal": 6,
+  "title": "Cabs & short trips",
+  "description": "Ride-hailing, directions, and fare talk.",
+  "phrases": [
+    {
+      "id": "item-l2-cab-booked",
+      "kannada_text": "ಕ್ಯಾಬ್ ಬುಕ್ ಮಾಡಿದ್ದೀನಿ",
+      "transliteration": "kyāb buk māḍiddīni",
+      "english_meaning": "I booked a cab",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-pickup-point",
+      "kannada_text": "ಪಿಕಪ್ ಪಾಯಿಂಟ್ ಇಲ್ಲಿ",
+      "transliteration": "pikap pāyiṇṭ illi",
+      "english_meaning": "Pickup point is here",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-traffic-heavy",
+      "kannada_text": "ಟ್ರಾಫಿಕ್ ತುಂಬಾ ಇದೆ",
+      "transliteration": "ṭrāphik tumba ide",
+      "english_meaning": "Traffic is heavy",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-faster-route",
+      "kannada_text": "ಬೇಗದ ರಸ್ತೆ ಹೋಗಿ",
+      "transliteration": "bēgada raste hōgi",
+      "english_meaning": "Take the faster route",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-meter-on",
+      "kannada_text": "ಮೀಟರ್ ಆನ್ ಮಾಡಿ",
+      "transliteration": "mīṭar ān māḍi",
+      "english_meaning": "Turn the meter on",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-stop-here",
+      "kannada_text": "ಇಲ್ಲೇ ನಿಲ್ಲಿ",
+      "transliteration": "illē nilli",
+      "english_meaning": "Stop here",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-fare-high",
+      "kannada_text": "ಫೇರ್ ಜಾಸ್ತಿ",
+      "transliteration": "phēr jāsti",
+      "english_meaning": "Fare is too high",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-receipt-need",
+      "kannada_text": "ರಸೀದಿ ಬೇಕು",
+      "transliteration": "rasīdi bēku",
+      "english_meaning": "I need a receipt",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-ac-on",
+      "kannada_text": "ಎಸಿ ಆನ್ ಮಾಡಿ",
+      "transliteration": "esi ān māḍi",
+      "english_meaning": "Turn AC on",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-reach-safe",
+      "kannada_text": "ಸೇಫ್ ಆಗಿ ಹೋಗಿ",
+      "transliteration": "sēph āgi hōgi",
+      "english_meaning": "Go safely",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-l2-cab-1",
+      "ordinal": 1,
+      "title": "Pickup & route",
+      "description": "Traffic and directions.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-cab-booked",
+        "item-l2-pickup-point",
+        "item-l2-traffic-heavy",
+        "item-l2-faster-route",
+        "item-l2-stop-here"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Getting into a cab.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಎಲ್ಲಿ ಹೋಗಬೇಕು?",
+              "transliteration": "elli hōgabēku?",
+              "english": "Where to go?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "illi nillesi",
+                "hint": "Stop here",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-stop-here",
+        "instruction": "Stop here",
+        "blank": "illē _____",
+        "accepted": [
+          "nilli"
+        ]
+      }
+    },
+    {
+      "id": "lesson-l2-cab-2",
+      "ordinal": 2,
+      "title": "Fare & comfort",
+      "description": "Meter, AC, receipt.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-meter-on",
+        "item-l2-fare-high",
+        "item-l2-receipt-need",
+        "item-l2-ac-on",
+        "item-l2-reach-safe"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Near the end of the ride.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಫೇರ್ ಎಷ್ಟು?",
+              "transliteration": "phēr eṣṭu?",
+              "english": "What's the fare?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "rasīdi bēku",
+                "hint": "Need receipt",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-receipt-need",
+        "instruction": "Need receipt",
+        "blank": "rasīdi _____",
+        "accepted": [
+          "bēku"
+        ]
+      }
+    }
+  ]
+}

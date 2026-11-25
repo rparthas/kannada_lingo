@@ -19,7 +19,15 @@ def load_curriculum_data() -> dict[str, Any]:
     exercises_hand: list[dict[str, Any]] = []
     skip_generated: list[str] = []
 
-    unit_files = sorted(UNITS_DIR.glob("*.json"), key=lambda p: json.loads(p.read_text())["ordinal"])
+    levels = course.get("levels") or []
+    level_ordinals = {level["id"]: level["ordinal"] for level in levels}
+
+    def unit_sort_key(path: Path) -> tuple[int, int]:
+        unit = json.loads(path.read_text(encoding="utf-8"))
+        level_ord = level_ordinals.get(unit["level_id"], 99)
+        return (level_ord, unit["ordinal"])
+
+    unit_files = sorted(UNITS_DIR.glob("*.json"), key=unit_sort_key)
     for path in unit_files:
         unit = json.loads(path.read_text(encoding="utf-8"))
         units_meta.append(

@@ -1,5 +1,5 @@
 {
-  "content_version": 6,
+  "content_version": 7,
   "course": {
     "id": "course-kannada-quest",
     "title": "Kannada Quest",
@@ -12,6 +12,13 @@
       "ordinal": 1,
       "title": "Survival Kannada",
       "description": "Travel, home, health, work, money, phone, family, and social chat."
+    },
+    {
+      "id": "level-2-everyday",
+      "course_id": "course-kannada-quest",
+      "ordinal": 2,
+      "title": "Everyday Conversations",
+      "description": "Work follow-ups, neighbors, deliveries, services, and polite Bengaluru register."
     }
   ],
   "extra_audio_assets": [

@@ -1,0 +1,243 @@
+{
+  "id": "unit-l2-05-home-services",
+  "level_id": "level-2-everyday",
+  "ordinal": 5,
+  "title": "Home services",
+  "description": "Plumber, electrician, and repair visits.",
+  "phrases": [
+    {
+      "id": "item-l2-leak",
+      "kannada_text": "ವಾಟರ್ ಲೀಕ್ ಆಗಿದೆ",
+      "transliteration": "vāṭar līk āgide",
+      "english_meaning": "There is a water leak",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-plumber-call",
+      "kannada_text": "ಪ್ಲಂಬರ್ ಕರೆ ಮಾಡಿದ್ದೀನಿ",
+      "transliteration": "plambar kare māḍiddīni",
+      "english_meaning": "I called a plumber",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-when-come",
+      "kannada_text": "ಎಷ್ಟ್ ಹೊತ್ತಿಗೆ ಬರುತ್ತೀರಾ?",
+      "transliteration": "eṣṭ hottige baruttīrā?",
+      "english_meaning": "What time will you come?",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-fuse-gone",
+      "kannada_text": "ಫ್ಯೂಜ್ ಹೋಗಿದೆ",
+      "transliteration": "phyūj hōgide",
+      "english_meaning": "The fuse is blown",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-power-cut",
+      "kannada_text": "ಕರೆಂಟ್ ಹೋಗಿದೆ",
+      "transliteration": "kareṇṭ hōgide",
+      "english_meaning": "Power is out",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-repair-cost",
+      "kannada_text": "ರಿಪೇರಿ ಎಷ್ಟು?",
+      "transliteration": "ripēri eṣṭu?",
+      "english_meaning": "How much for the repair?",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-cash-or-upi",
+      "kannada_text": "ಕ್ಯಾಶ್ ಅಥವಾ UPI?",
+      "transliteration": "kyāś athavā UPI?",
+      "english_meaning": "Cash or UPI?",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-works-now",
+      "kannada_text": "ಇದೀಗ ಸರಿ ಆಯ್ತು",
+      "transliteration": "idīga sari āytu",
+      "english_meaning": "It works fine now",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-come-tomorrow",
+      "kannada_text": "ನಾಳೆ ಬನ್ನಿ",
+      "transliteration": "nāḷe banni",
+      "english_meaning": "Come tomorrow",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-spare-parts",
+      "kannada_text": "ಸ್ಪೇರ್ ಪಾರ್ಟ್ಸ್ ಬೇಕು",
+      "transliteration": "spēr pārṭs bēku",
+      "english_meaning": "Need spare parts",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-l2-service-1",
+      "ordinal": 1,
+      "title": "Plumber visit",
+      "description": "Leaks and timing.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-leak",
+        "item-l2-plumber-call",
+        "item-l2-when-come",
+        "item-l2-come-tomorrow",
+        "item-l2-works-now"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Plumber at the door.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಸಮಸ್ಯೆ ಏನು?",
+              "transliteration": "samasya ēnu?",
+              "english": "What's the problem?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "vāṭar līk",
+                "hint": "Water leak",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-leak",
+        "instruction": "Water leak",
+        "blank": "vāṭar līk _____",
+        "accepted": [
+          "āgide"
+        ]
+      }
+    },
+    {
+      "id": "lesson-l2-service-2",
+      "ordinal": 2,
+      "title": "Electrician & payment",
+      "description": "Fuse, cost, UPI.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-fuse-gone",
+        "item-l2-power-cut",
+        "item-l2-repair-cost",
+        "item-l2-cash-or-upi",
+        "item-l2-spare-parts"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "After fixing wiring.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಪೇಮೆಂಟ್?",
+              "transliteration": "pēmeṇṭ?",
+              "english": "Payment?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "kyāś athavā UPI",
+                "hint": "Cash or UPI",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-cash-or-upi",
+        "instruction": "Cash or UPI",
+        "blank": "kyāś _____",
+        "accepted": [
+          "athavā UPI"
+        ]
+      }
+    }
+  ]
+}

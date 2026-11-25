@@ -1,7 +1,7 @@
 mod backup;
 mod commands;
-mod content;
-mod db;
+pub mod content;
+pub mod db;
 
 use db::DbState;
 use tauri::Manager;

@@ -2,7 +2,7 @@
 
 | Field | Value |
 |-------|-------|
-| Status | Planned |
+| Status | Shipped |
 | Roadmap | [Phase 8](../constitution/roadmap.md#phase-8--curriculum-expansion) |
 | Priority | P2 |
 
@@ -47,10 +47,10 @@ Pick 2–3 for MVP Level 2; validate with content author:
 
 ## Acceptance criteria
 
-- [ ] `npm run content:validate` passes with level 2 content.
-- [ ] `content_version` incremented; import adds rows without migration breakage.
-- [ ] Learner completing Level 1 sees Level 2 in Learn tab; prior XP/schedules unchanged.
-- [ ] Regional/formal notes present where spoken Bengaluru differs.
+- [x] `npm run content:validate` passes with level 2 content.
+- [x] `content_version` incremented; import adds rows without migration breakage.
+- [x] Learner completing Level 1 sees Level 2 in Learn tab; prior XP/schedules unchanged.
+- [x] Regional/formal notes present where spoken Bengaluru differs.
 
 ## Dependencies
 

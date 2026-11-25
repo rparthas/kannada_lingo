@@ -3,11 +3,60 @@ use serde::Deserialize;
 
 const BUNDLED_CURRICULUM: &str = include_str!("../../../content/curriculum/beginner-path.json");
 
+pub fn bundled_curriculum_json() -> &'static str {
+    BUNDLED_CURRICULUM
+}
+
 pub fn bundled_content_version() -> i32 {
-    serde_json::from_str::<serde_json::Value>(BUNDLED_CURRICULUM)
+    bundle_content_version(BUNDLED_CURRICULUM)
+}
+
+pub fn bundle_content_version(json: &str) -> i32 {
+    serde_json::from_str::<serde_json::Value>(json)
         .ok()
         .and_then(|v| v.get("content_version").and_then(|c| c.as_i64()))
         .unwrap_or(1) as i32
+}
+
+pub fn installed_content_version(conn: &Connection) -> i32 {
+    conn.query_row(
+        "SELECT COALESCE(MAX(content_version), 0) FROM courses",
+        [],
+        |row| row.get(0),
+    )
+    .unwrap_or(0)
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum ContentImportOutcome {
+    NoChange {
+        stored_version: i32,
+        incoming_version: i32,
+    },
+    Imported {
+        items: usize,
+        content_version: i32,
+    },
+}
+
+pub fn import_if_newer(conn: &Connection, json: &str) -> Result<ContentImportOutcome, String> {
+    let incoming = bundle_content_version(json);
+    let stored = installed_content_version(conn);
+    let empty = conn
+        .query_row("SELECT COUNT(*) FROM learning_items", [], |row| row.get::<_, i64>(0))
+        .unwrap_or(0)
+        == 0;
+    if !empty && incoming <= stored {
+        return Ok(ContentImportOutcome::NoChange {
+            stored_version: stored,
+            incoming_version: incoming,
+        });
+    }
+    let items = import_bundle(conn, json)?;
+    Ok(ContentImportOutcome::Imported {
+        items,
+        content_version: incoming,
+    })
 }
 
 #[derive(Debug, Deserialize)]
@@ -104,8 +153,12 @@ struct ExerciseJson {
 }
 
 pub fn import_bundled(conn: &Connection) -> Result<usize, String> {
+    import_bundle(conn, BUNDLED_CURRICULUM)
+}
+
+pub fn import_bundle(conn: &Connection, json: &str) -> Result<usize, String> {
     let bundle: CurriculumBundle =
-        serde_json::from_str(BUNDLED_CURRICULUM).map_err(|e| format!("invalid bundled JSON: {e}"))?;
+        serde_json::from_str(json).map_err(|e| format!("invalid curriculum JSON: {e}"))?;
 
     let tx = conn.unchecked_transaction().map_err(|e| e.to_string())?;
 
@@ -256,6 +309,121 @@ mod tests {
     use super::*;
     use crate::db::migrations;
     use rusqlite::Connection;
+
+    const FIXTURE_V1: &str = r#"{
+      "content_version": 1,
+      "course": { "id": "course-test", "title": "Test", "description": null },
+      "levels": [{ "id": "level-test", "course_id": "course-test", "ordinal": 1, "title": "L1", "description": null }],
+      "units": [{ "id": "unit-test", "level_id": "level-test", "ordinal": 1, "title": "U1", "description": null }],
+      "lessons": [{
+        "id": "lesson-test-1", "unit_id": "unit-test", "ordinal": 1,
+        "title": "Lesson 1", "description": null, "estimated_minutes": 10
+      }],
+      "learning_items": [{
+        "id": "item-alpha", "kannada_text": "ಆ", "transliteration": "aa",
+        "english_meaning": "Alpha"
+      }],
+      "audio_assets": [],
+      "lesson_items": [{ "lesson_id": "lesson-test-1", "learning_item_id": "item-alpha", "sort_order": 1 }],
+      "exercises": [{
+        "id": "ex-alpha", "lesson_id": "lesson-test-1", "learning_item_id": "item-alpha",
+        "exercise_type": "vocabulary_flashcard", "prompt": {}, "sort_order": 1
+      }]
+    }"#;
+
+    const FIXTURE_V2: &str = r#"{
+      "content_version": 2,
+      "course": { "id": "course-test", "title": "Test", "description": null },
+      "levels": [{ "id": "level-test", "course_id": "course-test", "ordinal": 1, "title": "L1", "description": null }],
+      "units": [{ "id": "unit-test", "level_id": "level-test", "ordinal": 1, "title": "U1", "description": null }],
+      "lessons": [
+        {
+          "id": "lesson-test-1", "unit_id": "unit-test", "ordinal": 1,
+          "title": "Lesson 1", "description": null, "estimated_minutes": 10
+        },
+        {
+          "id": "lesson-test-2", "unit_id": "unit-test", "ordinal": 2,
+          "title": "Lesson 2", "description": null, "estimated_minutes": 10
+        }
+      ],
+      "learning_items": [
+        {
+          "id": "item-alpha", "kannada_text": "ಆ", "transliteration": "aa",
+          "english_meaning": "Alpha"
+        },
+        {
+          "id": "item-beta", "kannada_text": "ಬ", "transliteration": "ba",
+          "english_meaning": "Beta"
+        }
+      ],
+      "audio_assets": [],
+      "lesson_items": [
+        { "lesson_id": "lesson-test-1", "learning_item_id": "item-alpha", "sort_order": 1 },
+        { "lesson_id": "lesson-test-2", "learning_item_id": "item-beta", "sort_order": 1 }
+      ],
+      "exercises": [
+        {
+          "id": "ex-alpha", "lesson_id": "lesson-test-1", "learning_item_id": "item-alpha",
+          "exercise_type": "vocabulary_flashcard", "prompt": {}, "sort_order": 1
+        },
+        {
+          "id": "ex-beta", "lesson_id": "lesson-test-2", "learning_item_id": "item-beta",
+          "exercise_type": "vocabulary_flashcard", "prompt": {}, "sort_order": 1
+        }
+      ]
+    }"#;
+
+    fn fresh_db() -> Connection {
+        let conn = Connection::open_in_memory().unwrap();
+        conn.execute_batch("PRAGMA foreign_keys = ON;").unwrap();
+        migrations::run(&conn).unwrap();
+        conn
+    }
+
+    #[test]
+    fn import_on_nonempty_db_adds_lesson_without_deleting_attempts() {
+        let conn = fresh_db();
+        import_bundle(&conn, FIXTURE_V1).expect("v1 import");
+        conn.execute(
+            "INSERT INTO exercise_attempts (id, exercise_id, learning_item_id, is_correct, response_json)
+             VALUES ('att-1', 'ex-alpha', 'item-alpha', 1, '{}')",
+            [],
+        )
+        .unwrap();
+
+        let outcome = import_if_newer(&conn, FIXTURE_V2).expect("v2 import");
+        assert_eq!(
+            outcome,
+            ContentImportOutcome::Imported {
+                items: 2,
+                content_version: 2,
+            }
+        );
+
+        let attempts: i64 = conn
+            .query_row("SELECT COUNT(*) FROM exercise_attempts", [], |r| r.get(0))
+            .unwrap();
+        assert_eq!(attempts, 1);
+
+        let lessons: i64 = conn
+            .query_row("SELECT COUNT(*) FROM lessons", [], |r| r.get(0))
+            .unwrap();
+        assert_eq!(lessons, 2);
+    }
+
+    #[test]
+    fn import_if_newer_noops_when_incoming_not_newer() {
+        let conn = fresh_db();
+        import_bundle(&conn, FIXTURE_V1).unwrap();
+        let outcome = import_if_newer(&conn, FIXTURE_V1).unwrap();
+        assert_eq!(
+            outcome,
+            ContentImportOutcome::NoChange {
+                stored_version: 1,
+                incoming_version: 1,
+            }
+        );
+    }
 
     #[test]
     fn bundled_import_includes_audio_assets() {

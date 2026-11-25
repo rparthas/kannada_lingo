@@ -15,6 +15,7 @@
     "ios:xcodegen": "bash scripts/ios-xcodegen.sh",
     "content:build": "python3 scripts/build-beginner-path.py && python3 scripts/generate-placeholder-audio.py",
     "content:validate": "node scripts/validate-content.mjs",
+    "content:import": "node scripts/import-content.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },

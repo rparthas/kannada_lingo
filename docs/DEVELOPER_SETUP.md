@@ -19,7 +19,13 @@ npm run content:build   # specs → beginner-path.json + macOS TTS audio
 
 Curriculum authoring: [`content/curriculum/specs/README.md`](../content/curriculum/specs/README.md).
 
-To re-import bundled curriculum in dev, delete the app’s `learner.sqlite` (or wipe app data).
+To merge a newer curriculum into an existing database (keeps attempts, XP, streak):
+
+```bash
+npm run content:import -- --db "$HOME/Library/Application Support/com.kannadaquest.app/learner.sqlite"
+```
+
+Optional: `--force` re-applies the bundle even when versions match. Fresh installs still import on `init_app` when the DB is empty or `content_version` lags the bundled JSON.
 
 ## iOS
 

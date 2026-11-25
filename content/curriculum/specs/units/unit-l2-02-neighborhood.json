@@ -1,0 +1,243 @@
+{
+  "id": "unit-l2-02-neighborhood",
+  "level_id": "level-2-everyday",
+  "ordinal": 2,
+  "title": "Neighborhood & society",
+  "description": "Gate passes, complaints, and polite asks to neighbors.",
+  "phrases": [
+    {
+      "id": "item-l2-guest-coming",
+      "kannada_text": "ಅತಿಥಿ ಬರುತ್ತಾರೆ",
+      "transliteration": "atithi baruttāre",
+      "english_meaning": "Guests are coming",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-gate-pass",
+      "kannada_text": "ಗೇಟ್ ಪಾಸ್ ಬೇಕು",
+      "transliteration": "gēṭ pās bēku",
+      "english_meaning": "Need a gate pass",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-vehicle-number",
+      "kannada_text": "ವಾಹನ ಸಂಖ್ಯೆ ಇದೆ",
+      "transliteration": "vāhana sankhye ide",
+      "english_meaning": "I have the vehicle number",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-noise",
+      "kannada_text": "ಸ್ವಲ್ಪ ಶಬ್ದ ಕಮ್ಮಿ ಮಾಡಿ",
+      "transliteration": "svalpa śabda kummi māḍi",
+      "english_meaning": "Please reduce the noise a bit",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-parking",
+      "kannada_text": "ಪಾರ್ಕಿಂಗ್ ಇಲ್ಲೀನಾ?",
+      "transliteration": "pārkiṅg illīnā?",
+      "english_meaning": "Is parking allowed here?",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-elevator",
+      "kannada_text": "ಲಿಫ್ಟ್ ಹಾಳಾಗಿದೆ",
+      "transliteration": "liṭ hāḷāgide",
+      "english_meaning": "The lift is broken",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-water-tank",
+      "kannada_text": "ವಾಟರ್ ಟ್ಯಾಂಕ್ ಖಾಲಿ",
+      "transliteration": "vāṭar ṭyāṅk khāli",
+      "english_meaning": "Water tank is empty",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-morning-walk",
+      "kannada_text": "ಬೆಳಗ್ಗೆ ವಾಕ್ ಹೋಗ್ತೀನಿ",
+      "transliteration": "beḷagge vāk hōgtīni",
+      "english_meaning": "I go for a walk in the morning",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-help-carry",
+      "kannada_text": "ಸಹಾಯ ಮಾಡ್ತೀರಾ?",
+      "transliteration": "sahāya māḍtīrā?",
+      "english_meaning": "Can you help?",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-society-meeting",
+      "kannada_text": "ಸೊಸೈಟಿ ಮೀಟಿಂಗ್ ಯಾವಾಗ?",
+      "transliteration": "sosaiṭi mīṭiṅg yāvāga?",
+      "english_meaning": "When is the society meeting?",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-l2-neighbor-1",
+      "ordinal": 1,
+      "title": "Gate & guests",
+      "description": "Visitors and security desk.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-guest-coming",
+        "item-l2-gate-pass",
+        "item-l2-vehicle-number",
+        "item-l2-help-carry",
+        "item-l2-parking"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "At the apartment gate.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಯಾರು ಬರುತ್ತಾರೆ?",
+              "transliteration": "yāru baruttāre?",
+              "english": "Who is coming?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "atithi baruttāre",
+                "hint": "Guests are coming",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-gate-pass",
+        "instruction": "Need a gate pass",
+        "blank": "gēṭ pās _____",
+        "accepted": [
+          "bēku"
+        ]
+      }
+    },
+    {
+      "id": "lesson-l2-neighbor-2",
+      "ordinal": 2,
+      "title": "Building life",
+      "description": "Lift, water, and society notices.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-noise",
+        "item-l2-elevator",
+        "item-l2-water-tank",
+        "item-l2-morning-walk",
+        "item-l2-society-meeting"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Talking to a neighbor in the corridor.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ನೀರಿಲ್ಲ ಇಂದು.",
+              "transliteration": "nīrilla indu.",
+              "english": "No water today."
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "vāṭar ṭyāṅk khāli",
+                "hint": "Tank is empty",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-water-tank",
+        "instruction": "Water tank empty",
+        "blank": "vāṭar ṭyāṅk _____",
+        "accepted": [
+          "khāli"
+        ]
+      }
+    }
+  ]
+}

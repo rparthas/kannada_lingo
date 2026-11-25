@@ -26,7 +26,7 @@ npm run content:validate
 npm run test
 ```
 
-7. Re-import in the app: delete learner DB or install a fresh build so `init_app` sees the higher version.
+7. Re-import without wiping progress: `npm run content:import -- --db "$HOME/Library/Application Support/com.kannadaquest.app/learner.sqlite"` (see `docs/DEVELOPER_SETUP.md`).
 
 ## Generated exercise shorthand
 

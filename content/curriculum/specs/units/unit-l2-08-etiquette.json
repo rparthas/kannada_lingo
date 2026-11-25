@@ -1,0 +1,246 @@
+{
+  "id": "unit-l2-08-etiquette",
+  "level_id": "level-2-everyday",
+  "ordinal": 8,
+  "title": "Etiquette & register",
+  "description": "nimma/neenu, soft refusals, and Bengaluru politeness.",
+  "phrases": [
+    {
+      "id": "item-l2-nimma-peru",
+      "kannada_text": "ನಿಮ್ಮ ಹೆಸರು ಏನು?",
+      "transliteration": "nimma hesaru ēnu?",
+      "english_meaning": "What is your name? (formal)",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "context_note": "Use with elders or strangers."
+    },
+    {
+      "id": "item-l2-neenu-barta",
+      "kannada_text": "ನೀನು ಬರ್ತಿಯಾ?",
+      "transliteration": "nīnu bartiyā?",
+      "english_meaning": "Will you come? (informal)",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "context_note": "Close friends only."
+    },
+    {
+      "id": "item-l2-nimma-manaige",
+      "kannada_text": "ನಿಮ್ಮ ಮನೆಗೆ ಬರೋಣ",
+      "transliteration": "nimma manege barōṇa",
+      "english_meaning": "Shall we come to your home?",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-soft-no",
+      "kannada_text": "ಇದೀಗ ಸಾಧ್ಯ ಇಲ್ಲ",
+      "transliteration": "idīga sādhy illa",
+      "english_meaning": "Not possible right now",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "context_note": "Softer than a blunt 'illa'."
+    },
+    {
+      "id": "item-l2-maybe-later",
+      "kannada_text": "ನೋಡೊಣ, ಸಾಯಂಕಾಲ",
+      "transliteration": "nōḍōṇa, sāyaṅkāla",
+      "english_meaning": "Let's see, evening",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-respect-elder",
+      "kannada_text": "ನಿಮಗೆ ಗೌರವ",
+      "transliteration": "nimage gaurava",
+      "english_meaning": "Respect to you",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-please-wait",
+      "kannada_text": "ಒಂದು ನಿಮಿಷ ಕಾಯಿರಿ",
+      "transliteration": "ondu nimisha kāyiri",
+      "english_meaning": "Please wait a minute",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-after-you",
+      "kannada_text": "ನೀವು ಮೊದಲು",
+      "transliteration": "nīvu modalu",
+      "english_meaning": "You first",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-no-worries",
+      "kannada_text": "ಪರವಾಗಿಲ್ಲ",
+      "transliteration": "paravāgilla",
+      "english_meaning": "No worries / it's fine",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-see-you-soon",
+      "kannada_text": "ಬೇಗಾ ಸಿಗೋಣ",
+      "transliteration": "bēgā sigōṇa",
+      "english_meaning": "See you soon",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-l2-etiq-1",
+      "ordinal": 1,
+      "title": "nimma vs nīnu",
+      "description": "Match formality to the person.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-nimma-peru",
+        "item-l2-neenu-barta",
+        "item-l2-nimma-manaige",
+        "item-l2-please-wait",
+        "item-l2-after-you"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Meeting a neighbor's parent.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಹೆಸರು?",
+              "transliteration": "hesaru?",
+              "english": "Name?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "nimma hesaru",
+                "hint": "Your name (formal)",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-nimma-peru",
+        "instruction": "What is your name",
+        "blank": "nimma hesaru _____",
+        "accepted": [
+          "ēnu"
+        ]
+      }
+    },
+    {
+      "id": "lesson-l2-etiq-2",
+      "ordinal": 2,
+      "title": "Soft refusals",
+      "description": "Decline without sounding rude.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-soft-no",
+        "item-l2-maybe-later",
+        "item-l2-respect-elder",
+        "item-l2-no-worries",
+        "item-l2-see-you-soon"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Friend asks you out last minute.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಇವತ್ತು ಬರುತ್ತಿಯಾ?",
+              "transliteration": "ivattu baruttiyā?",
+              "english": "Coming today?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "idīga sādhy illa",
+                "hint": "Not possible now",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-soft-no",
+        "instruction": "Not possible now",
+        "blank": "idīga sādhy _____",
+        "accepted": [
+          "illa"
+        ]
+      }
+    }
+  ]
+}

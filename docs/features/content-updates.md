@@ -2,7 +2,7 @@
 
 | Field | Value |
 |-------|-------|
-| Status | Planned |
+| Status | Shipped |
 | Roadmap | Phase 8 |
 | Priority | P2 |
 
@@ -44,10 +44,10 @@
 
 ## Acceptance criteria
 
-- [ ] Documented command or settings action imports content pack and preserves learner profile.
-- [ ] Rust tests: import on non-empty DB adds new lesson without deleting attempts.
-- [ ] Restore backup after content import still works.
-- [ ] `content:validate` runs on pack before import is offered.
+- [x] Documented command or settings action imports content pack and preserves learner profile (`npm run content:import`).
+- [x] Rust tests: import on non-empty DB adds new lesson without deleting attempts.
+- [x] Restore backup after content import still works (unchanged backup path; import uses `INSERT OR REPLACE` on content tables only).
+- [x] `content:validate` runs on pack before import is offered.
 
 ## Dependencies
 

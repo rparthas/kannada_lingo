@@ -1,0 +1,248 @@
+{
+  "id": "unit-l2-01-work-deeper",
+  "level_id": "level-2-everyday",
+  "ordinal": 1,
+  "title": "Deeper work chat",
+  "description": "Standups, deadlines, and polite pushback at the office.",
+  "phrases": [
+    {
+      "id": "item-l2-standup",
+      "kannada_text": "ಸ್ಟ್ಯಾಂಡಪ್ ಎಷ್ಟ್?",
+      "transliteration": "sṭyāṇḍap eṣṭ?",
+      "english_meaning": "What time is standup?",
+      "register": "informal",
+      "tags": [
+        "work",
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "context_note": "Common in IT offices."
+    },
+    {
+      "id": "item-l2-deadline",
+      "kannada_text": "ಡೆಡ್‌ಲೈನ್ ಟೈಟ್",
+      "transliteration": "ḍeḍlain ṭaiṭ",
+      "english_meaning": "The deadline is tight",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-blocked",
+      "kannada_text": "ನಾನು ಬ್ಲಾಕ್ ಆಗಿದ್ದೀನಿ",
+      "transliteration": "nānu blāk āgiddīni",
+      "english_meaning": "I'm blocked",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "context_note": "Explaining why work is stuck."
+    },
+    {
+      "id": "item-l2-update-kodi",
+      "kannada_text": "ಅಪ್ಡೇಟ್ ಕೊಡಿ",
+      "transliteration": "apḍēṭ koḍi",
+      "english_meaning": "Give an update",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-meeting-reach",
+      "kannada_text": "ಮೀಟಿಂಗ್‌ಗೆ ರೀಚ್ ಆಗಲಿಲ್ಲ",
+      "transliteration": "mīṭiṅg ge rīc āgalilla",
+      "english_meaning": "Couldn't join the meeting",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-slide-share",
+      "kannada_text": "ಸ್ಲೈಡ್ ಶೇರ್ ಮಾಡ್ತೀನಿ",
+      "transliteration": "slaiḍ śēr māḍtīni",
+      "english_meaning": "I'll share the slide",
+      "register": "informal",
+      "tags": [
+        "work",
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-followup",
+      "kannada_text": "ಫಾಲೋ ಅಪ್ ಮಾಡೋಣ",
+      "transliteration": "phālō ap māḍōṇa",
+      "english_meaning": "Let's follow up",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-ping-later",
+      "kannada_text": "ಸಾಯಂಕಾಲ ತಾನೇ ಪಿಂಗ್ ಮಾಡ್ತೀನಿ",
+      "transliteration": "sāyaṅkāla tāne piṅg māḍtīni",
+      "english_meaning": "I'll ping you this evening",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-agree-partial",
+      "kannada_text": "ಸರಿ, ಆದರೆ ಸಮಯ ಬೇಕು",
+      "transliteration": "sari, ādare samaya bēku",
+      "english_meaning": "Okay, but I need time",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "context_note": "Soft disagreement."
+    },
+    {
+      "id": "item-l2-eod",
+      "kannada_text": "ಇವತ್ತು EOD ಗೆ ಕಳಿಸ್ತೀನಿ",
+      "transliteration": "ivattu EOD ge kaḷistīni",
+      "english_meaning": "I'll send it by EOD today",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-l2-work-1",
+      "ordinal": 1,
+      "title": "Standups & status",
+      "description": "Updates and blockers.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-standup",
+        "item-l2-blocked",
+        "item-l2-update-kodi",
+        "item-l2-deadline",
+        "item-l2-meeting-reach"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "During morning standup.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಆಪ್ಡೇಟ್?",
+              "transliteration": "apḍēṭ?",
+              "english": "Update?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "nānu blāk",
+                "hint": "I'm blocked",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-blocked",
+        "instruction": "I'm blocked",
+        "blank": "nānu blāk _____",
+        "accepted": [
+          "āgiddīni"
+        ]
+      }
+    },
+    {
+      "id": "lesson-l2-work-2",
+      "ordinal": 2,
+      "title": "Deadlines & follow-up",
+      "description": "Sharing slides and pushing deadlines gently.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-slide-share",
+        "item-l2-followup",
+        "item-l2-ping-later",
+        "item-l2-agree-partial",
+        "item-l2-eod"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "After a planning call.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಇಂದು ಕಳಿಸ್ತೀರಾ?",
+              "transliteration": "indu kaḷistīrā?",
+              "english": "Will you send today?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "ivattu EOD",
+                "hint": "By EOD today",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-eod",
+        "instruction": "I'll send by EOD",
+        "blank": "ivattu EOD ge _____",
+        "accepted": [
+          "kaḷistīni"
+        ]
+      }
+    }
+  ]
+}

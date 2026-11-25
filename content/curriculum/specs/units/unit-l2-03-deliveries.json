@@ -1,0 +1,243 @@
+{
+  "id": "unit-l2-03-deliveries",
+  "level_id": "level-2-everyday",
+  "ordinal": 3,
+  "title": "Deliveries & couriers",
+  "description": "Swiggy, Amazon, and mismatched orders.",
+  "phrases": [
+    {
+      "id": "item-l2-order-placed",
+      "kannada_text": "ಆರ್ಡರ್ ಮಾಡಿದ್ದೀನಿ",
+      "transliteration": "ārḍar māḍiddīni",
+      "english_meaning": "I placed an order",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-otp-share",
+      "kannada_text": "OTP ಹೇಳ್ತೀನಿ",
+      "transliteration": "OTP hēḷtīni",
+      "english_meaning": "I'll tell you the OTP",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-wrong-item",
+      "kannada_text": "ತಪ್ಪು ಐಟಮ್ ಬಂದಿದೆ",
+      "transliteration": "tappu aiṭam bandide",
+      "english_meaning": "Wrong item arrived",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-leave-door",
+      "kannada_text": "ಬಾಗಿಲ ಬಳಿ ಇಟ್ಟುಬಿಡಿ",
+      "transliteration": "bāgila baḷi iṭṭubiḍi",
+      "english_meaning": "Leave it by the door",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-delivery-late",
+      "kannada_text": "ತುಂಬಾ ಲೇಟ್ ಆಯ್ತು",
+      "transliteration": "tumbā lēṭ āytu",
+      "english_meaning": "It was very late",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-call-on-arrival",
+      "kannada_text": "ಬಂದ ಮೇಲೆ ಕಾಲ್ ಮಾಡಿ",
+      "transliteration": "banda mēle kāl māḍi",
+      "english_meaning": "Call when you arrive",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-package-damaged",
+      "kannada_text": "ಪ್ಯಾಕೇಜ್ ಹಾನಿಯಾಗಿದೆ",
+      "transliteration": "pyākēj hāniyāgide",
+      "english_meaning": "Package is damaged",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-refund",
+      "kannada_text": "ರಿಫಂಡ್ ಬೇಕು",
+      "transliteration": "riphaṇḍ bēku",
+      "english_meaning": "I need a refund",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-security-desk",
+      "kannada_text": "ಸೆಕ್ಯುರಿಟಿ ಡೆಸ್ಕ್‌ನಲ್ಲಿ ಇದೆ",
+      "transliteration": "sekyuriṭi desk nalli ide",
+      "english_meaning": "It's at the security desk",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-floor-number",
+      "kannada_text": "ಮೂರನೇ ಫ್ಲೋರ್",
+      "transliteration": "mūranē phlōr",
+      "english_meaning": "Third floor",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-l2-delivery-1",
+      "ordinal": 1,
+      "title": "Receiving orders",
+      "description": "OTP, floor, and door drop.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-order-placed",
+        "item-l2-otp-share",
+        "item-l2-call-on-arrival",
+        "item-l2-leave-door",
+        "item-l2-floor-number"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Delivery partner at the gate.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "OTP ಹೇಳಿ.",
+              "transliteration": "OTP hēḷi.",
+              "english": "Tell the OTP."
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "OTP hēḷtīni",
+                "hint": "I'll share OTP",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-otp-share",
+        "instruction": "I'll share OTP",
+        "blank": "OTP _____",
+        "accepted": [
+          "hēḷtīni"
+        ]
+      }
+    },
+    {
+      "id": "lesson-l2-delivery-2",
+      "ordinal": 2,
+      "title": "When things go wrong",
+      "description": "Wrong item, damage, refund.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-wrong-item",
+        "item-l2-delivery-late",
+        "item-l2-package-damaged",
+        "item-l2-refund",
+        "item-l2-security-desk"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Customer support call.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಸಮಸ್ಯೆ ಏನು?",
+              "transliteration": "samasya ēnu?",
+              "english": "What is the problem?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "tappu aiṭam bandide",
+                "hint": "Wrong item came",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-wrong-item",
+        "instruction": "Wrong item arrived",
+        "blank": "tappu aiṭam _____",
+        "accepted": [
+          "bandide"
+        ]
+      }
+    }
+  ]
+}

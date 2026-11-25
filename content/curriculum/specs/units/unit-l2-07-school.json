@@ -1,0 +1,244 @@
+{
+  "id": "unit-l2-07-school",
+  "level_id": "level-2-everyday",
+  "ordinal": 7,
+  "title": "Kids & school",
+  "description": "Parent–teacher lines and pickup chat.",
+  "phrases": [
+    {
+      "id": "item-l2-parent-meeting",
+      "kannada_text": "ಪೇರೆಂಟ್ಸ್ ಮೀಟಿಂಗ್ ಇದೆ",
+      "transliteration": "pēreṇṭs mīṭiṅg ide",
+      "english_meaning": "There is a parents' meeting",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-homework-done",
+      "kannada_text": "ಹೋಮ್‌ವರ್ಕ್ ಮುಗಿಸಿದ್ದಾರೆ",
+      "transliteration": "hōm vark mugisiddāre",
+      "english_meaning": "They finished homework",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-pickup-time",
+      "kannada_text": "ಇನ್ನೂ ಐದು ನಿಮಿಷ",
+      "transliteration": "innū aidu nimisha",
+      "english_meaning": "Five more minutes",
+      "register": "informal",
+      "tags": [
+        "school",
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-bus-missed",
+      "kannada_text": "ಬಸ್ ಮಿಸ್ ಆಯ್ತು",
+      "transliteration": "bas mis āytu",
+      "english_meaning": "Missed the bus",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-feeling-sick",
+      "kannada_text": "ಮಗು ಸ್ವಲ್ಪ ಅಸ್ವಸ್ಥ",
+      "transliteration": "magu svalpa asvastha",
+      "english_meaning": "Child is a bit unwell",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-leave-note",
+      "kannada_text": "ಲೀವ್ ನೋಟ್ ಕೊಟ್ಟಿದ್ದೀನಿ",
+      "transliteration": "līv nōṭ koṭṭiddīni",
+      "english_meaning": "I gave a leave note",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-teacher-call",
+      "kannada_text": "ಟೀಚರ್ ಕರೆ ಮಾಡ್ತಾರೆ",
+      "transliteration": "ṭīcar kare māḍtāre",
+      "english_meaning": "Teacher will call",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-exam-next-week",
+      "kannada_text": "ನೆಕ್ಸ್ಟ್ ವೀಕ್ ಎಗ್ಸಾಂ",
+      "transliteration": "nekst vīk eg sām",
+      "english_meaning": "Exam next week",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-playground",
+      "kannada_text": "ಗ್ರೌಂಡ್‌ನಲ್ಲಿ ಆಡ್ತಾರೆ",
+      "transliteration": "grauṇḍ nalli āḍtāre",
+      "english_meaning": "They play in the ground",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-thank-teacher",
+      "kannada_text": "ಟೀಚರ್ ಗೆ ಧನ್ಯವಾದ",
+      "transliteration": "ṭīcar ge dhanyavāda",
+      "english_meaning": "Thanks to the teacher",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-l2-school-1",
+      "ordinal": 1,
+      "title": "At school gate",
+      "description": "Pickup and timing.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-pickup-time",
+        "item-l2-bus-missed",
+        "item-l2-playground",
+        "item-l2-feeling-sick",
+        "item-l2-thank-teacher"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Another parent at pickup.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಮಗು ಬಂದಿದೆಯಾ?",
+              "transliteration": "magu bandideyā?",
+              "english": "Has your child come?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "innū aidu nimisha",
+                "hint": "Five more minutes",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-pickup-time",
+        "instruction": "Five more minutes",
+        "blank": "innū aidu _____",
+        "accepted": [
+          "nimisha"
+        ]
+      }
+    },
+    {
+      "id": "lesson-l2-school-2",
+      "ordinal": 2,
+      "title": "Teacher updates",
+      "description": "Meetings, homework, exams.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-parent-meeting",
+        "item-l2-homework-done",
+        "item-l2-leave-note",
+        "item-l2-teacher-call",
+        "item-l2-exam-next-week"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Quick chat with teacher.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಹೋಮ್‌ವರ್ಕ್ ಆಯ್ತಾ?",
+              "transliteration": "hōm vark āytā?",
+              "english": "Homework done?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "mugisiddāre",
+                "hint": "They finished",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-homework-done",
+        "instruction": "Finished homework",
+        "blank": "hōm vark _____",
+        "accepted": [
+          "mugisiddāre"
+        ]
+      }
+    }
+  ]
+}

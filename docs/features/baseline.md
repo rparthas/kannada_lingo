@@ -30,7 +30,7 @@ Capabilities **implemented in the repository** as of the current Level 1 Surviva
 
 | Feature | Notes |
 |---------|--------|
-| Level selector | Currently **Level 1 Survival** only in content |
+| Level selector | **Level 1 Survival** + **Level 2 Everyday Conversations** |
 | Lesson list | Completion markers, estimated minutes |
 | Lesson player | Resume, review mode, all exercise types |
 
@@ -74,15 +74,17 @@ Defined in `src/domain/exercises/evaluate.ts` and rendered in `ExerciseRenderer`
 | Backup restore | Validate manifest → confirm → replace DB |
 | Integrity | Checksum rejection tested (Rust + TS paths) |
 
-## Content (Level 1)
+## Content
 
 | Metric | Value |
 |--------|-------|
-| Units | 13 (`content/curriculum/specs/units/`) |
-| Lessons | 26 |
-| Phrases | 110 |
+| Levels | 2 (Survival + Everyday Conversations) |
+| Units | 21 (`content/curriculum/specs/units/`) |
+| Lessons | 42 |
+| Phrases | 190 |
 | Content version | See `content/curriculum/specs/course.json` |
 | Validation | `npm run content:validate` |
+| Content import (no wipe) | `npm run content:import` |
 
 ## Explicit non-features (by design)
 

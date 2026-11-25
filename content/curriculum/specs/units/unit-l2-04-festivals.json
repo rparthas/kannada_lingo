@@ -1,0 +1,244 @@
+{
+  "id": "unit-l2-04-festivals",
+  "level_id": "level-2-everyday",
+  "ordinal": 4,
+  "title": "Festivals with neighbors",
+  "description": "Invites, sweets, and polite declines.",
+  "phrases": [
+    {
+      "id": "item-l2-festival-wishes",
+      "kannada_text": "ಹಬ್ಬದ ಶುಭಾಶಯಗಳು",
+      "transliteration": "habbada śubhāśayagaḷu",
+      "english_meaning": "Festival greetings",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-invite-home",
+      "kannada_text": "ಮನೆಗೆ ಬನ್ನಿ",
+      "transliteration": "manege banni",
+      "english_meaning": "Please come home",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-sweets-share",
+      "kannada_text": "ಸ್ವೀಟ್ಸ್ ತೆಗೆದುಕೊಳ್ಳಿ",
+      "transliteration": "svīṭs tegedukoḷḷi",
+      "english_meaning": "Please take some sweets",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-sorry-busy",
+      "kannada_text": "ಕ್ಷಮಿಸಿ, ಇವತ್ತು ಬಿಸಿ",
+      "transliteration": "kṣamisi, ivattu bisi",
+      "english_meaning": "Sorry, I'm busy today",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved",
+      "context_note": "Polite decline."
+    },
+    {
+      "id": "item-l2-decorate",
+      "kannada_text": "ಅಲಂಕರಿಸ್ತಿದ್ದೇವೆ",
+      "transliteration": "alaṅkaristiddēve",
+      "english_meaning": "We are decorating",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-prayers",
+      "kannada_text": "ಪೂಜೆ ಇದೆ ಸಾಯಂಕಾಲ",
+      "transliteration": "pūje ide sāyaṅkāla",
+      "english_meaning": "Puja is in the evening",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-dress-traditional",
+      "kannada_text": "ಪಾರಂಪರಿಕ ಉಡುಗೆ ಹಾಕಿದ್ದೀನಿ",
+      "transliteration": "pāraṁparika uḍuge hākiddīni",
+      "english_meaning": "I'm wearing traditional dress",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 3,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-kids-excited",
+      "kannada_text": "ಮಕ್ಕಳಿಗೆ ತುಂಬಾ ಖುಷಿ",
+      "transliteration": "makkaḷige tumba khuṣi",
+      "english_meaning": "Kids are very excited",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-gift-brought",
+      "kannada_text": "ಸಣ್ಣ ಉಡುಗೊರೆ ತಂದಿದ್ದೀನಿ",
+      "transliteration": "saṇṇa uḍugore tandididdīni",
+      "english_meaning": "I brought a small gift",
+      "register": "formal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    },
+    {
+      "id": "item-l2-see-you-event",
+      "kannada_text": "ಈವೆಂಟ್‌ನಲ್ಲಿ ಸಿಗೋಣ",
+      "transliteration": "īvèṇṭ nalli sigōṇa",
+      "english_meaning": "See you at the event",
+      "register": "informal",
+      "tags": [
+        "level2"
+      ],
+      "difficulty": 2,
+      "validation_status": "approved"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-l2-fest-1",
+      "ordinal": 1,
+      "title": "Invitations",
+      "description": "Greet and invite neighbors.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-festival-wishes",
+        "item-l2-invite-home",
+        "item-l2-sweets-share",
+        "item-l2-gift-brought",
+        "item-l2-see-you-event"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Festival day in the corridor.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಶುಭಾಶಯಗಳು!",
+              "transliteration": "śubhāśayagaḷu!",
+              "english": "Greetings!"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "habbada śubhāśayagaḷu",
+                "hint": "Festival greetings",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-festival-wishes",
+        "instruction": "Festival greetings",
+        "blank": "habbada _____",
+        "accepted": [
+          "śubhāśayagaḷu"
+        ]
+      }
+    },
+    {
+      "id": "lesson-l2-fest-2",
+      "ordinal": 2,
+      "title": "Busy but kind",
+      "description": "Declining without offending.",
+      "estimated_minutes": 14,
+      "phrase_ids": [
+        "item-l2-sorry-busy",
+        "item-l2-decorate",
+        "item-l2-prayers",
+        "item-l2-dress-traditional",
+        "item-l2-kids-excited"
+      ],
+      "exercise_mode": "generated",
+      "convo": {
+        "instruction": "Neighbor invites you inside.",
+        "steps": [
+          {
+            "narration": "Your conversation partner speaks.",
+            "partner": {
+              "kannada": "ಒಂದು ಚುಮುದು.",
+              "transliteration": "ondu cumudu.",
+              "english": "A bite to eat?"
+            }
+          },
+          {
+            "narration": "Pick the best reply.",
+            "choices": [
+              {
+                "label": "ivattu bisi",
+                "hint": "Busy today",
+                "correct": true
+              },
+              {
+                "label": "illa",
+                "hint": "No",
+                "correct": false
+              },
+              {
+                "label": "dhanyavada",
+                "hint": "Thank you",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      "fill": {
+        "item_id": "item-l2-sorry-busy",
+        "instruction": "Sorry busy today",
+        "blank": "ivattu _____",
+        "accepted": [
+          "bisi"
+        ]
+      }
+    }
+  ]
+}
