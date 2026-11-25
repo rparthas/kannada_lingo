@@ -12,6 +12,7 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_fs::init())
+        .plugin(tauri_plugin_native_audio::init())
         .setup(|app| {
             let data_dir = app
                 .path()
@@ -44,6 +45,7 @@ pub fn run() {
             commands::export_learning_backup,
             commands::validate_learning_backup,
             commands::restore_learning_backup,
+            commands::get_app_platform,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

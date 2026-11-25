@@ -10,6 +10,7 @@ import { PracticeScreen } from "../features/practice/PracticeScreen";
 import { PhraseDetailScreen } from "../features/phrases/PhraseDetailScreen";
 import { ProgressScreen } from "../features/progress/ProgressScreen";
 import { tauriApi } from "../services/api/tauri";
+import { configureAudioService } from "../services/audio";
 
 function MainRoutes() {
   return (
@@ -37,6 +38,7 @@ export function AppShell() {
     async function boot() {
       try {
         await tauriApi.initApp();
+        await configureAudioService();
       } catch {
         /* Vite-only web preview without Tauri */
       }

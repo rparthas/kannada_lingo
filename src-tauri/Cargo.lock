@@ -2108,6 +2108,7 @@ dependencies = [
  "tauri-build",
  "tauri-plugin-dialog",
  "tauri-plugin-fs",
+ "tauri-plugin-native-audio",
  "tauri-plugin-opener",
  "uuid",
  "zip",
@@ -4007,6 +4008,16 @@ dependencies = [
  "thiserror 2.0.21",
  "toml 1.2.1+spec-1.1.0",
  "url",
+]
+
+[[package]]
+name = "tauri-plugin-native-audio"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "tauri",
+ "tauri-plugin",
+ "thiserror 2.0.21",
 ]
 
 [[package]]

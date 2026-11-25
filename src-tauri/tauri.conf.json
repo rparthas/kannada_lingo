@@ -41,7 +41,8 @@
       "../content/audio/": "content/audio/"
     },
     "iOS": {
-      "developmentTeam": "XR2SACTR43"
+      "developmentTeam": "XR2SACTR43",
+      "infoPlist": "Info.ios.plist"
     }
   }
 }

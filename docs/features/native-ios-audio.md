@@ -2,7 +2,7 @@
 
 | Field | Value |
 |-------|-------|
-| Status | Planned |
+| Status | Implemented (device verification required) |
 | Roadmap | Phase 7 (cross-cutting) |
 | Priority | P1 |
 
@@ -17,15 +17,21 @@
 
 ## Current state
 
-- `WebAudioService` drives playback in `src/services/audio/webAudioService.ts`.
-- `LearnerRecordingPanel` and `listen_repeat` exercises depend on web audio APIs inside the Tauri webview.
-- Device smoke explicitly calls out audio and mic checks.
+- **`WebAudioService`** — desktop macOS / Windows playback and recording (HTML media APIs).
+- **`NativeIosAudioService`** — physical iOS via `tauri-plugin-native-audio` (AVAudioPlayer / AVAudioRecorder).
+- **`configureAudioService()`** — selects the adapter at boot using `get_app_platform`.
+- **`LearnerRecordingPanel`** — listen-and-repeat recording UI; permission errors surface from native layer.
 
-## In scope
+## Screen lock / background
 
-- Adapter interface already implied by `src/services/audio/types.ts`: iOS-native playback when web APIs are insufficient (latency, background, session category).
-- Recording pipeline for `listen_repeat` with clear permission UX and error states.
-- Regression tests on desktop; manual device matrix for sim vs device.
+Phrase playback uses `AVAudioSession` **playback** (not background audio). **Playback stops when the screen locks** — the recording panel notes this for learners.
+
+## In scope (done)
+
+- [x] Adapter interface in `src/services/audio/types.ts` with iOS-native implementation.
+- [x] Recording pipeline for `listen_repeat` (`.m4a` on device, `.webm` on desktop web APIs).
+- [x] `NSMicrophoneUsageDescription` in iOS bundle config.
+- [x] Regression tests for platform routing (`tests/unit/audio-service.test.ts`).
 
 ## Out of scope
 
@@ -34,12 +40,19 @@
 
 ## Acceptance criteria
 
-- [ ] Normal and slow playback work on physical iPhone with screen locked policy documented (if background not supported, UX explains it).
+- [ ] Normal and slow playback work on physical iPhone with screen locked policy documented (if background not supported, UX explains it). — **UX copy added**; verify on device.
 - [ ] Mic permission prompt is clear on your device build (store review not required).
 - [ ] Record → playback → retry flow works on device for at least one `listen_repeat` exercise.
-- [ ] Desktop `tauri dev` behavior unchanged or gracefully degraded with visible message.
+- [x] Desktop `tauri dev` behavior unchanged or gracefully degraded with visible message.
+
+## Manual device test
+
+1. `npm run ios:dev` on a physical iPhone.
+2. Open a `listen_repeat` lesson → Play (normal + slow).
+3. Record → Stop → Play my recording → Record again.
+4. Deny mic once → confirm Settings guidance message → enable in Settings → retry.
 
 ## Dependencies
 
 - [personal-release-cadence.md](./personal-release-cadence.md) for sideloaded iOS installs.
-- May require Rust/Tauri plugin or WKWebView bridge — follow [techstack](../constitution/techstack.md) service-layer rules (no audio logic in React beyond UI).
+- Rust/Tauri plugin: `tauri-plugin-native-audio/` (Swift + IPC).

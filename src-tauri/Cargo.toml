@@ -33,6 +33,7 @@ sha2 = "0.11.1"
 zip = "9.6.0"
 tauri-plugin-dialog = "2.8.4"
 tauri-plugin-fs = "2.7.1"
+tauri-plugin-native-audio = { path = "../tauri-plugin-native-audio" }
 
 
 # Read the optimization guideline for more details: https://tauri.app/concept/size/#cargo-configuration

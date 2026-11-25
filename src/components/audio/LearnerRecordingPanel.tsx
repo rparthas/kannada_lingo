@@ -38,6 +38,8 @@ export function LearnerRecordingPanel({ onRecorded }: Props) {
       <p className="text-sm font-medium text-stone-800">Your pronunciation</p>
       <p className="text-xs text-stone-500">
         Microphone is used only while you record. MVP does not score pronunciation.
+        On iPhone, playback pauses when the screen locks — keep the app in the
+        foreground while you practice.
       </p>
       <div className="flex flex-wrap gap-2">
         {!recording ? (
