@@ -2,6 +2,17 @@ import AVFoundation
 import Foundation
 import Tauri
 
+private enum AudioError: Error {
+  case message(String)
+
+  var message: String {
+    switch self {
+    case .message(let msg):
+      return msg
+    }
+  }
+}
+
 private struct PlayPhraseArgs: Decodable {
   let filePath: String
   let speed: String?
@@ -42,25 +53,25 @@ class NativeAudioPlugin: Plugin {
     "Microphone access is off. Open Settings → Kannada Quest and turn on Microphone, then try again."
   }
 
-  private func ensureMicPermission(_ completion: @escaping (Result<Void, String>) -> Void) {
+  private func ensureMicPermission(_ completion: @escaping (Result<Void, AudioError>) -> Void) {
     let session = AVAudioSession.sharedInstance()
     switch session.recordPermission {
     case .granted:
       completion(.success(()))
     case .denied:
-      completion(.failure(self.micDeniedMessage()))
+      completion(.failure(.message(self.micDeniedMessage())))
     case .undetermined:
       session.requestRecordPermission { granted in
         DispatchQueue.main.async {
           if granted {
             completion(.success(()))
           } else {
-            completion(.failure(self.micDeniedMessage()))
+            completion(.failure(.message(self.micDeniedMessage())))
           }
         }
       }
     @unknown default:
-      completion(.failure(self.micDeniedMessage()))
+      completion(.failure(.message(self.micDeniedMessage())))
     }
   }
 
@@ -98,8 +109,8 @@ class NativeAudioPlugin: Plugin {
   @objc public func startRecording(_ invoke: Invoke) throws {
     ensureMicPermission { result in
       switch result {
-      case .failure(let message):
-        invoke.reject(message)
+      case .failure(let error):
+        invoke.reject(error.message)
       case .success:
         do {
           try self.activateRecordingSession()

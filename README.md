@@ -32,6 +32,13 @@ npm run tauri dev
 
 iOS and content tooling: [`docs/DEVELOPER_SETUP.md`](docs/DEVELOPER_SETUP.md).
 
+## Install
+
+```bash
+npm run ios:build
+ideviceinstaller install "src-tauri/gen/apple/build/arm64/Kannada Quest.ipa"
+```
+
 ## Documentation
 
 | Document | Description |
