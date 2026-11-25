@@ -1,5 +1,7 @@
 # Kannada Quest — Product Roadmap
 
+> **Current direction:** [Speaking-first roadmap v1](roadmap_v1.md). It re-sequences the next work around speaking practice, recognition, conversations and speaking-aware revision. This document remains the phase/content/infrastructure baseline and the home of completed phases.
+
 ## Roadmap Objective
 
 Ship a trustworthy **Level 1 Survival** experience on iOS, then expand curriculum and polish native mobile affordances—without sacrificing offline learning, content accuracy, or local control of progress.

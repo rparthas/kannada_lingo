@@ -56,3 +56,8 @@ Phrase playback uses `AVAudioSession` **playback** (not background audio). **Pla
 
 - [personal-release-cadence.md](./personal-release-cadence.md) for sideloaded iOS installs.
 - Rust/Tauri plugin: `tauri-plugin-native-audio/` (Swift + IPC).
+
+## Follow-on work
+
+- [recording-reliability.md](./recording-reliability.md) — permission recovery, interruptions, navigation-safe takes.
+- [speaking-practice-mode.md](./speaking-practice-mode.md) — first learner-facing mode built on this pipeline.
