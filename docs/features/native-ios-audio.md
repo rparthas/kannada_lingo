@@ -4,7 +4,7 @@
 |-------|-------|
 | Status | Implemented (device verification required) |
 | Roadmap | Phase 7 (cross-cutting) |
-| Priority | P1 |
+| Priority | P0 prerequisite |
 
 ## Learner outcome
 

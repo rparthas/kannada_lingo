@@ -30,15 +30,15 @@ App Store work is **deferred**: see [ios-app-store-release.md](./ios-app-store-r
 
 ## Progress across weekly installs
 
-Today, bundled curriculum imports when the DB is **empty** only. Reinstalling the app or wiping data re-imports content but **loses** learner state unless you restore a backup.
+Fresh installs import bundled curriculum when the database is empty. Existing databases can receive a newer validated bundle through `npm run content:import` without wiping learner attempts, XP, streaks, or schedules. Reinstalling or wiping the app's data can still lose learner state unless you restore a backup.
 
 For a 7-day rhythm, prioritize:
 
 | Approach | When |
 |----------|------|
-| **Backup → update app → restore** | Safe default until content-only import exists |
+| **Backup → update app → restore** | Safe default before any risky schema or content experiment |
 | **Same DB file** (dev: don’t wipe `learner.sqlite`) | Desktop practice between iOS rebuilds |
-| **Content update without reinstall** | [content-updates.md](./content-updates.md) — highest-value engineering for weekly publishes |
+| **Content update without reinstall** | Run `npm run content:import` for a newer validated bundle; see [content-updates.md](./content-updates.md) |
 
 ## Priority stack (personal use)
 

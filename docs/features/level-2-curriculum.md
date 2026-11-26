@@ -15,15 +15,9 @@
 - **Practical-first**, **Bengaluru Kannada**.
 - **Content as a product** — JSON specs, validators, versioned release independent of app binary when possible.
 
-## Current state
+## Delivered scope
 
-- Single level: `level-1-survival` in `content/curriculum/specs/course.json`.
-- `LearnScreen` already lists levels from DB via `listLevels` — UI ready for multiple levels.
-- 13 units cover survival domains (greetings → social).
-
-## Proposed Level 2 themes (draft)
-
-Pick 2–3 for MVP Level 2; validate with content author:
+`level-2-everyday` is present in `content/curriculum/specs/course.json` and `LearnScreen` lists it from the database. The shipped units cover the following themes:
 
 | Unit theme | Example situations |
 |------------|-------------------|
@@ -33,12 +27,11 @@ Pick 2–3 for MVP Level 2; validate with content author:
 | Kids & school | parent–teacher, pickup lines (extends unit 12) |
 | Culture & etiquette | honorifics, `neenu`/`nimma`, soft refusals |
 
-## In scope
+## Ongoing scope
 
-- New level record in `course.json` with `ordinal: 2`.
-- New unit JSON files under `content/curriculum/specs/units/`.
-- Lessons reuse existing exercise types; new phrases get `accepted_answers` and optional `context_note`.
-- Audio via `content:build` pipeline until human recordings land per phrase.
+- Maintain and extend Level 2 through unit specs under `content/curriculum/specs/units/`.
+- Reuse exercise types; give new phrases `accepted_answers` and optional `context_note`.
+- Generate audio through `content:build` until human recordings land per phrase.
 
 ## Out of scope
 

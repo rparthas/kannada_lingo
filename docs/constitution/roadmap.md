@@ -1,10 +1,10 @@
 # Kannada Quest — Product Roadmap
 
-> **Current direction:** [Speaking-first roadmap v1](roadmap_v1.md). It re-sequences the next work around speaking practice, recognition, conversations and speaking-aware revision. This document remains the phase/content/infrastructure baseline and the home of completed phases.
+> **Current direction:** [Speaking-first roadmap](roadmap_v1.md). It owns the next build sequence. This document records the shipped foundation and continuing delivery constraints.
 
 ## Roadmap Objective
 
-Ship a trustworthy **Level 1 Survival** experience on iOS, then expand curriculum and polish native mobile affordances—without sacrificing offline learning, content accuracy, or local control of progress.
+Keep a trustworthy, offline-first practical Kannada experience on iOS while expanding the spoken-learning loop—without sacrificing content accuracy or local control of progress.
 
 Capabilities are grouped by phase, not fixed release dates.
 
@@ -13,7 +13,7 @@ Capabilities are grouped by phase, not fixed release dates.
 The repository already includes:
 
 - Bottom navigation (Home, Learn, Practice, Progress).
-- Level 1 Survival path: **13 units**, **26 lessons**, **110 phrases**.
+- Two-level path: **21 units**, **42 lessons**, **190 phrases**.
 - Lesson player (resume, review mode, scripted conversations, all exercise types).
 - Practice drills, phrase detail with attempt history, SM-2-inspired scheduling.
 - Bundled audio (slow/normal), learner recording hooks, `content:validate`.
@@ -34,7 +34,7 @@ Treat "complete" in the table below as **implemented in repo**; device-only chec
 | 3 — Audio and content | Complete | WAV import, `WebAudioService`, validation tooling |
 | 4 — Revision and retention | Complete | Streaks, daily goal, review UI, local-time scheduling |
 | 5 — AI personalization | Complete (mock) | Swap provider via env; no client secrets |
-| 6 — Backup / release | Complete (app) | Restore UX and tests; App Store submission manual |
+| 6 — Backup / personal delivery | Complete (app) | Restore UX and tests; weekly personal installs govern delivery |
 
 ---
 
@@ -46,22 +46,24 @@ Use the device smoke table in `docs/DEVELOPER_SETUP.md`. Simulator feasibility i
 
 ---
 
-## Phase 7 — iOS Release Readiness
+## Phase 7 — Device Readiness
 
-**Objective:** Make Kannada Quest shippable on the App Store.
+**Objective:** Make Kannada Quest dependable on the personal iPhone/iPad used for practice.
 
 ### Priorities
 
-- App icons, privacy strings, and microphone usage descriptions aligned with exercises.
-- TestFlight build pipeline and crash-free smoke path on device.
+- Privacy strings and microphone usage descriptions aligned with exercises.
+- Crash-free smoke path on device.
 - Replace or supplement TTS placeholder audio with human recordings where quality matters.
 - Harden native audio/recording if `WebAudioService` limits appear on device.
 
 ### Exit Criteria
 
-- TestFlight build accepted by at least one external tester path.
+- Device smoke checks pass for playback, recording, and backup/restore.
 - Backup/restore verified on device via Files/iCloud Drive.
-- Store listing assets and versioning process documented.
+- Personal release steps and versioning process documented.
+
+Public App Store work is deferred; see [personal release cadence](../features/personal-release-cadence.md).
 
 ---
 
@@ -71,14 +73,14 @@ Use the device smoke table in `docs/DEVELOPER_SETUP.md`. Simulator feasibility i
 
 ### Priorities
 
-- Level 2+ units with validated JSON and audio pipeline.
-- Content import or update path without full app reinstall (CLI or in-app, TBD).
+- Level 2 units with validated JSON and audio pipeline are shipped.
+- Content import without a full reinstall is available through the local CLI.
 - Expanded accepted-answer variants and regional notes where needed.
 
 ### Exit Criteria
 
-- New levels ship through `content:validate` and version bumps.
-- Learners can upgrade content without losing local progress.
+- New or changed units ship through `content:validate` and version bumps.
+- A newer bundle imports without losing local progress.
 
 ---
 
@@ -117,12 +119,12 @@ Use the device smoke table in `docs/DEVELOPER_SETUP.md`. Simulator feasibility i
 
 1. Protect learner data and restore safety.
 2. Correctness of evaluation and scheduling.
-3. Physical iOS verification and release blockers.
+3. Physical iOS verification and speaking-loop blockers.
 4. Curriculum accuracy and audio quality.
-5. New levels and optional AI.
+5. Optional AI and supporting polish.
 
 Changes to mission or platform should align with `docs/constitution/mission.md` and `docs/vision.md`.
 
 Feature-level plans live in [`docs/features/README.md`](../features/README.md).
 
-**Personal fork note:** Solo use with ~weekly installs from the repo — no App Store. Priorities: [`docs/features/personal-release-cadence.md`](../features/personal-release-cadence.md) (Phase 7 store release optional/deferred).
+**Personal-use note:** Solo use with roughly weekly installs from the repo; no App Store release is planned. The current sequence is in [the speaking-first roadmap](roadmap_v1.md), and the delivery routine is in [personal release cadence](../features/personal-release-cadence.md).

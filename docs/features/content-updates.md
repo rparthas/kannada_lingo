@@ -19,22 +19,16 @@
 
 - Curriculum imported only when DB is empty (`init_app` import path in Rust).
 - Dev workflow: delete `learner.sqlite` to re-import.
-- Roadmap lists “CLI or in-app, TBD”.
+- The local CLI is the supported personal-release path; no in-app download flow exists.
 
-## Options (decide before build)
+## Delivered approach
 
-| Approach | Pros | Cons |
-|----------|------|------|
-| **A. Content-only ZIP** (manifest + JSON + audio) | Matches backup mental model; user-initiated | Large downloads; UX for “import content” |
-| **B. CLI `content:import`** for power users | Simple; good for editors | Not learner-facing |
-| **C. App update only** | Simplest | Requires store release for every curriculum fix |
-
-**Recommendation:** Implement **B** first for editorial loop; design **A** manifest compatible with backup manifest fields (`content_version`, checksum).
+`npm run content:import -- --db PATH` imports a newer validated bundled curriculum into an existing database. It is the editor/developer workflow for personal releases; it is not an in-app download mechanism. `--force` re-applies a bundle whose version matches the installed version.
 
 ## In scope
 
 - Idempotent import: add new levels/lessons/items; do not wipe `exercise_attempts` or SM-2 rows for existing `learning_item_id`s.
-- Bump detection: if incoming `content_version` ≤ installed, no-op with message.
+- Version gate: if incoming `content_version` is not newer, the command no-ops with a message unless `--force` is used.
 - Migration story when exercise definitions change for an existing item (version pin or soft “relearn” flag).
 
 ## Out of scope
@@ -52,4 +46,4 @@
 ## Dependencies
 
 - Schema stability for `content_version` in manifest (align with backup manifest).
-- Level 2 content package as first real-world test ([level-2-curriculum.md](./level-2-curriculum.md)).
+- Future in-app content packs should use the same validation and version-gating contract.
