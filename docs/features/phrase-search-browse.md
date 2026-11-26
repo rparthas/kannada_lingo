@@ -2,7 +2,7 @@
 
 | Field | Value |
 |-------|-------|
-| Status | Planned |
+| Status | Shipped |
 | Roadmap | Cross-cutting (supports Phase 8 scale) |
 | Priority | P4 |
 

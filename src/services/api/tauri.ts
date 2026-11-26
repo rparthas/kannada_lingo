@@ -26,6 +26,8 @@ export interface LessonSummary {
   description?: string;
   estimatedMinutes: number;
   completed: boolean;
+  unitId: string;
+  unitTitle: string;
 }
 
 export interface LearningItemDto {

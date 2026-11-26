@@ -8,13 +8,14 @@ Capabilities **implemented in the repository** as of the current Level 1 Surviva
 |---------|-------------|---------|
 | Bottom tab nav | `BottomNav` — Home, Learn, Practice, Progress | — |
 | App bootstrap | `AppShell` — `init_app`, onboarding gate | `commands/app.rs` |
-| Settings (secondary) | `/settings` (linked from Progress) | learner profile commands |
+| Settings (secondary) | `/settings` (linked from Home gear and Progress) | learner profile commands |
 
 ## Onboarding
 
 | Feature | Notes |
 |---------|--------|
 | First-run welcome | Optional display name → `completeOnboarding` |
+| Guided onboarding & goals | Sets daily XP goal + optional Kannada script preference |
 | Content import on empty DB | Bundled JSON + WAV on first launch |
 
 ## Home (Today)
@@ -25,6 +26,7 @@ Capabilities **implemented in the repository** as of the current Level 1 Surviva
 | Streak | Days with goal met |
 | Continue lesson | Resume `continueLessonId` |
 | Due revision count | Link to Practice |
+| Settings link | Gear/“Settings” link in Home header to `/settings` |
 
 ## Learn
 
@@ -32,6 +34,7 @@ Capabilities **implemented in the repository** as of the current Level 1 Surviva
 |---------|--------|
 | Level selector | **Level 1 Survival** + **Level 2 Everyday Conversations** |
 | Lesson list | Completion markers, estimated minutes |
+| Unit map & learning path UX | Grouped lessons by unit title, “Recommended next” highlight |
 | Lesson player | Resume, review mode, all exercise types |
 
 ### Exercise types (domain)
@@ -57,6 +60,7 @@ Defined in `src/domain/exercises/evaluate.ts` and rendered in `ExerciseRenderer`
 | Backup export | ZIP + manifest + SHA-256 from Progress |
 | Phrase detail | Script, transliteration, meaning, audio, attempt history |
 | Mock AI grammar | Phrase detail; production uses `unconfigured` stub |
+| Phrase search & browse | `/phrase-search` — search by English, transliteration, Kannada; links to phrase detail |
 
 ## Audio
 

@@ -16,9 +16,18 @@ export function HomeScreen() {
 
   return (
     <div className="mx-auto max-w-3xl space-y-6 px-4 pb-28 pt-4">
-      <header>
-        <h1 className="text-2xl font-bold text-stone-900">Today</h1>
-        <p className="text-stone-600">A focused session beats a long study block.</p>
+      <header className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-stone-900">Today</h1>
+          <p className="text-stone-600">A focused session beats a long study block.</p>
+          {/* Settings gear link for discoverability */}
+          <Link
+            to="/settings"
+            className="text-sm text-stone-600 hover:text-amber-600 underline"
+          >
+            Settings
+          </Link>
+        </div>
       </header>
 
       <section className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-stone-200">

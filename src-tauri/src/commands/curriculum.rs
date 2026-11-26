@@ -34,6 +34,8 @@ pub struct LessonSummary {
     pub description: Option<String>,
     pub estimated_minutes: i32,
     pub completed: bool,
+    pub unit_id: String,
+    pub unit_title: String,
 }
 
 #[derive(Serialize)]
@@ -228,7 +230,9 @@ pub fn list_lessons_for_level(
                 "SELECT l.id, l.ordinal, l.title, l.description, l.estimated_minutes,
                         CASE WHEN EXISTS (
                           SELECT 1 FROM lesson_attempts la WHERE la.lesson_id = l.id AND la.completed_at IS NOT NULL
-                        ) THEN 1 ELSE 0 END AS completed
+                        ) THEN 1 ELSE 0 END AS completed,
+                        u.id AS unit_id,
+                        u.title AS unit_title
                  FROM lessons l
                  JOIN units u ON u.id = l.unit_id
                  WHERE u.level_id = ?1
@@ -245,6 +249,8 @@ pub fn list_lessons_for_level(
                     description: row.get(3)?,
                     estimated_minutes: row.get(4)?,
                     completed: row.get::<_, i32>(5)? == 1,
+                    unit_id: row.get(6)?,
+                    unit_title: row.get(7)?,
                 })
             })
             .map_err(|e| e.to_string())?;

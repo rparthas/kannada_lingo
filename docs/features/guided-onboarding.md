@@ -2,7 +2,7 @@
 
 | Field | Value |
 |-------|-------|
-| Status | Planned |
+| Status | Shipped |
 | Roadmap | Cross-cutting |
 | Priority | P4 |
 
