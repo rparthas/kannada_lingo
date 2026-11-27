@@ -28,10 +28,6 @@ Phrase playback uses `AVAudioSession` **playback** (not background audio). **Pla
 
 ## In scope (done)
 
-- [x] Adapter interface in `src/services/audio/types.ts` with iOS-native implementation.
-- [x] Recording pipeline for `listen_repeat` (`.m4a` on device, `.webm` on desktop web APIs).
-- [x] `NSMicrophoneUsageDescription` in iOS bundle config.
-- [x] Regression tests for platform routing (`tests/unit/audio-service.test.ts`).
 
 ## Out of scope
 
@@ -43,7 +39,6 @@ Phrase playback uses `AVAudioSession` **playback** (not background audio). **Pla
 - [ ] Normal and slow playback work on physical iPhone with screen locked policy documented (if background not supported, UX explains it). — **UX copy added**; verify on device.
 - [ ] Mic permission prompt is clear on your device build (store review not required).
 - [ ] Record → playback → retry flow works on device for at least one `listen_repeat` exercise.
-- [x] Desktop `tauri dev` behavior unchanged or gracefully degraded with visible message.
 
 ## Manual device test
 
