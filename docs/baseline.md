@@ -1,6 +1,6 @@
 # Shipped baseline (feature inventory)
 
-Capabilities **implemented in the repository** as of the current Level 1 Survival release. Status labels match [roadmap](../constitution/roadmap.md): *complete* in repo; device-only or store steps may still be open.
+Capabilities **implemented in the repository** as of the current Level 1 Survival release. Status labels match [roadmap](constitution/roadmap.md): *complete* in repo; device-only or store steps may still be open.
 
 ## Navigation & shell
 
@@ -92,7 +92,7 @@ Defined in `src/domain/exercises/evaluate.ts` and rendered in `ExerciseRenderer`
 
 ## Explicit non-features (by design)
 
-Per [mission](../constitution/mission.md) boundaries:
+Per [mission](constitution/mission.md) boundaries:
 
 - User accounts, cloud sync, social leaderboards
 - Autonomous AI-generated lesson content in production

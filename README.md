@@ -48,7 +48,8 @@ ideviceinstaller install "src-tauri/gen/apple/build/arm64/Kannada Quest.ipa"
 | [`docs/constitution/mission.md`](docs/constitution/mission.md) | Mission and boundaries |
 | [`docs/constitution/techstack.md`](docs/constitution/techstack.md) | Stack and architecture |
 | [`docs/constitution/roadmap.md`](docs/constitution/roadmap.md) | Phases and priorities |
-| [`docs/features/README.md`](docs/features/README.md) | Feature backlog and briefs |
+| [`docs/FEATURE_WORKFLOW.md`](docs/FEATURE_WORKFLOW.md) | Feature workflow — GitHub Issues are the source of truth |
+| [`docs/baseline.md`](docs/baseline.md) | Shipped feature inventory |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Short layer summary |
 
 [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) points at the roadmap.

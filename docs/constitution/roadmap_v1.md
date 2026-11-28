@@ -34,11 +34,11 @@ Recognition, recall, and pronunciation are different signals. Speech-to-text can
 
 ### 0. Verify the device foundation
 
-Before new speech features, complete the physical-device checks in [native iOS audio](../features/native-ios-audio.md): playback, microphone permission recovery, repeated recording/playback, interruptions, and navigation-safe takes.
+Before new speech features, complete the physical-device checks in the [Phase 0 milestone](https://github.com/rparthas/kannada_lingo/milestone/1): playback, microphone permission recovery, repeated recording/playback, interruptions, and navigation-safe takes. The runbook is [DEVICE_AUDIO_VERIFICATION.md](../DEVICE_AUDIO_VERIFICATION.md).
 
 ### 1. Speak and record
 
-Deliver [recording reliability](../features/recording-reliability.md) and [speaking practice](../features/speaking-practice-mode.md).
+Deliver [recording reliability and speaking practice](https://github.com/rparthas/kannada_lingo/milestone/2).
 
 - Play a phrase, hide the answer, record, replay, retry, and self-rate.
 - Persist local attempt history and speaking counters.
@@ -48,7 +48,7 @@ Deliver [recording reliability](../features/recording-reliability.md) and [speak
 
 ### 2. Speak and evaluate
 
-Deliver the [on-device speech recognition adapter](../features/speech-recognition-adapter.md) and [spoken-answer evaluation](../features/spoken-answer-evaluation.md).
+Deliver the [on-device speech recognition adapter and spoken-answer evaluation](https://github.com/rparthas/kannada_lingo/milestone/3).
 
 - Detect availability for `kn-IN`; provide typed fallback.
 - Normalize Kannada script and supported transliteration variants.
@@ -59,7 +59,7 @@ Deliver the [on-device speech recognition adapter](../features/speech-recognitio
 
 ### 3. Speak in context
 
-Deliver the [deterministic conversation engine](../features/conversation-engine.md) and [five everyday scenarios](../features/conversation-scenarios.md).
+Deliver the [deterministic conversation engine and five everyday scenarios](https://github.com/rparthas/kannada_lingo/milestone/4).
 
 - Start with content-defined branching, accepted responses, hints, and local completion history.
 - Cover auto rides, restaurants, apartment security, shops, and neighbours.
@@ -69,7 +69,7 @@ Deliver the [deterministic conversation engine](../features/conversation-engine.
 
 ### 4. Retain and understand
 
-Deliver [listening comprehension](../features/listening-comprehension.md) and [speaking-aware revision](../features/speaking-aware-revision.md).
+Deliver [listening comprehension and speaking-aware revision](https://github.com/rparthas/kannada_lingo/milestone/5).
 
 - Track recognition, recall, speaking, and listening separately.
 - Prioritize weak speaking and listening skills without discarding existing schedules.
@@ -77,13 +77,13 @@ Deliver [listening comprehension](../features/listening-comprehension.md) and [s
 
 ### 5. Extend intentionally
 
-Add the [optional AI conversation coach](../features/ai-conversation-coach.md), then the [proficiency dashboard](../features/proficiency-dashboard.md) and [personal phrasebook](../features/personal-phrasebook.md).
+Add the [optional AI conversation coach, proficiency dashboard, and personal phrasebook](https://github.com/rparthas/kannada_lingo/milestone/6).
 
 AI is opt-in, disabled by default, and receives recognized text rather than recordings by default. Its suggestions remain distinct from canonical content.
 
 ## Dependency and migration ledger
 
-The feature index owns planned migration numbers. Reserve them in this order to avoid collisions:
+This roadmap owns the planned migration numbers. Reserve them in this order to avoid collisions:
 
 | Migration | Purpose |
 |---|---|
@@ -97,10 +97,10 @@ These are planned names, not migrations that already exist. Add each only with t
 
 ## Supporting work
 
-- [Human phrase audio](../features/human-phrase-audio.md) for high-frequency phrases.
-- [Content updates](../features/content-updates.md) and ongoing Level 2 curriculum work.
-- [Phrase search](../features/phrase-search-browse.md), [learning-path UX](../features/learn-path-ux.md), and [guided onboarding](../features/guided-onboarding.md) when daily use exposes friction.
-- [Personal release cadence](../features/personal-release-cadence.md) for weekly installs and data safety.
+- [Human phrase audio](https://github.com/rparthas/kannada_lingo/milestone/7) for high-frequency phrases.
+- Content updates and ongoing Level 2 curriculum work.
+- [UX enhancements](https://github.com/rparthas/kannada_lingo/milestone/9) — search, learning-path UX, and settings — when daily use exposes friction.
+- [RELEASE.md](../RELEASE.md) for weekly installs and data safety.
 
 ## Measures of success
 
@@ -122,4 +122,4 @@ Establish a personal baseline before setting targets. Do not infer proficiency f
 
 ## Source of truth
 
-This roadmap sets sequencing. The [feature index](../features/README.md) is the delivery board, individual feature briefs define scope and acceptance criteria, and [baseline.md](../features/baseline.md) records what has shipped.
+This roadmap sets sequencing. [GitHub Issues](https://github.com/rparthas/kannada_lingo/issues) are the delivery board and define scope and acceptance criteria; [FEATURE_WORKFLOW.md](../FEATURE_WORKFLOW.md) explains how to use them. [baseline.md](../baseline.md) records what has shipped.

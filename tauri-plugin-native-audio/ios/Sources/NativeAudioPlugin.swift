@@ -31,7 +31,7 @@ class NativeAudioPlugin: Plugin {
   private var phrasePlayer: AVAudioPlayer?
   private var learnerPlayer: AVAudioPlayer?
   private var recorder: AVAudioRecorder?
-  private var recordingStartedAt: Date?
+  private var isStartingRecording = false
 
   private func activatePlaybackSession() throws {
     let session = AVAudioSession.sharedInstance()
@@ -47,6 +47,19 @@ class NativeAudioPlugin: Plugin {
       options: [.defaultToSpeaker, .allowBluetooth],
     )
     try session.setActive(true)
+  }
+
+  private func stopPlayback() {
+    phrasePlayer?.stop()
+    phrasePlayer = nil
+    learnerPlayer?.stop()
+    learnerPlayer = nil
+  }
+
+  private func rejectIfRecording(_ invoke: Invoke) -> Bool {
+    guard recorder != nil else { return false }
+    invoke.reject("Stop your recording before playing audio.")
+    return true
   }
 
   private func micDeniedMessage() -> String {
@@ -76,15 +89,20 @@ class NativeAudioPlugin: Plugin {
   }
 
   @objc public func playPhrase(_ invoke: Invoke) throws {
+    if rejectIfRecording(invoke) { return }
     let args = try invoke.parseArgs(PlayPhraseArgs.self)
     let url = URL(fileURLWithPath: args.filePath)
     guard FileManager.default.fileExists(atPath: url.path) else {
       invoke.reject("Audio file is missing. Rebuild and reinstall the app.")
       return
     }
-    try activatePlaybackSession()
-    phrasePlayer?.stop()
-    learnerPlayer?.stop()
+    do {
+      stopPlayback()
+      try activatePlaybackSession()
+    } catch {
+      invoke.reject("Could not prepare audio playback: \(error.localizedDescription)")
+      return
+    }
     let player = try AVAudioPlayer(contentsOf: url)
     player.enableRate = true
     let speed = args.speed ?? "normal"
@@ -99,20 +117,24 @@ class NativeAudioPlugin: Plugin {
   }
 
   @objc public func pausePlayback(_ invoke: Invoke) throws {
-    phrasePlayer?.stop()
-    phrasePlayer = nil
-    learnerPlayer?.stop()
-    learnerPlayer = nil
+    stopPlayback()
     invoke.resolve()
   }
 
   @objc public func startRecording(_ invoke: Invoke) throws {
+    guard recorder == nil, !isStartingRecording else {
+      invoke.reject("A recording is already in progress.")
+      return
+    }
+    isStartingRecording = true
     ensureMicPermission { result in
+      defer { self.isStartingRecording = false }
       switch result {
       case .failure(let error):
         invoke.reject(error.message)
       case .success:
         do {
+          self.stopPlayback()
           try self.activateRecordingSession()
           let dir = try self.learnerRecordingDirectory()
           let fileName = "\(UUID().uuidString).m4a"
@@ -125,7 +147,6 @@ class NativeAudioPlugin: Plugin {
           ]
           let recorder = try AVAudioRecorder(url: fileURL, settings: settings)
           recorder.prepareToRecord()
-          self.recordingStartedAt = Date()
           self.recorder = recorder
           if !recorder.record() {
             invoke.reject("Could not start recording.")
@@ -144,11 +165,10 @@ class NativeAudioPlugin: Plugin {
       invoke.reject("No recording in progress.")
       return
     }
-    let startedAt = recordingStartedAt ?? Date()
+    let recordedSeconds = recorder.currentTime
     recorder.stop()
     self.recorder = nil
-    recordingStartedAt = nil
-    let durationMs = Int(Date().timeIntervalSince(startedAt) * 1000)
+    let durationMs = Int(recordedSeconds * 1000)
     let payload = RecordingResultPayload(
       filePath: recorder.url.path,
       durationMs: max(durationMs, 0),
@@ -157,15 +177,20 @@ class NativeAudioPlugin: Plugin {
   }
 
   @objc public func playLearnerRecording(_ invoke: Invoke) throws {
+    if rejectIfRecording(invoke) { return }
     let args = try invoke.parseArgs(PlayLearnerArgs.self)
     let url = URL(fileURLWithPath: args.filePath)
     guard FileManager.default.fileExists(atPath: url.path) else {
       invoke.reject("Recording file is missing.")
       return
     }
-    try activatePlaybackSession()
-    phrasePlayer?.stop()
-    learnerPlayer?.stop()
+    do {
+      stopPlayback()
+      try activatePlaybackSession()
+    } catch {
+      invoke.reject("Could not prepare audio playback: \(error.localizedDescription)")
+      return
+    }
     let player = try AVAudioPlayer(contentsOf: url)
     player.prepareToPlay()
     learnerPlayer = player

@@ -58,12 +58,15 @@ If **device signing** fails: Xcode → Settings → Accounts → sign in; open `
 ## Device smoke test (optional)
 
 On a physical iPhone/iPad when you care about mic, Files, and speakers—not simulator alone.
+Audio checks have a detailed runbook: [`DEVICE_AUDIO_VERIFICATION.md`](DEVICE_AUDIO_VERIFICATION.md).
 
 | Check | ☐ |
 |-------|---|
 | Launch, first-run import, lesson offline (airplane mode) | |
 | Progress after force quit; Kannada script | |
-| Audio normal/slow; mic on listen-repeat | |
+| Phrase playback normal/slow; stops on screen lock | |
+| Mic prompt text; deny → Settings → allow → retry | |
+| Record → play my recording → record again | |
 | Backup export/import via Files | |
 | iPad portrait + landscape | |
 

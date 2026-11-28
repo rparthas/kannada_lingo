@@ -63,7 +63,7 @@ Use the device smoke table in `docs/DEVELOPER_SETUP.md`. Simulator feasibility i
 - Backup/restore verified on device via Files/iCloud Drive.
 - Personal release steps and versioning process documented.
 
-Public App Store work is deferred; see [personal release cadence](../features/personal-release-cadence.md).
+Public App Store work is deferred; see [RELEASE.md](../RELEASE.md).
 
 ---
 
@@ -125,6 +125,6 @@ Public App Store work is deferred; see [personal release cadence](../features/pe
 
 Changes to mission or platform should align with `docs/constitution/mission.md` and `docs/vision.md`.
 
-Feature-level plans live in [`docs/features/README.md`](../features/README.md).
+Feature-level scope, status, and acceptance criteria live in [GitHub Issues](https://github.com/rparthas/kannada_lingo/issues); see [FEATURE_WORKFLOW.md](../FEATURE_WORKFLOW.md).
 
-**Personal-use note:** Solo use with roughly weekly installs from the repo; no App Store release is planned. The current sequence is in [the speaking-first roadmap](roadmap_v1.md), and the delivery routine is in [personal release cadence](../features/personal-release-cadence.md).
+**Personal-use note:** Solo use with roughly weekly installs from the repo; no App Store release is planned. The current sequence is in [the speaking-first roadmap](roadmap_v1.md), and the delivery routine is in [RELEASE.md](../RELEASE.md).

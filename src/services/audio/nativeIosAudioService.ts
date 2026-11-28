@@ -18,8 +18,10 @@ export class NativeIosAudioService implements AudioService {
   async play(asset: AudioAssetRef, speed: PlaybackSpeed = "normal"): Promise<void> {
     if (!asset.relativePath) return;
     const filePath = await resolveAbsolutePath(asset.relativePath);
+    // Only time-stretch normal takes. A "slow" recording is already slowed;
+    // applying 0.82 again would play it at roughly half speed.
     const effectiveSpeed =
-      speed === "slow" && asset.speakingSpeed === "normal" ? "slow" : speed;
+      speed === "slow" && asset.speakingSpeed === "normal" ? "slow" : "normal";
     await invokeNative("play_phrase", {
       request: { filePath, speed: effectiveSpeed },
     });

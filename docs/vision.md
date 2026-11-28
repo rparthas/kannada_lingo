@@ -30,7 +30,8 @@ Kannada Quest should be more than a phrasebook or a streak counter. It should be
 
 ## Related docs
 
-- [`features/README.md`](features/README.md) — feature backlog and build briefs
+- [GitHub Issues](https://github.com/rparthas/kannada_lingo/issues) — feature backlog and acceptance criteria (source of truth)
+- [`FEATURE_WORKFLOW.md`](FEATURE_WORKFLOW.md) — how issues, milestones, and labels are used
 - [`constitution/mission.md`](constitution/mission.md) — audience, boundaries, expanded principles
 - [`constitution/techstack.md`](constitution/techstack.md) — architecture, TDD, and engineering rules
 - [`constitution/roadmap.md`](constitution/roadmap.md) — phase status and priorities
