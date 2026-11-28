@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { filterPhrases } from "../../domain/phrase-search/filter";
 
 type Phrase = {
   id: string;
@@ -38,14 +39,7 @@ export function PhraseSearchScreen() {
       });
   }, []);
 
-  const filteredPhrases = phrases.filter((phrase) => {
-    const term = searchTerm.toLowerCase();
-    return (
-      phrase.kannada_text.toLowerCase().includes(term) ||
-      phrase.transliteration.toLowerCase().includes(term) ||
-      phrase.english_meaning.toLowerCase().includes(term)
-    );
-  });
+  const filteredPhrases = filterPhrases(phrases, searchTerm);
 
   return (
     <div className="mx-auto max-w-3xl space-y-4 px-4 py-6">
@@ -71,7 +65,8 @@ export function PhraseSearchScreen() {
                 to={`/phrase/${phrase.id}`}
                 className="text-lg font-medium text-amber-600 hover:underline"
               >
-                {phrase.kannada_text} ({phrase.transliteration})
+                <span className="kannada">{phrase.kannada_text}</span> (
+                {phrase.transliteration})
               </Link>
               <p className="text-sm text-stone-600">{phrase.english_meaning}</p>
             </li>

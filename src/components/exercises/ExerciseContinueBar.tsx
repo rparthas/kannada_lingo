@@ -13,7 +13,7 @@ export function ExerciseContinueBar({
 }: Props) {
   return (
     <div
-      className={`mt-4 space-y-3 rounded-2xl p-4 ${isCorrect ? "bg-emerald-50 ring-1 ring-emerald-200" : "bg-amber-50 ring-1 ring-amber-200"}`}
+      className={`space-y-3 rounded-2xl p-4 ${isCorrect ? "bg-emerald-50 ring-1 ring-emerald-200" : "bg-amber-50 ring-1 ring-amber-200"}`}
     >
       <div className="flex items-center gap-3">
         {isCorrect ? (

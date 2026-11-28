@@ -109,20 +109,39 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
     );
   }
 
+  /** Check and Continue share one slot, so the button turns into the next step. */
+  function submitArea(
+    label: string,
+    disabled: boolean,
+    onClick: () => void,
+  ) {
+    if (pending) {
+      return (
+        <ExerciseContinueBar
+          feedback={pending.message}
+          isCorrect={pending.result.isCorrect}
+          explanation={pending.explanation}
+          onContinue={() => onComplete(pending.result)}
+        />
+      );
+    }
+    return (
+      <button
+        type="button"
+        className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
+        disabled={disabled}
+        onClick={onClick}
+      >
+        {label}
+      </button>
+    );
+  }
+
   if (!item && exercise.exerciseType !== "vocabulary_flashcard" && exercise.exerciseType !== "scripted_conversation") {
     return <p className="text-stone-600">Exercise is missing phrase data.</p>;
   }
 
   const instruction = String(exercise.prompt.instruction ?? "Complete the exercise.");
-
-  const continueBar = pending ? (
-    <ExerciseContinueBar
-      feedback={pending.message}
-      isCorrect={pending.result.isCorrect}
-      explanation={pending.explanation}
-      onContinue={() => onComplete(pending.result)}
-    />
-  ) : null;
 
   switch (exercise.exerciseType) {
     case "vocabulary_flashcard":
@@ -177,17 +196,9 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
               </button>
             ))}
           </div>
-          <button
-            type="button"
-            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
-            disabled={selected === null || !!pending}
-            onClick={() =>
-              submitMcq(Number(exercise.prompt.correct_index ?? exercise.prompt.correctIndex))
-            }
-          >
-            Check
-          </button>
-          {continueBar}
+          {submitArea("Check", selected === null, () =>
+            submitMcq(Number(exercise.prompt.correct_index ?? exercise.prompt.correctIndex)),
+          )}
         </div>
       );
 
@@ -212,17 +223,9 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
               </button>
             ))}
           </div>
-          <button
-            type="button"
-            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
-            disabled={selected === null || !!pending}
-            onClick={() =>
-              submitMcq(Number(exercise.prompt.correct_index ?? exercise.prompt.correctIndex))
-            }
-          >
-            Check
-          </button>
-          {continueBar}
+          {submitArea("Check", selected === null, () =>
+            submitMcq(Number(exercise.prompt.correct_index ?? exercise.prompt.correctIndex)),
+          )}
         </div>
       );
 
@@ -241,29 +244,21 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
             autoCorrect="off"
             disabled={!!pending}
           />
-          <button
-            type="button"
-            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
-            disabled={!!pending}
-            onClick={() => {
-              const isCorrect = evaluateKannadaRecall(textAnswer, {
-                kannadaText: item.kannadaText,
-                transliteration: item.transliteration,
-                englishMeaning: item.englishMeaning,
-                acceptedAnswers: item.acceptedAnswers,
-              });
-              queueResult(
-                { isCorrect, response: { textAnswer } },
-                isCorrect ? "Correct" : "Keep practising this one.",
-                isCorrect
-                  ? undefined
-                  : `Expected something like “${item.transliteration}”.`,
-              );
-            }}
-          >
-            Check
-          </button>
-          {continueBar}
+          {submitArea("Check", false, () => {
+            const isCorrect = evaluateKannadaRecall(textAnswer, {
+              kannadaText: item.kannadaText,
+              transliteration: item.transliteration,
+              englishMeaning: item.englishMeaning,
+              acceptedAnswers: item.acceptedAnswers,
+            });
+            queueResult(
+              { isCorrect, response: { textAnswer } },
+              isCorrect ? "Correct" : "Keep practising this one.",
+              isCorrect
+                ? undefined
+                : `Expected something like “${item.transliteration}”.`,
+            );
+          })}
         </div>
       );
 
@@ -282,23 +277,15 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
             onChange={(e) => setTextAnswer(e.target.value)}
             disabled={!!pending}
           />
-          <button
-            type="button"
-            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
-            disabled={!!pending}
-            onClick={() => {
-              const isCorrect = [item.transliteration, ...accepted].some(
-                (v) => normalizeFreeText(textAnswer) === normalizeFreeText(v),
-              );
-              queueResult(
-                { isCorrect, response: { textAnswer } },
-                isCorrect ? "Correct" : "That blank needs another try.",
-              );
-            }}
-          >
-            Check
-          </button>
-          {continueBar}
+          {submitArea("Check", false, () => {
+            const isCorrect = [item.transliteration, ...accepted].some(
+              (v) => normalizeFreeText(textAnswer) === normalizeFreeText(v),
+            );
+            queueResult(
+              { isCorrect, response: { textAnswer } },
+              isCorrect ? "Correct" : "That blank needs another try.",
+            );
+          })}
         </div>
       );
     }
@@ -332,22 +319,14 @@ export function ExerciseRenderer({ exercise, onComplete }: Props) {
               </button>
             ))}
           </div>
-          <button
-            type="button"
-            className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-white disabled:opacity-50"
-            disabled={!!pending || built.length === 0}
-            onClick={() => {
-              const isCorrect = evaluateWordOrder(built, solution);
-              queueResult(
-                { isCorrect, response: { built } },
-                isCorrect ? "Correct order" : "Word order is not quite right.",
-                isCorrect ? undefined : `Solution: ${solution.join(" ")}`,
-              );
-            }}
-          >
-            Check order
-          </button>
-          {continueBar}
+          {submitArea("Check order", built.length === 0, () => {
+            const isCorrect = evaluateWordOrder(built, solution);
+            queueResult(
+              { isCorrect, response: { built } },
+              isCorrect ? "Correct order" : "Word order is not quite right.",
+              isCorrect ? undefined : `Solution: ${solution.join(" ")}`,
+            );
+          })}
         </div>
       );
     }
